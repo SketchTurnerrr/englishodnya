@@ -19,6 +19,12 @@ export default defineSchema({
     level: v.optional(v.number()), // Current level of the user
   }).index('by_email', ['email']),
 
+  idioms: defineTable({
+    content: v.string(),
+    definition: v.string(),
+    example: v.string(),
+  }),
+
   texts: defineTable({
     title: v.string(),
     content: v.string(),

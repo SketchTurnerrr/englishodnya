@@ -9,11 +9,16 @@ import {
   Award,
   Trophy,
   Loader2,
+  ChevronDown,
+  ChevronRight,
 } from 'lucide-react'
 import { SpellingBee } from './SpellingBee'
+import { Reading } from './Reading'
+import { Idiom } from './Idiom'
+import { PracticeMore } from './PracticeMore'
 import { useQuery, useMutation } from 'convex/react'
 import { api } from '~/_generated/api'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, Link } from '@tanstack/react-router'
 
 interface DailyTask {
   id: string
@@ -28,6 +33,7 @@ export function DailyPractice() {
   const navigate = useNavigate()
 
   const [selectedTask, setSelectedTask] = useState<string | null>(null)
+  const [showPracticeMore, setShowPracticeMore] = useState(false)
 
   const tasks: DailyTask[] = [
     {
@@ -79,7 +85,7 @@ export function DailyPractice() {
     switch (selectedTask) {
       case 'spelling':
         return (
-          <div>
+          <>
             <Button
               onClick={handleBackToTasks}
               variant="outline"
@@ -88,9 +94,34 @@ export function DailyPractice() {
               ← Back to Tasks
             </Button>
             <SpellingBee />
+          </>
+        )
+      case 'reading':
+        return (
+          <div>
+            <Button
+              onClick={handleBackToTasks}
+              variant="outline"
+              className="mb-4"
+            >
+              ← Back to Tasks
+            </Button>
+            <Reading />
           </div>
         )
-      // Add other task components here
+      case 'idiom':
+        return (
+          <>
+            <Button
+              onClick={handleBackToTasks}
+              variant="outline"
+              className="mb-4"
+            >
+              ← Back to Tasks
+            </Button>
+            <Idiom />
+          </>
+        )
       default:
         return null
     }
@@ -154,17 +185,27 @@ export function DailyPractice() {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
-        <Button
-          size="lg"
-          className="bg-green-600 hover:bg-green-700"
-          disabled={!allTasksCompleted}
-          onClick={() => navigate({ to: '/progress' })}
-        >
-          <CheckCircle className="w-5 h-5 mr-2" />
-          Done for Today
-        </Button>
-      </div>
+      {allTasksCompleted && (
+        <div className="mt-8 text-center space-y-4">
+          <Button
+            size="lg"
+            className="bg-green-600 hover:bg-green-700"
+            onClick={() => navigate({ to: '/progress' })}
+          >
+            <CheckCircle className="w-5 h-5 mr-2" />
+            Done for Today
+          </Button>
+
+          <div>
+            <Link
+              to="/practice"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700"
+            >
+              Want to practice more? <ChevronRight className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+        </div>
+      )}
 
       <div className="mt-12 p-6 bg-blue-50 rounded-lg">
         <h2 className="text-xl font-semibold mb-4">Today's Progress</h2>
@@ -186,7 +227,6 @@ export function DailyPractice() {
           </div>
         </div>
 
-        {/* Achievements */}
         {progress.achievements && progress.achievements.length > 0 && (
           <div className="mt-6">
             <h3 className="font-semibold mb-3">Recent Achievements</h3>

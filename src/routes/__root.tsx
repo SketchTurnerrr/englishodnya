@@ -2,20 +2,26 @@ import {
   HeadContent,
   Outlet,
   Scripts,
-  createRootRoute,
+  createRootRouteWithContext,
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { ConvexReactClient } from 'convex/react'
 import { ConvexAuthProvider } from '@convex-dev/auth/react'
 
-import Header from '../components/Header'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 import appCss from '@/styles/app.css?url'
 import { Toaster } from '@/components/ui/sonner'
+import { NotFound } from '@/components/NotFound'
+import { DefaultCatchBoundary } from '@/components/DefaultCatchBoundary'
+import type { QueryClient } from '@tanstack/react-query'
+import { seo } from '@/lib/seo'
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string)
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient
+}>()({
   head: () => ({
     meta: [
       {
@@ -25,38 +31,69 @@ export const Route = createRootRoute({
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
-      {
-        title: 'TanStack Start Starter',
-      },
+      ...seo({
+        title:
+          'TanStack Start | Type-Safe, Client-First, Full-Stack React Framework',
+        description: `TanStack Start is a type-safe, client-first, full-stack React framework. `,
+      }),
     ],
     links: [
+      { rel: 'stylesheet', href: appCss },
       {
-        rel: 'stylesheet',
-        href: appCss,
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
       },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+      { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
+      { rel: 'icon', href: '/favicon.ico' },
     ],
   }),
+  errorComponent: (props) => {
+    return (
+      <RootDocument>
+        <DefaultCatchBoundary {...props} />
+      </RootDocument>
+    )
+  },
+  notFoundComponent: () => <NotFound />,
 
-  component: () => (
-    <RootDocument>
-      <Header />
-      <ConvexAuthProvider client={convex}>
-        <Outlet />
-      </ConvexAuthProvider>
-      <TanStackRouterDevtools />
-    </RootDocument>
-  ),
+  component: RootComponent,
 })
+
+function RootComponent() {
+  return (
+    <RootDocument>
+      <Outlet />
+    </RootDocument>
+  )
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html>
       <head>
         <HeadContent />
       </head>
       <body>
-        {children}
-        <Toaster />
+        <ConvexAuthProvider client={convex}>
+          {children}
+          <Toaster />
+        </ConvexAuthProvider>
+        <TanStackRouterDevtools />
+        <ReactQueryDevtools />
+
         <Scripts />
       </body>
     </html>

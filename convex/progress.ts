@@ -183,7 +183,6 @@ async function updateStreak(ctx: any, userId: Id<'users'>) {
 export const getUserProgress = query({
   handler: async (ctx) => {
     const userId = await getAuthUserId(ctx)
-    console.log('userId :', userId)
     if (!userId) {
       throw new Error('Not unauthorized')
     }
@@ -192,7 +191,6 @@ export const getUserProgress = query({
       .query('users')
       .filter((q) => q.eq(q.field('_id'), userId))
       .first()
-    console.log('user :', user)
 
     if (!user) {
       throw new Error('User not found')

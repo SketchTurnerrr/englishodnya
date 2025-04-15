@@ -14,6 +14,9 @@ importers:
       '@convex-dev/auth':
         specifier: ^0.0.81
         version: 0.0.81(@auth/core@0.38.0)(convex@1.23.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+      '@convex-dev/react-query':
+        specifier: 0.0.0-alpha.8
+        version: 0.0.0-alpha.8(@tanstack/react-query@5.74.3(react@19.1.0))(convex@1.23.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@radix-ui/react-slot':
         specifier: ^1.2.0
         version: 1.2.0(@types/react@19.1.1)(react@19.1.0)
@@ -23,6 +26,12 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.0.6
         version: 4.1.4(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+      '@tanstack/react-query':
+        specifier: ^5.74.3
+        version: 5.74.3(react@19.1.0)
+      '@tanstack/react-query-devtools':
+        specifier: ^5.74.3
+        version: 5.74.3(@tanstack/react-query@5.74.3(react@19.1.0))(react@19.1.0)
       '@tanstack/react-router':
         specifier: ^1.114.3
         version: 1.116.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -30,7 +39,7 @@ importers:
         specifier: ^1.114.3
         version: 1.116.0(@tanstack/react-router@1.116.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.115.3)(csstype@3.1.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tiny-invariant@1.3.3)
       '@tanstack/react-router-with-query':
-        specifier: ^1.114.3
+        specifier: ^1.116.0
         version: 1.116.0(@tanstack/react-query@5.74.3(react@19.1.0))(@tanstack/react-router@1.116.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@tanstack/router-core@1.115.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tanstack/react-start':
         specifier: ^1.114.3
@@ -257,6 +266,12 @@ packages:
     peerDependenciesMeta:
       react:
         optional: true
+
+  '@convex-dev/react-query@0.0.0-alpha.8':
+    resolution: {integrity: sha512-Rv/q7/CplU75f7ckBd2vh+HoeeQ0tOrjwMl14Hk7D/03e55oUIU0TV5JYYzC79ZQyyAtoj7CmCo5ZxcmtKNv1Q==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.0.0
+      convex: ^1.17.0
 
   '@cspell/cspell-bundled-dicts@8.18.1':
     resolution: {integrity: sha512-gxciVVfQqCVXYH0p2Q5D7x7/SgaW3Wv5UjRwO+TCme0P2lVLl/IcfjkujZX+6UQkT7X4QRglXo1QN141UcCRCQ==}
@@ -1852,6 +1867,15 @@ packages:
 
   '@tanstack/query-core@5.74.3':
     resolution: {integrity: sha512-Mqk+5o3qTuAiZML248XpNH8r2cOzl15+LTbUsZQEwvSvn1GU4VQhvqzAbil36p+MBxpr/58oBSnRzhrBevDhfg==}
+
+  '@tanstack/query-devtools@5.73.3':
+    resolution: {integrity: sha512-hBQyYwsOuO7QOprK75NzfrWs/EQYjgFA0yykmcvsV62q0t6Ua97CU3sYgjHx0ZvxkXSOMkY24VRJ5uv9f5Ik4w==}
+
+  '@tanstack/react-query-devtools@5.74.3':
+    resolution: {integrity: sha512-H7TsOBB1fRCuuawrBzKMoIszqqILr2IN5oGLYMl7QG7ERJpMdc4hH8OwzBhVxJnmKeGwgtTQgcdKepfoJCWvFg==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.74.3
+      react: ^18 || ^19
 
   '@tanstack/react-query@5.74.3':
     resolution: {integrity: sha512-QrycUn0wxjVPzITvQvOxFRdhlAwIoOQSuav7qWD4SWCoKCdLbyRZ2vji2GuBq/glaxbF4wBx3fqcYRDOt8KDTA==}
@@ -4833,6 +4857,11 @@ snapshots:
     optionalDependencies:
       react: 19.1.0
 
+  '@convex-dev/react-query@0.0.0-alpha.8(@tanstack/react-query@5.74.3(react@19.1.0))(convex@1.23.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+    dependencies:
+      '@tanstack/react-query': 5.74.3(react@19.1.0)
+      convex: 1.23.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+
   '@cspell/cspell-bundled-dicts@8.18.1':
     dependencies:
       '@cspell/dict-ada': 4.1.0
@@ -6024,6 +6053,14 @@ snapshots:
   '@tanstack/history@1.115.0': {}
 
   '@tanstack/query-core@5.74.3': {}
+
+  '@tanstack/query-devtools@5.73.3': {}
+
+  '@tanstack/react-query-devtools@5.74.3(@tanstack/react-query@5.74.3(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@tanstack/query-devtools': 5.73.3
+      '@tanstack/react-query': 5.74.3(react@19.1.0)
+      react: 19.1.0
 
   '@tanstack/react-query@5.74.3(react@19.1.0)':
     dependencies:

@@ -38,7 +38,7 @@ function App() {
         </div>
       </nav>
 
-      <main className="py-10">
+      <main className="py-10 container mx-auto">
         <DailyPractice />
       </main>
 
