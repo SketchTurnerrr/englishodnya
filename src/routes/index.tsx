@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import logo from '../logo.svg'
+import { DailyPractice } from '@/components/features/daily-practice/DailyPractice'
 
 export const Route = createFileRoute('/')({
   component: App,
@@ -7,33 +7,48 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div className="text-center">
-      <header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]">
-        <img
-          src={logo}
-          className="h-[40vmin] pointer-events-none animate-[spin_20s_linear_infinite]"
-          alt="logo"
-        />
-        <p>
-          Edit <code>src/routes/index.tsx</code> and save to reload.
-        </p>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://tanstack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn TanStack
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16 items-center">
+            <div className="flex-shrink-0">
+              <h1 className="text-xl font-bold text-blue-600">EnglishOdnya</h1>
+            </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a
+                href="/"
+                className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-blue-500"
+              >
+                Daily Practice
+              </a>
+              <a
+                href="/progress"
+                className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 border-transparent"
+              >
+                Progress
+              </a>
+              <a
+                href="/community"
+                className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 border-transparent"
+              >
+                Community
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main className="py-10">
+        <DailyPractice />
+      </main>
+
+      <footer className="bg-white mt-auto">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-500 text-sm">
+            "Learn English a Little Every Day" - Consistency Over Intensity
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
