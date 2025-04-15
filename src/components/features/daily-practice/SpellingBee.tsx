@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Volume2, Check, X, Trophy } from 'lucide-react'
 import { type Word, spellingWords } from '@/data/spelling-words'
+import { useMutation } from 'convex/react'
+import { api } from '../../../../convex/_generated/api'
 
 export function SpellingBee() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<
@@ -12,6 +14,9 @@ export function SpellingBee() {
   const [showResult, setShowResult] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [score, setScore] = useState({ correct: 0, total: 0 })
+
+  const recordAttempt = useMutation(api.progress.recordSpellingAttempt)
+  const updateProgress = useMutation(api.progress.updateDailyProgress)
 
   const getRandomWord = (difficulty: 'easy' | 'medium' | 'hard') => {
     const words = spellingWords.filter((word) => word.difficulty === difficulty)
@@ -25,7 +30,7 @@ export function SpellingBee() {
     setShowResult(false)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (currentWord) {
       const correct = userInput.toLowerCase() === currentWord.word.toLowerCase()
@@ -35,6 +40,21 @@ export function SpellingBee() {
         correct: prev.correct + (correct ? 1 : 0),
         total: prev.total + 1,
       }))
+
+      // Record the attempt in Convex
+      await recordAttempt({
+        word: currentWord.word,
+        correct,
+        difficulty: selectedDifficulty,
+      })
+
+      // If they've completed at least 5 words, mark the spelling task as complete
+      if (score.total >= 4) {
+        await updateProgress({
+          taskId: 'spelling',
+          completed: true,
+        })
+      }
     }
   }
 
@@ -69,6 +89,19 @@ export function SpellingBee() {
             Score: {score.correct}/{score.total}
           </span>
         </div>
+      </div>
+
+      {/* Progress Indicator */}
+      <div className="mb-4">
+        <div className="w-full bg-gray-200 rounded-full h-2">
+          <div
+            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+            style={{ width: `${Math.min((score.total / 5) * 100, 100)}%` }}
+          />
+        </div>
+        <p className="text-sm text-gray-600 mt-1">
+          Complete 5 words to finish today's practice
+        </p>
       </div>
 
       {/* Difficulty Selection */}

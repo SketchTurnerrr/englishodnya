@@ -1,41 +1,60 @@
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
-import { Calendar, CheckCircle, BookOpen, Play, Mic, Award } from 'lucide-react'
+import { useState, type JSX } from 'react'
+import {
+  Calendar,
+  CheckCircle,
+  BookOpen,
+  Play,
+  Mic,
+  Award,
+  Trophy,
+  Loader2,
+} from 'lucide-react'
 import { SpellingBee } from './SpellingBee'
+import { useQuery, useMutation } from 'convex/react'
+import { api } from '~/_generated/api'
+import { useNavigate } from '@tanstack/react-router'
 
 interface DailyTask {
   id: string
   title: string
   completed: boolean
+  icon: JSX.Element
 }
 
 export function DailyPractice() {
-  const [tasks, setTasks] = useState<DailyTask[]>([
-    { id: 'reading', title: "Read Today's Text", completed: false },
-    { id: 'video', title: 'Watch Daily Video', completed: false },
-    { id: 'spelling', title: 'Spelling Challenge', completed: false },
-    { id: 'idiom', title: "Learn Today's Idiom", completed: false },
-  ])
+  const progress = useQuery(api.progress.getUserProgress)
+  const updateProgress = useMutation(api.progress.updateDailyProgress)
+  const navigate = useNavigate()
 
-  const [streak, setStreak] = useState(0)
   const [selectedTask, setSelectedTask] = useState<string | null>(null)
 
-  const handleTaskComplete = (taskId: string) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === taskId ? { ...task, completed: true } : task,
-      ),
-    )
-
-    // Check if all tasks are completed
-    const updatedTasks = tasks.map((task) =>
-      task.id === taskId ? { ...task, completed: true } : task,
-    )
-
-    if (updatedTasks.every((task) => task.completed)) {
-      setStreak((prev) => prev + 1)
-    }
-  }
+  const tasks: DailyTask[] = [
+    {
+      id: 'reading',
+      title: "Read Today's Text",
+      completed: progress?.todayProgress?.readingCompleted ?? false,
+      icon: <BookOpen className="w-5 h-5" />,
+    },
+    {
+      id: 'video',
+      title: 'Watch Daily Video',
+      completed: progress?.todayProgress?.videoCompleted ?? false,
+      icon: <Play className="w-5 h-5" />,
+    },
+    {
+      id: 'spelling',
+      title: 'Spelling Challenge',
+      completed: (progress?.todayProgress?.spellingScore ?? 0) > 5,
+      icon: <Award className="w-5 h-5" />,
+    },
+    {
+      id: 'idiom',
+      title: "Learn Today's Idiom",
+      completed: progress?.todayProgress?.idiomCompleted ?? false,
+      icon: <Mic className="w-5 h-5" />,
+    },
+  ]
 
   const handleTaskSelect = (taskId: string) => {
     setSelectedTask(taskId)
@@ -43,6 +62,17 @@ export function DailyPractice() {
 
   const handleBackToTasks = () => {
     setSelectedTask(null)
+  }
+
+  const handleTaskComplete = async (taskId: string) => {
+    try {
+      await updateProgress({
+        taskId,
+        completed: true,
+      })
+    } catch (error) {
+      console.error('Failed to update task progress:', error)
+    }
   }
 
   const renderTaskContent = () => {
@@ -70,6 +100,16 @@ export function DailyPractice() {
     return renderTaskContent()
   }
 
+  if (!progress) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <Loader2 className="w-8 h-8 animate-spin" />
+      </div>
+    )
+  }
+
+  const allTasksCompleted = tasks.every((task) => task.completed)
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="mb-8 text-center">
@@ -77,7 +117,9 @@ export function DailyPractice() {
         <p className="text-gray-600">Consistency Over Intensity</p>
         <div className="flex items-center justify-center gap-2 mt-4">
           <Calendar className="w-5 h-5" />
-          <span className="font-semibold">Current Streak: {streak} days</span>
+          <span className="font-semibold">
+            Current Streak: {progress.streak || 0} days
+          </span>
         </div>
       </div>
 
@@ -92,7 +134,10 @@ export function DailyPractice() {
             }`}
           >
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold">{task.title}</h3>
+              <div className="flex items-center gap-3">
+                {task.icon}
+                <h3 className="text-lg font-semibold">{task.title}</h3>
+              </div>
               <Button
                 onClick={() => handleTaskSelect(task.id)}
                 disabled={task.completed}
@@ -113,7 +158,8 @@ export function DailyPractice() {
         <Button
           size="lg"
           className="bg-green-600 hover:bg-green-700"
-          disabled={!tasks.every((task) => task.completed)}
+          disabled={!allTasksCompleted}
+          onClick={() => navigate({ to: '/progress' })}
         >
           <CheckCircle className="w-5 h-5 mr-2" />
           Done for Today
@@ -125,7 +171,7 @@ export function DailyPractice() {
         <div className="grid gap-4 md:grid-cols-3">
           <div className="flex items-center gap-2">
             <Award className="w-5 h-5 text-blue-500" />
-            <span>Streak: {streak} days</span>
+            <span>Streak: {progress.streak || 0} days</span>
           </div>
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-blue-500" />
@@ -134,7 +180,29 @@ export function DailyPractice() {
               {tasks.length}
             </span>
           </div>
+          <div className="flex items-center gap-2">
+            <Calendar className="w-5 h-5 text-blue-500" />
+            <span>Total Practice: {progress.totalPractice || 0} days</span>
+          </div>
         </div>
+
+        {/* Achievements */}
+        {progress.achievements && progress.achievements.length > 0 && (
+          <div className="mt-6">
+            <h3 className="font-semibold mb-3">Recent Achievements</h3>
+            <div className="flex flex-wrap gap-2">
+              {progress.achievements.map((achievement: any) => (
+                <div
+                  key={achievement._id}
+                  className="bg-white px-3 py-1 rounded-full text-sm flex items-center gap-1"
+                >
+                  <Trophy className="w-4 h-4 text-yellow-500" />
+                  {achievement.type}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

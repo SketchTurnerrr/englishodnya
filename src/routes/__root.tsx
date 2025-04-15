@@ -5,10 +5,15 @@ import {
   createRootRoute,
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { ConvexReactClient } from 'convex/react'
+import { ConvexAuthProvider } from '@convex-dev/auth/react'
 
 import Header from '../components/Header'
 
 import appCss from '@/styles/app.css?url'
+import { Toaster } from '@/components/ui/sonner'
+
+const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string)
 
 export const Route = createRootRoute({
   head: () => ({
@@ -35,8 +40,9 @@ export const Route = createRootRoute({
   component: () => (
     <RootDocument>
       <Header />
-
-      <Outlet />
+      <ConvexAuthProvider client={convex}>
+        <Outlet />
+      </ConvexAuthProvider>
       <TanStackRouterDevtools />
     </RootDocument>
   ),
@@ -50,6 +56,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Toaster />
         <Scripts />
       </body>
     </html>
