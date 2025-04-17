@@ -14,11 +14,8 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as SignUpImport } from './routes/sign-up'
 import { Route as SignInImport } from './routes/sign-in'
 import { Route as ProgressImport } from './routes/progress'
+import { Route as DailyImport } from './routes/daily'
 import { Route as IndexImport } from './routes/index'
-import { Route as PracticeIndexImport } from './routes/practice/index'
-import { Route as PracticeSpellingImport } from './routes/practice/spelling'
-import { Route as PracticeReadingImport } from './routes/practice/reading'
-import { Route as PracticeIdiomsImport } from './routes/practice/idioms'
 import { Route as DemoStartServerFuncsImport } from './routes/demo.start.server-funcs'
 
 // Create/Update Routes
@@ -41,33 +38,15 @@ const ProgressRoute = ProgressImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const DailyRoute = DailyImport.update({
+  id: '/daily',
+  path: '/daily',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PracticeIndexRoute = PracticeIndexImport.update({
-  id: '/practice/',
-  path: '/practice/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PracticeSpellingRoute = PracticeSpellingImport.update({
-  id: '/practice/spelling',
-  path: '/practice/spelling',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PracticeReadingRoute = PracticeReadingImport.update({
-  id: '/practice/reading',
-  path: '/practice/reading',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PracticeIdiomsRoute = PracticeIdiomsImport.update({
-  id: '/practice/idioms',
-  path: '/practice/idioms',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -86,6 +65,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/daily': {
+      id: '/daily'
+      path: '/daily'
+      fullPath: '/daily'
+      preLoaderRoute: typeof DailyImport
       parentRoute: typeof rootRoute
     }
     '/progress': {
@@ -109,34 +95,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SignUpImport
       parentRoute: typeof rootRoute
     }
-    '/practice/idioms': {
-      id: '/practice/idioms'
-      path: '/practice/idioms'
-      fullPath: '/practice/idioms'
-      preLoaderRoute: typeof PracticeIdiomsImport
-      parentRoute: typeof rootRoute
-    }
-    '/practice/reading': {
-      id: '/practice/reading'
-      path: '/practice/reading'
-      fullPath: '/practice/reading'
-      preLoaderRoute: typeof PracticeReadingImport
-      parentRoute: typeof rootRoute
-    }
-    '/practice/spelling': {
-      id: '/practice/spelling'
-      path: '/practice/spelling'
-      fullPath: '/practice/spelling'
-      preLoaderRoute: typeof PracticeSpellingImport
-      parentRoute: typeof rootRoute
-    }
-    '/practice/': {
-      id: '/practice/'
-      path: '/practice'
-      fullPath: '/practice'
-      preLoaderRoute: typeof PracticeIndexImport
-      parentRoute: typeof rootRoute
-    }
     '/demo/start/server-funcs': {
       id: '/demo/start/server-funcs'
       path: '/demo/start/server-funcs'
@@ -151,38 +109,29 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/daily': typeof DailyRoute
   '/progress': typeof ProgressRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
-  '/practice/idioms': typeof PracticeIdiomsRoute
-  '/practice/reading': typeof PracticeReadingRoute
-  '/practice/spelling': typeof PracticeSpellingRoute
-  '/practice': typeof PracticeIndexRoute
   '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/daily': typeof DailyRoute
   '/progress': typeof ProgressRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
-  '/practice/idioms': typeof PracticeIdiomsRoute
-  '/practice/reading': typeof PracticeReadingRoute
-  '/practice/spelling': typeof PracticeSpellingRoute
-  '/practice': typeof PracticeIndexRoute
   '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/daily': typeof DailyRoute
   '/progress': typeof ProgressRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
-  '/practice/idioms': typeof PracticeIdiomsRoute
-  '/practice/reading': typeof PracticeReadingRoute
-  '/practice/spelling': typeof PracticeSpellingRoute
-  '/practice/': typeof PracticeIndexRoute
   '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
@@ -190,60 +139,45 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/daily'
     | '/progress'
     | '/sign-in'
     | '/sign-up'
-    | '/practice/idioms'
-    | '/practice/reading'
-    | '/practice/spelling'
-    | '/practice'
     | '/demo/start/server-funcs'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/daily'
     | '/progress'
     | '/sign-in'
     | '/sign-up'
-    | '/practice/idioms'
-    | '/practice/reading'
-    | '/practice/spelling'
-    | '/practice'
     | '/demo/start/server-funcs'
   id:
     | '__root__'
     | '/'
+    | '/daily'
     | '/progress'
     | '/sign-in'
     | '/sign-up'
-    | '/practice/idioms'
-    | '/practice/reading'
-    | '/practice/spelling'
-    | '/practice/'
     | '/demo/start/server-funcs'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DailyRoute: typeof DailyRoute
   ProgressRoute: typeof ProgressRoute
   SignInRoute: typeof SignInRoute
   SignUpRoute: typeof SignUpRoute
-  PracticeIdiomsRoute: typeof PracticeIdiomsRoute
-  PracticeReadingRoute: typeof PracticeReadingRoute
-  PracticeSpellingRoute: typeof PracticeSpellingRoute
-  PracticeIndexRoute: typeof PracticeIndexRoute
   DemoStartServerFuncsRoute: typeof DemoStartServerFuncsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DailyRoute: DailyRoute,
   ProgressRoute: ProgressRoute,
   SignInRoute: SignInRoute,
   SignUpRoute: SignUpRoute,
-  PracticeIdiomsRoute: PracticeIdiomsRoute,
-  PracticeReadingRoute: PracticeReadingRoute,
-  PracticeSpellingRoute: PracticeSpellingRoute,
-  PracticeIndexRoute: PracticeIndexRoute,
   DemoStartServerFuncsRoute: DemoStartServerFuncsRoute,
 }
 
@@ -258,18 +192,18 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/daily",
         "/progress",
         "/sign-in",
         "/sign-up",
-        "/practice/idioms",
-        "/practice/reading",
-        "/practice/spelling",
-        "/practice/",
         "/demo/start/server-funcs"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/daily": {
+      "filePath": "daily.tsx"
     },
     "/progress": {
       "filePath": "progress.tsx"
@@ -279,18 +213,6 @@ export const routeTree = rootRoute
     },
     "/sign-up": {
       "filePath": "sign-up.tsx"
-    },
-    "/practice/idioms": {
-      "filePath": "practice/idioms.tsx"
-    },
-    "/practice/reading": {
-      "filePath": "practice/reading.tsx"
-    },
-    "/practice/spelling": {
-      "filePath": "practice/spelling.tsx"
-    },
-    "/practice/": {
-      "filePath": "practice/index.tsx"
     },
     "/demo/start/server-funcs": {
       "filePath": "demo.start.server-funcs.tsx"

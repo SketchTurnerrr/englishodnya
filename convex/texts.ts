@@ -23,9 +23,12 @@ export const getRandomText = query({
   args: {
     excludeId: v.optional(v.id('texts')), // Optionally exclude the daily text
     cacheBuster: v.number(),
+    difficulty: v.optional(v.string()),
   },
-  handler: async (ctx, { excludeId }) => {
-    let texts = await ctx.db.query('texts').collect()
+  handler: async (ctx, { excludeId, difficulty }) => {
+    let texts = await (
+      await ctx.db.query('texts').collect()
+    ).filter((text) => text.difficulty === difficulty)
     if (texts.length === 0) return null
 
     // Exclude the specified text if provided
@@ -40,9 +43,6 @@ export const getRandomText = query({
 })
 
 export const markTextAsRead = mutation({
-  args: {
-    textId: v.id('texts'),
-  },
   handler: async (ctx) => {
     const userId = await getAuthUserId(ctx)
     if (!userId) throw new Error('Not authenticated')

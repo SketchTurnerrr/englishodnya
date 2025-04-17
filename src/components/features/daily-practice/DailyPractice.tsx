@@ -11,14 +11,17 @@ import {
   Loader2,
   ChevronDown,
   ChevronRight,
+  CheckCheck,
+  CircleCheck,
+  Lamp,
+  Lightbulb,
 } from 'lucide-react'
 import { SpellingBee } from './SpellingBee'
-import { Reading } from './Reading'
 import { Idiom } from './Idiom'
-import { PracticeMore } from './PracticeMore'
 import { useQuery, useMutation } from 'convex/react'
 import { api } from '~/_generated/api'
 import { useNavigate, Link } from '@tanstack/react-router'
+import { PracticeReading } from './PracticeReading'
 
 interface DailyTask {
   id: string
@@ -38,27 +41,27 @@ export function DailyPractice() {
   const tasks: DailyTask[] = [
     {
       id: 'reading',
-      title: "Read Today's Text",
+      title: 'Тексти',
       completed: progress?.todayProgress?.readingCompleted ?? false,
-      icon: <BookOpen className="w-5 h-5" />,
+      icon: <BookOpen className="size-5" />,
     },
-    {
-      id: 'video',
-      title: 'Watch Daily Video',
-      completed: progress?.todayProgress?.videoCompleted ?? false,
-      icon: <Play className="w-5 h-5" />,
-    },
+    // {
+    //   id: 'video',
+    //   title: 'Watch Daily Video',
+    //   completed: progress?.todayProgress?.videoCompleted ?? false,
+    //   icon: <Play className="size-5" />,
+    // },
     {
       id: 'spelling',
-      title: 'Spelling Challenge',
+      title: 'Spelling Bee',
       completed: (progress?.todayProgress?.spellingScore ?? 0) > 5,
-      icon: <Award className="w-5 h-5" />,
+      icon: <img src="/bee.svg" className="size-5 text-yellow-400" />,
     },
     {
       id: 'idiom',
-      title: "Learn Today's Idiom",
+      title: 'Ідіоми',
       completed: progress?.todayProgress?.idiomCompleted ?? false,
-      icon: <Mic className="w-5 h-5" />,
+      icon: <Lightbulb className="size-5" />,
     },
   ]
 
@@ -91,23 +94,23 @@ export function DailyPractice() {
               variant="outline"
               className="mb-4"
             >
-              ← Back to Tasks
+              ← Повернутись до завдань
             </Button>
             <SpellingBee />
           </>
         )
       case 'reading':
         return (
-          <div>
+          <>
             <Button
               onClick={handleBackToTasks}
               variant="outline"
               className="mb-4"
             >
-              ← Back to Tasks
+              ← Повернутись до завдань
             </Button>
-            <Reading />
-          </div>
+            <PracticeReading />
+          </>
         )
       case 'idiom':
         return (
@@ -117,7 +120,7 @@ export function DailyPractice() {
               variant="outline"
               className="mb-4"
             >
-              ← Back to Tasks
+              ← Повернутись до завдань
             </Button>
             <Idiom />
           </>
@@ -128,7 +131,9 @@ export function DailyPractice() {
   }
 
   if (selectedTask) {
-    return renderTaskContent()
+    return (
+      <div className="max-w-4xl mx-auto p-6 mb-20">{renderTaskContent()}</div>
+    )
   }
 
   if (!progress) {
@@ -145,7 +150,6 @@ export function DailyPractice() {
     <div className="max-w-4xl mx-auto p-6">
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">Daily English Practice</h1>
-        <p className="text-gray-600">Consistency Over Intensity</p>
         <div className="flex items-center justify-center gap-2 mt-4">
           <Calendar className="w-5 h-5" />
           <span className="font-semibold">
@@ -154,7 +158,7 @@ export function DailyPractice() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-1">
         {tasks.map((task) => (
           <div
             key={task.id}
@@ -170,12 +174,14 @@ export function DailyPractice() {
                 <h3 className="text-lg font-semibold">{task.title}</h3>
               </div>
               <Button
+                className="bg-green-700 hover:bg-green-800 cursor-pointer"
                 onClick={() => handleTaskSelect(task.id)}
-                disabled={task.completed}
-                variant={task.completed ? 'ghost' : 'default'}
               >
                 {task.completed ? (
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <>
+                    Review
+                    <CircleCheck className="size-6 " />
+                  </>
                 ) : (
                   'Start'
                 )}
@@ -195,15 +201,6 @@ export function DailyPractice() {
             <CheckCircle className="w-5 h-5 mr-2" />
             Done for Today
           </Button>
-
-          <div>
-            <Link
-              to="/practice"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700"
-            >
-              Want to practice more? <ChevronRight className="w-4 h-4 ml-1" />
-            </Link>
-          </div>
         </div>
       )}
 

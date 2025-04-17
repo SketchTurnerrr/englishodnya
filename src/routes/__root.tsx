@@ -16,6 +16,7 @@ import { NotFound } from '@/components/NotFound'
 import { DefaultCatchBoundary } from '@/components/DefaultCatchBoundary'
 import type { QueryClient } from '@tanstack/react-query'
 import { seo } from '@/lib/seo'
+import Header from '@/components/Header'
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string)
 
@@ -75,6 +76,7 @@ export const Route = createRootRouteWithContext<{
 function RootComponent() {
   return (
     <RootDocument>
+      <Header />
       <Outlet />
     </RootDocument>
   )
@@ -86,7 +88,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="h-screen">
         <ConvexAuthProvider client={convex}>
           {children}
           <Toaster />

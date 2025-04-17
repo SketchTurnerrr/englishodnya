@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { BookOpen, Award, Mic } from 'lucide-react'
 import { PracticeReading } from './PracticeReading'
 import { SpellingBee } from './SpellingBee'
-import { PracticeIdiom } from './PracticeIdiom'
+import { Idiom } from './Idiom'
 
 type ActivityType = 'reading' | 'spelling' | 'idiom' | null
 
@@ -72,7 +72,7 @@ export function PracticeMore() {
             >
               ← Back to Activities
             </Button>
-            <PracticeIdiom />
+            <Idiom />
           </>
         )
       default:

@@ -3,12 +3,22 @@ import { Button } from '@/components/ui/button'
 import { Loader2, BookOpen, ChevronRight } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { randomTextQuery } from '@/queries'
+import {
+  DifficultySelector,
+  type Difficulty,
+} from '@/components/DifficultySelector'
+import { api } from '~/_generated/api'
+import { useQuery as convexQuery, useMutation } from 'convex/react'
 
 export function PracticeReading() {
   const [cacheBuster, rerunQuery] = useState(0)
+  const [difficulty, setDifficulty] = useState<Difficulty>('easy')
+  const progress = convexQuery(api.progress.getUserProgress)
+  const markAsRead = useMutation(api.texts.markTextAsRead)
 
-  const { data: randomText } = useQuery(randomTextQuery.list(cacheBuster))
-  const [isReading, setIsReading] = useState(false)
+  const { data: randomText } = useQuery(
+    randomTextQuery.list(cacheBuster, difficulty),
+  )
   const [readTexts, setReadTexts] = useState<string[]>([])
 
   if (!randomText) {
@@ -19,36 +29,27 @@ export function PracticeReading() {
     )
   }
 
-  const handleNextText = () => {
+  const handleNextText = async () => {
+    if (!progress?.todayProgress?.readingCompleted) {
+      try {
+        await markAsRead()
+      } catch (error) {
+        console.error('Failed to mark text as read:', error)
+      }
+    }
+
     rerunQuery(Math.random())
     setReadTexts((prev) => [...prev, randomText._id])
-    setIsReading(false)
-  }
-
-  if (!isReading) {
-    return (
-      <div className="text-center max-w-2xl mx-auto">
-        <BookOpen className="w-12 h-12 mx-auto mb-4 text-blue-500" />
-        <h2 className="text-2xl font-bold mb-4">{randomText.title}</h2>
-        <p className="text-gray-600 mb-6">
-          This text is about {randomText.category.toLowerCase()}. Take your time
-          to read and understand it.
-        </p>
-        <Button onClick={() => setIsReading(true)} size="lg">
-          Start Reading
-        </Button>
-        {readTexts.length > 0 && (
-          <p className="text-sm text-gray-500 mt-4">
-            You've read {readTexts.length} additional text
-            {readTexts.length !== 1 ? 's' : ''} today!
-          </p>
-        )}
-      </div>
-    )
   }
 
   return (
     <div className="max-w-2xl mx-auto">
+      <DifficultySelector
+        currentDifficulty={difficulty}
+        onChange={(newDifficulty) => {
+          setDifficulty(newDifficulty)
+        }}
+      />
       <h2 className="text-2xl font-bold mb-4">{randomText.title}</h2>
       <div className="prose prose-blue max-w-none mb-8 space-y-4  ">
         {randomText.content.split('\n').map((paragraph, index) => (
@@ -58,14 +59,17 @@ export function PracticeReading() {
 
       <div className="flex justify-center">
         <Button onClick={handleNextText} size="lg">
-          Read Another Text <ChevronRight className="w-4 h-4 ml-2" />
+          {progress?.todayProgress?.readingCompleted ? 'Читати ще' : 'Готово'}
         </Button>
       </div>
 
       {readTexts.length > 0 && (
         <p className="text-sm text-gray-500 text-center mt-4">
-          You've read {readTexts.length} additional text
-          {readTexts.length !== 1 ? 's' : ''} today!
+          Ти прочитав{' '}
+          {readTexts.length === 1
+            ? `${readTexts.length} текст `
+            : `${readTexts.length} тексти `}
+          за сьогодні!
         </p>
       )}
     </div>
