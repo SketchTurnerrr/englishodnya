@@ -20,12 +20,13 @@ import {
 } from '@/app/components/ui/card';
 import Link from 'next/link';
 import { useStoreUserEffect } from '@/lib/useStoreUserEffect';
+import Image from 'next/image';
 
 export default function Home() {
   const { isAuthenticated } = useStoreUserEffect();
   console.log('isAuthenticated :', isAuthenticated);
   return (
-    <div className="flex min-h-screen flex-col ">
+    <div className="flex min-h-[calc(100vh_-_65px)] flex-col ">
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 lg:py-36 overflow-hidden">
@@ -53,12 +54,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative lg:ml-auto">
-                <img
-                  src="https://kzmoqf5hnwhpl2hrcxv5.lite.vusercontent.net/placeholder.svg?height=400&width=400"
+                <Image
+                  src="/hero.png"
                   alt="English mentoring illustration"
-                  width={500}
-                  height={500}
+                  width={800}
+                  height={800}
                   className="mx-auto rounded-lg object-cover"
+                  priority
                 />
               </div>
             </div>
@@ -73,19 +75,15 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Our Philosophy
                 </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We believe in the power of small, consistent actions over
-                  time.
-                </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <img
-                src="https://kzmoqf5hnwhpl2hrcxv5.lite.vusercontent.net/placeholder.svg?height=400&width=400"
-                width={400}
-                height={400}
+              <Image
+                src="/philosophy.png"
+                width={800}
+                height={800}
                 alt="Consistent learning illustration"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto  rounded-xl sm:w-full lg:order-last"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
@@ -311,7 +309,7 @@ export default function Home() {
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <img
-                      src="/placeholder.svg?height=60&width=60"
+                      src="/vercel.svg"
                       alt="Maria"
                       width={60}
                       height={60}
@@ -336,7 +334,7 @@ export default function Home() {
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <img
-                      src="/placeholder.svg?height=60&width=60"
+                      src="/vercel.svg"
                       alt="Hiroshi"
                       width={60}
                       height={60}

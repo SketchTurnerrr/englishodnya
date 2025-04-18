@@ -17,6 +17,11 @@ export default defineSchema({
     example: v.string(),
   }),
 
+  learnedIdioms: defineTable({
+    userId: v.id('users'),
+    idiomId: v.id('idioms'),
+  }),
+
   texts: defineTable({
     title: v.string(),
     content: v.string(),

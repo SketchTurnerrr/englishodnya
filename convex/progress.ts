@@ -1,7 +1,6 @@
 import { v } from 'convex/values';
 import { mutation, MutationCtx, query } from './_generated/server';
 import type { Id } from './_generated/dataModel';
-import type { GenericMutationCtx, UserIdentity } from 'convex/server';
 
 export const recordSpellingAttempt = mutation({
   args: {
@@ -92,7 +91,10 @@ export const updateDailyProgress = mutation({
 
     console.log('dailyProgress :', dailyProgress);
     if (dailyProgress) {
-      const updates: any = {};
+      const updates: {
+        readingCompleted?: boolean;
+        idiomCompleted?: boolean;
+      } = {};
       switch (args.taskId) {
         case 'reading':
           updates.readingCompleted = args.completed;
@@ -117,7 +119,7 @@ export const updateDailyProgress = mutation({
         await updateStreak(ctx, user._id);
       }
     } else {
-      const newProgress: any = {
+      const newProgress = {
         userId: user._id,
         date: today,
         tasksCompleted: args.completed ? [args.taskId] : [],
@@ -145,7 +147,7 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
   // Check if user practiced yesterday
   const yesterdayProgress = await ctx.db
     .query('dailyProgress')
-    .filter((q: any) =>
+    .filter((q) =>
       q.and(q.eq(q.field('userId'), userId), q.eq(q.field('date'), yesterday))
     )
     .first();
@@ -222,9 +224,16 @@ export const getUserProgress = query({
       .filter((q) => q.eq(q.field('userId'), user._id))
       .collect();
 
+    const learnedIdioms = await ctx.db
+      .query('learnedIdioms')
+      .filter((q) => q.eq(q.field('userId'), user._id))
+      .collect();
+
     return {
       streak: user.currentStreak,
       totalPractice: user.totalPracticeCount,
+      totalIdiomsLearned:
+        learnedIdioms.length + (dailyProgress?.idiomCompleted ? 1 : 0),
       todayProgress: dailyProgress,
       achievements,
     };
