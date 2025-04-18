@@ -1,23 +1,15 @@
-import { defineSchema, defineTable } from 'convex/server'
-import { v } from 'convex/values'
-import { authTables } from '@convex-dev/auth/server'
+import { defineSchema, defineTable } from 'convex/server';
+import { v } from 'convex/values';
 
 export default defineSchema({
-  ...authTables,
   users: defineTable({
-    name: v.optional(v.string()),
-    image: v.optional(v.string()),
-    email: v.optional(v.string()),
-    emailVerificationTime: v.optional(v.number()),
-    phone: v.optional(v.string()),
-    phoneVerificationTime: v.optional(v.number()),
-    isAnonymous: v.optional(v.boolean()),
-    // Custom field.
+    email: v.string(),
+    tokenIdentifier: v.string(),
     currentStreak: v.optional(v.number()),
     lastPracticeDate: v.optional(v.string()), // ISO date string
     totalPracticeCount: v.optional(v.number()),
     level: v.optional(v.number()), // Current level of the user
-  }).index('by_email', ['email']),
+  }).index('by_token', ['tokenIdentifier']),
 
   idioms: defineTable({
     content: v.string(),
@@ -38,7 +30,6 @@ export default defineSchema({
     tasksCompleted: v.array(v.string()), // Array of completed task IDs
     spellingScore: v.optional(v.number()),
     readingCompleted: v.boolean(),
-    videoCompleted: v.boolean(),
     idiomCompleted: v.boolean(),
   }),
 
@@ -56,4 +47,4 @@ export default defineSchema({
     earnedAt: v.string(), // ISO date string
     description: v.string(),
   }),
-})
+});

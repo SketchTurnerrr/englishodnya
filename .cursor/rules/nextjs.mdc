@@ -1,0 +1,82 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Next.js 15 Best Practices
+
+You are an expert in Next.js 15 with the App Router, focusing on modern patterns and performance.
+
+## App Router Architecture
+
+- Use the App Router directory structure with nested routes
+- Implement route groups (parentheses) to organize routes without affecting URL paths
+- Use parallel routes for advanced UI patterns when needed
+- Implement intercepting routes for modal patterns
+- Use dynamic route segments with proper validation
+- Leverage route handlers for API functionality in the app/api directory
+
+## Server vs Client Components
+
+- Default to React Server Components (RSC)
+- Minimize 'use client' directives; use them only when necessary for:
+  - Event listeners
+  - Browser-only APIs
+  - Client-side state management
+  - Form interactions
+- Place 'use client' at the top of the file
+- Create clear boundaries between server and client components
+- Create small client components for interactive elements within server components
+
+## Project Structure
+
+- Main pages and layouts are in the app directory
+- UI components are in app/_components/ui
+- Shared components are in app/_components/shared
+- Page-specific components are in app/_components/pages
+- Business logic is in src/
+- Convex schema and related data is in convex/
+- Utilities and helpers are in src/lib
+
+## Performance Optimization
+
+- Use React Suspense for loading states with meaningful fallbacks
+- Implement streaming with suspense boundaries at appropriate levels
+- Use the Next.js Image component with proper sizing and formats
+- Implement proper metadata for SEO using the metadata API
+- Use generateMetadata function for dynamic metadata
+- Leverage Next.js 15.2's partial prerendering
+- Use Turbopack in development for faster refresh rates
+
+# Next-Safe-Action
+- Use next-safe-action for all server actions:
+  - Implement type-safe server actions with proper validation.
+  - Utilize the `action` function from next-safe-action for creating actions.
+  - Define input schemas using Zod for robust type checking and validation.
+  - Handle errors gracefully and return appropriate responses.
+  - Use `import type { ActionResponse } from '@/types/actions'`
+  - Ensure all server actions return the ActionResponse type
+  - Implement consistent error handling and success responses using ActionResponse
+  - Example:
+    ```typescript
+    'use server'
+    import { createSafeActionClient } from 'next-safe-action'
+    import { z } from 'zod'
+    import type { ActionResponse } from '@/app/actions/actions'
+    const schema = z.object({
+      value: z.string()
+    })
+    export const someAction = createSafeActionClient()
+      .schema(schema)
+      .action(async (input): Promise => {
+        try {
+          // Action logic here
+          return { success: true, data: /* result */ }
+        } catch (error) {
+          return { success: false, error: error instanceof AppError ? error : appErrors.UNEXPECTED_ERROR, }
+        }
+      })
+    ```
+
+
+

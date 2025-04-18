@@ -1,7 +1,7 @@
-import { v } from 'convex/values'
-import { mutation, query } from './_generated/server'
-import type { Id } from './_generated/dataModel'
-import { getAuthUserId } from '@convex-dev/auth/server'
+import { v } from 'convex/values';
+import { mutation, MutationCtx, query } from './_generated/server';
+import type { Id } from './_generated/dataModel';
+import type { GenericMutationCtx, UserIdentity } from 'convex/server';
 
 export const recordSpellingAttempt = mutation({
   args: {
@@ -10,18 +10,18 @@ export const recordSpellingAttempt = mutation({
     difficulty: v.string(),
   },
   handler: async (ctx, args) => {
-    const userId = await getAuthUserId(ctx)
-    if (!userId) {
-      throw new Error('Not unauthorized')
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error('Unauthenticated call to mutation');
     }
-
     const user = await ctx.db
       .query('users')
-      .filter((q) => q.eq(q.field('_id'), userId))
-      .first()
-
+      .withIndex('by_token', (q) =>
+        q.eq('tokenIdentifier', identity.tokenIdentifier)
+      )
+      .unique();
     if (!user) {
-      throw new Error('User not found')
+      throw new Error('Unauthenticated call to mutation');
     }
 
     // Record the spelling attempt
@@ -31,22 +31,22 @@ export const recordSpellingAttempt = mutation({
       correct: args.correct,
       difficulty: args.difficulty,
       attemptedAt: new Date().toISOString(),
-    })
+    });
 
     // Update daily progress
-    const today = new Date().toISOString().split('T')[0]
+    const today = new Date().toISOString().split('T')[0];
     const dailyProgress = await ctx.db
       .query('dailyProgress')
       .filter((q) =>
-        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today)),
+        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today))
       )
-      .first()
+      .first();
 
     if (dailyProgress) {
       await ctx.db.patch(dailyProgress._id, {
         spellingScore:
           (dailyProgress.spellingScore || 0) + (args.correct ? 1 : 0),
-      })
+      });
     } else {
       await ctx.db.insert('dailyProgress', {
         userId: user._id,
@@ -54,14 +54,13 @@ export const recordSpellingAttempt = mutation({
         tasksCompleted: ['spelling'],
         spellingScore: args.correct ? 1 : 0,
         readingCompleted: false,
-        videoCompleted: false,
         idiomCompleted: false,
-      })
+      });
     }
 
-    return { success: true }
+    return { success: true };
   },
-})
+});
 
 export const updateDailyProgress = mutation({
   args: {
@@ -69,55 +68,52 @@ export const updateDailyProgress = mutation({
     completed: v.boolean(),
   },
   handler: async (ctx, args) => {
-    const userId = await getAuthUserId(ctx)
-    console.log('userId :', userId)
-    if (!userId) {
-      throw new Error('Not unauthorized')
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error('Unauthenticated call to mutation');
     }
-
     const user = await ctx.db
       .query('users')
-      .filter((q) => q.eq(q.field('_id'), userId))
-      .first()
-
-    console.log('user :', user)
+      .withIndex('by_token', (q) =>
+        q.eq('tokenIdentifier', identity.tokenIdentifier)
+      )
+      .unique();
     if (!user) {
-      throw new Error('User not found')
+      throw new Error('Unauthenticated call to mutation');
     }
 
-    const today = new Date().toISOString().split('T')[0]
+    const today = new Date().toISOString().split('T')[0];
     const dailyProgress = await ctx.db
       .query('dailyProgress')
       .filter((q) =>
-        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today)),
+        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today))
       )
-      .first()
+      .first();
 
     if (dailyProgress) {
-      const updates: any = {}
+      const updates: any = {};
       switch (args.taskId) {
         case 'reading':
-          updates.readingCompleted = args.completed
-          break
+          updates.readingCompleted = args.completed;
+          break;
         case 'video':
-          updates.videoCompleted = args.completed
-          break
+          updates.videoCompleted = args.completed;
+          break;
         case 'idiom':
-          updates.idiomCompleted = args.completed
-          break
+          updates.idiomCompleted = args.completed;
+          break;
       }
 
-      await ctx.db.patch(dailyProgress._id, updates)
+      await ctx.db.patch(dailyProgress._id, updates);
 
       // Update user streak if all tasks are completed
-      const updatedProgress = await ctx.db.get(dailyProgress._id)
+      const updatedProgress = await ctx.db.get(dailyProgress._id);
       if (
         updatedProgress?.readingCompleted &&
-        updatedProgress?.videoCompleted &&
         updatedProgress?.idiomCompleted &&
         updatedProgress?.spellingScore
       ) {
-        await updateStreak(ctx, user._id)
+        await updateStreak(ctx, user._id);
       }
     } else {
       const newProgress: any = {
@@ -128,31 +124,36 @@ export const updateDailyProgress = mutation({
         readingCompleted: args.taskId === 'reading' && args.completed,
         videoCompleted: args.taskId === 'video' && args.completed,
         idiomCompleted: args.taskId === 'idiom' && args.completed,
-      }
-      await ctx.db.insert('dailyProgress', newProgress)
+      };
+      await ctx.db.insert('dailyProgress', newProgress);
     }
 
-    return { success: true }
+    return { success: true };
   },
-})
+});
 
-async function updateStreak(ctx: any, userId: Id<'users'>) {
-  const user = await ctx.db.get(userId)
-  const today = new Date().toISOString().split('T')[0]
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0]
+async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
+  const user = await ctx.db.get(userId);
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  const today = new Date().toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
 
   // Check if user practiced yesterday
   const yesterdayProgress = await ctx.db
     .query('dailyProgress')
     .filter((q: any) =>
-      q.and(q.eq(q.field('userId'), userId), q.eq(q.field('date'), yesterday)),
+      q.and(q.eq(q.field('userId'), userId), q.eq(q.field('date'), yesterday))
     )
-    .first()
+    .first();
 
   // Update streak based on yesterday's practice
-  let newStreak = 1
+  let newStreak = 1;
   if (yesterdayProgress && user.lastPracticeDate === yesterday) {
-    newStreak = user.currentStreak + 1
+    newStreak = user.currentStreak! + 1;
   }
 
   // Update user streak and practice date
@@ -160,7 +161,7 @@ async function updateStreak(ctx: any, userId: Id<'users'>) {
     currentStreak: newStreak,
     lastPracticeDate: today,
     totalPracticeCount: (user.totalPracticeCount || 0) + 1,
-  })
+  });
 
   // Check and award streak achievements
   if (newStreak === 7) {
@@ -169,51 +170,51 @@ async function updateStreak(ctx: any, userId: Id<'users'>) {
       type: '7-day-streak',
       earnedAt: today,
       description: 'Practiced English for 7 days in a row',
-    })
+    });
   } else if (newStreak === 30) {
     await ctx.db.insert('achievements', {
       userId,
       type: '30-day-streak',
       earnedAt: today,
       description: 'Maintained practice for a full month',
-    })
+    });
   }
 }
 
 export const getUserProgress = query({
   handler: async (ctx) => {
-    const userId = await getAuthUserId(ctx)
-    if (!userId) {
-      throw new Error('Not unauthorized')
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) {
+      throw new Error('Unauthenticated call to mutation');
     }
-
     const user = await ctx.db
       .query('users')
-      .filter((q) => q.eq(q.field('_id'), userId))
-      .first()
-
+      .withIndex('by_token', (q) =>
+        q.eq('tokenIdentifier', identity.tokenIdentifier)
+      )
+      .unique();
     if (!user) {
-      throw new Error('User not found')
+      throw new Error('Unauthenticated call to mutation');
     }
 
-    const today = new Date().toISOString().split('T')[0]
+    const today = new Date().toISOString().split('T')[0];
     const dailyProgress = await ctx.db
       .query('dailyProgress')
       .filter((q) =>
-        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today)),
+        q.and(q.eq(q.field('userId'), user._id), q.eq(q.field('date'), today))
       )
-      .first()
+      .first();
 
     const achievements = await ctx.db
       .query('achievements')
       .filter((q) => q.eq(q.field('userId'), user._id))
-      .collect()
+      .collect();
 
     return {
       streak: user.currentStreak,
       totalPractice: user.totalPracticeCount,
       todayProgress: dailyProgress,
       achievements,
-    }
+    };
   },
-})
+});
