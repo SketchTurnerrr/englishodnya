@@ -3,7 +3,7 @@ import { Button } from '@/app/components/ui/button';
 import { Volume2, Check, X, Trophy } from 'lucide-react';
 import { useMutation } from 'convex/react';
 import { api } from '@/convex/_generated/api';
-import { spellingWords, Word } from '@/convex/spelling-words';
+import { spellingWords, Word } from '@/lib/spelling-words';
 
 export function SpellingBee() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<

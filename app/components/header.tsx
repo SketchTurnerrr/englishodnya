@@ -1,19 +1,15 @@
-import { BookOpen } from 'lucide-react';
-import { Button } from '@/app/components/ui/button';
 import Link from 'next/link';
 import { auth } from '@clerk/nextjs/server';
 import { SignedIn, UserButton } from '@clerk/nextjs';
 
 export async function Header() {
   const { userId } = await auth();
-  console.log('userId :', userId);
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
       <div className="container mx-auto flex h-16 items-center justify-between p-4">
         <div className="flex items-center gap-2">
-          <BookOpen className="h-6 w-6 text-emerald-600" />
           <Link href="/" className="text-xl font-bold">
-            LinguaPartner
+            English Щодня
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-6">

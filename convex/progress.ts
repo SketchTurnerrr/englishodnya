@@ -90,14 +90,12 @@ export const updateDailyProgress = mutation({
       )
       .first();
 
+    console.log('dailyProgress :', dailyProgress);
     if (dailyProgress) {
       const updates: any = {};
       switch (args.taskId) {
         case 'reading':
           updates.readingCompleted = args.completed;
-          break;
-        case 'video':
-          updates.videoCompleted = args.completed;
           break;
         case 'idiom':
           updates.idiomCompleted = args.completed;
@@ -108,11 +106,14 @@ export const updateDailyProgress = mutation({
 
       // Update user streak if all tasks are completed
       const updatedProgress = await ctx.db.get(dailyProgress._id);
-      if (
+
+      const allTasksCompleted =
         updatedProgress?.readingCompleted &&
         updatedProgress?.idiomCompleted &&
-        updatedProgress?.spellingScore
-      ) {
+        (updatedProgress?.spellingScore ?? 0) > 0;
+
+      if (allTasksCompleted) {
+        console.log('update streak :');
         await updateStreak(ctx, user._id);
       }
     } else {
@@ -122,7 +123,6 @@ export const updateDailyProgress = mutation({
         tasksCompleted: args.completed ? [args.taskId] : [],
         spellingScore: 0,
         readingCompleted: args.taskId === 'reading' && args.completed,
-        videoCompleted: args.taskId === 'video' && args.completed,
         idiomCompleted: args.taskId === 'idiom' && args.completed,
       };
       await ctx.db.insert('dailyProgress', newProgress);
@@ -150,18 +150,30 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
     )
     .first();
 
+  console.log('yesterdayProgress :', yesterdayProgress);
+  // Check if yesterday's tasks were all completed
+  const yesterdayCompleted =
+    yesterdayProgress?.readingCompleted &&
+    yesterdayProgress?.idiomCompleted &&
+    (yesterdayProgress?.spellingScore ?? 0) > 0;
+
   // Update streak based on yesterday's practice
-  let newStreak = 1;
-  if (yesterdayProgress && user.lastPracticeDate === yesterday) {
-    newStreak = user.currentStreak! + 1;
+  let newStreak = 1; // Default to 1 for completing today
+  if (yesterdayCompleted && user.lastPracticeDate === yesterday) {
+    newStreak = (user.currentStreak ?? 0) + 1;
   }
 
   // Update user streak and practice date
   await ctx.db.patch(userId, {
     currentStreak: newStreak,
     lastPracticeDate: today,
-    totalPracticeCount: (user.totalPracticeCount || 0) + 1,
+    totalPracticeCount: (user.totalPracticeCount ?? 0) + 1,
   });
+  console.log('Current user streak:', user.currentStreak);
+  console.log('Last practice date:', user.lastPracticeDate);
+
+  console.log('Yesterday completed:', yesterdayCompleted);
+  console.log('New streak:', newStreak);
 
   // Check and award streak achievements
   if (newStreak === 7) {

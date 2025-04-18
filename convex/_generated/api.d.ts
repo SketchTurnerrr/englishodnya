@@ -16,7 +16,6 @@ import type {
 import type * as idioms from "../idioms.js";
 import type * as idioms_seed from "../idioms_seed.js";
 import type * as progress from "../progress.js";
-import type * as spelling_words from "../spelling-words.js";
 import type * as texts from "../texts.js";
 import type * as users from "../users.js";
 
@@ -32,7 +31,6 @@ declare const fullApi: ApiFromModules<{
   idioms: typeof idioms;
   idioms_seed: typeof idioms_seed;
   progress: typeof progress;
-  "spelling-words": typeof spelling_words;
   texts: typeof texts;
   users: typeof users;
 }>;

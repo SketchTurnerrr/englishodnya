@@ -22,7 +22,7 @@ import Link from 'next/link';
 import { useStoreUserEffect } from '@/lib/useStoreUserEffect';
 
 export default function Home() {
-  const { isLoading, isAuthenticated } = useStoreUserEffect();
+  const { isAuthenticated } = useStoreUserEffect();
   console.log('isAuthenticated :', isAuthenticated);
   return (
     <div className="flex min-h-screen flex-col ">

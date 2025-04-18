@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/app/components/ui/button';
-import { Loader2, BookOpen, ChevronRight } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 import { useQuery, useMutation } from 'convex/react';
 import { api } from '@/convex/_generated/api';
@@ -14,6 +14,7 @@ export function PracticeReading() {
   const [difficulty, setDifficulty] = useState<Difficulty>('easy');
   const progress = useQuery(api.progress.getUserProgress);
   const markAsRead = useMutation(api.texts.markTextAsRead);
+  const updateProgress = useMutation(api.progress.updateDailyProgress);
 
   const randomText = useQuery(api.texts.getRandomText, {
     cacheBuster,
@@ -33,6 +34,7 @@ export function PracticeReading() {
     if (!progress?.todayProgress?.readingCompleted) {
       try {
         await markAsRead();
+        await updateProgress({ taskId: 'reading', completed: true });
       } catch (error) {
         console.error('Failed to mark text as read:', error);
       }

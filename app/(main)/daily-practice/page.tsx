@@ -5,25 +5,19 @@ import {
   Calendar,
   CheckCircle,
   BookOpen,
-  Play,
-  Mic,
   Award,
   Trophy,
   Loader2,
-  ChevronDown,
-  ChevronRight,
-  CheckCheck,
   CircleCheck,
-  Lamp,
   Lightbulb,
 } from 'lucide-react';
-import { useMutation, useQuery } from 'convex/react';
-import { useRouter } from 'next/navigation';
+import { useQuery } from 'convex/react';
 import { Idiom } from '@/app/components/features/daily-practice/Idiom';
 import { PracticeReading } from '@/app/components/features/daily-practice/PracticeReading';
 import { SpellingBee } from '@/app/components/features/daily-practice/SpellingBee';
 import { api } from '@/convex/_generated/api';
 import { useStoreUserEffect } from '@/lib/useStoreUserEffect';
+import { useRouter } from 'next/navigation';
 
 interface DailyTask {
   id: string;
@@ -32,14 +26,15 @@ interface DailyTask {
   icon: JSX.Element;
 }
 
-export default function DailyPractice() {
-  const { isLoading, isAuthenticated } = useStoreUserEffect();
+export default function DailyPracticePage() {
+  const { isAuthenticated } = useStoreUserEffect();
+  console.log('isAuthenticated :', isAuthenticated);
+
   const progress = useQuery(api.progress.getUserProgress);
-  const updateProgress = useMutation(api.progress.updateDailyProgress);
+  console.log('progress :', progress);
   const router = useRouter();
 
   const [selectedTask, setSelectedTask] = useState<string | null>(null);
-  const [showPracticeMore, setShowPracticeMore] = useState(false);
 
   const tasks: DailyTask[] = [
     {
@@ -48,16 +43,11 @@ export default function DailyPractice() {
       completed: progress?.todayProgress?.readingCompleted ?? false,
       icon: <BookOpen className="size-5" />,
     },
-    // {
-    //   id: 'video',
-    //   title: 'Watch Daily Video',
-    //   completed: progress?.todayProgress?.videoCompleted ?? false,
-    //   icon: <Play className="size-5" />,
-    // },
+
     {
       id: 'spelling',
       title: 'Spelling Bee',
-      completed: (progress?.todayProgress?.spellingScore ?? 0) > 5,
+      completed: (progress?.todayProgress?.spellingScore ?? 0) >= 5,
       icon: <img src="/bee.svg" className="size-5 text-yellow-400" />,
     },
     {
@@ -74,17 +64,6 @@ export default function DailyPractice() {
 
   const handleBackToTasks = () => {
     setSelectedTask(null);
-  };
-
-  const handleTaskComplete = async (taskId: string) => {
-    try {
-      await updateProgress({
-        taskId,
-        completed: true,
-      });
-    } catch (error) {
-      console.error('Failed to update task progress:', error);
-    }
   };
 
   const renderTaskContent = () => {
@@ -231,7 +210,7 @@ export default function DailyPractice() {
           <div className="mt-6">
             <h3 className="font-semibold mb-3">Recent Achievements</h3>
             <div className="flex flex-wrap gap-2">
-              {progress.achievements.map((achievement: any) => (
+              {progress.achievements.map((achievement) => (
                 <div
                   key={achievement._id}
                   className="bg-white px-3 py-1 rounded-full text-sm flex items-center gap-1"

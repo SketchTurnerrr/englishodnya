@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useMutation } from 'convex/react';
-import { Loader2, BookOpen, Quote, Check, CircleCheck } from 'lucide-react';
+import { Loader2, BookOpen, Quote, CircleCheck } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -17,7 +17,7 @@ export function Idiom() {
   const dailyIdiom = useQuery(api.idioms.getDailyIdiom);
   const markAsLearned = useMutation(api.idioms.markIdiomAsLearned);
   const progress = useQuery(api.progress.getUserProgress);
-  console.log('progress :', progress);
+  const updateProgress = useMutation(api.progress.updateDailyProgress);
   const [isRevealed, setIsRevealed] = useState(false);
 
   if (!dailyIdiom) {
@@ -33,6 +33,7 @@ export function Idiom() {
       return;
     }
     try {
+      await updateProgress({ taskId: 'idiom', completed: true });
       await markAsLearned({ idiomId: dailyIdiom._id });
       console.log('marked as learned');
     } catch (error) {
