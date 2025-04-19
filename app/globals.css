@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +119,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.filter-green {
+  filter: invert(48%) sepia(79%) saturate(210%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
 }

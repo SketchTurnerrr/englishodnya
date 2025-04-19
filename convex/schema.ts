@@ -36,7 +36,7 @@ export default defineSchema({
     spellingScore: v.optional(v.number()),
     readingCompleted: v.boolean(),
     idiomCompleted: v.boolean(),
-  }),
+  }).index('by_user_date', ['userId', 'date']),
 
   spellingAttempts: defineTable({
     userId: v.id('users'),

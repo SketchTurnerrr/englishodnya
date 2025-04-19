@@ -1,6 +1,7 @@
 import { v } from 'convex/values';
 import { mutation, MutationCtx, query } from './_generated/server';
 import type { Id } from './_generated/dataModel';
+import { getLocalISODate, getYesterdayLocalISODate } from '@/lib/utils';
 
 export const recordSpellingAttempt = mutation({
   args: {
@@ -141,8 +142,10 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
     throw new Error('User not found');
   }
 
-  const today = new Date().toISOString().split('T')[0];
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+  const today = getLocalISODate();
+  console.log('today :', today);
+  const yesterday = getYesterdayLocalISODate();
+  console.log('yesterday :', yesterday);
 
   // Check if user practiced yesterday
   const yesterdayProgress = await ctx.db
@@ -192,6 +195,8 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
       earnedAt: today,
       description: 'Maintained practice for a full month',
     });
+
+    return newStreak;
   }
 }
 
@@ -236,6 +241,68 @@ export const getUserProgress = query({
         learnedIdioms.length + (dailyProgress?.idiomCompleted ? 1 : 0),
       todayProgress: dailyProgress,
       achievements,
+    };
+  },
+});
+
+// convex/progress.ts
+export const getMonthlyProgress = query({
+  args: {
+    year: v.number(),
+    month: v.number(), // 0-11 (JavaScript months)
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new Error('Unauthenticated');
+
+    const user = await ctx.db
+      .query('users')
+      .withIndex('by_token', (q) =>
+        q.eq('tokenIdentifier', identity.tokenIdentifier)
+      )
+      .unique();
+    if (!user) throw new Error('User not found');
+
+    // Calculate start and end dates for the month
+    const startDate = new Date(args.year, args.month, 1);
+    const endDate = new Date(args.year, args.month + 1, 0);
+
+    const startDateString = getLocalISODate(startDate);
+    const endDateString = getLocalISODate(endDate);
+
+    const monthlyProgress = await ctx.db
+      .query('dailyProgress')
+      .withIndex('by_user_date', (q) => q.eq('userId', user._id))
+      .filter((q) =>
+        q.and(
+          q.gte(q.field('date'), startDateString),
+          q.lte(q.field('date'), endDateString)
+        )
+      )
+      .collect();
+
+    // Convert to a map of dates to completion status
+    const progressMap = new Map(
+      monthlyProgress.map((progress) => [
+        progress.date,
+        {
+          isCompleted:
+            progress.readingCompleted &&
+            progress.idiomCompleted &&
+            (progress.spellingScore ?? 0) > 0,
+          tasks: {
+            reading: progress.readingCompleted,
+            idiom: progress.idiomCompleted,
+            spelling: (progress.spellingScore ?? 0) > 0,
+          },
+        },
+      ])
+    );
+
+    return {
+      progressMap: Object.fromEntries(progressMap),
+      currentStreak: user.currentStreak ?? 0,
+      lastPracticeDate: user.lastPracticeDate,
     };
   },
 });

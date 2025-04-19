@@ -1,9 +1,10 @@
 'use client';
-import React, { type JSX } from 'react';
+import React, { useState, type JSX } from 'react';
 import { Calendar, Trophy, Star, Target, Activity } from 'lucide-react';
 import { useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api'; // Adjust path if needed
 import { conjugateDay } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 // Define the structure expected by the component for an achievement
 interface DisplayAchievement {
@@ -53,6 +54,26 @@ const achievementDefinitions: Record<
 // --- End Achievement Definitions ---
 
 export function ProgressTracker() {
+  const today = new Date();
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+  const [currentYear, setCurrentYear] = useState(today.getFullYear());
+
+  const monthlyProgress = useQuery(api.progress.getMonthlyProgress, {
+    year: currentYear,
+    month: currentMonth,
+  });
+
+  const getDaysInMonth = (year: number, month: number) => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  const getDateString = (day: number) => {
+    return new Date(currentYear, currentMonth, day).toISOString().split('T')[0];
+  };
+
+  const daysInMonth = getDaysInMonth(currentYear, currentMonth);
+  const daysList = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+
   const progressData = useQuery(api.progress.getUserProgress);
 
   if (progressData === undefined) {
@@ -66,7 +87,6 @@ export function ProgressTracker() {
   const {
     streak = 0,
     totalPractice = 0,
-    todayProgress,
     achievements: earnedDbAchievements = [], // Rename to avoid confusion
   } = progressData || {};
 
@@ -103,27 +123,6 @@ export function ProgressTracker() {
   const unearnedDisplayAchievements = allAchievements.filter((a) => !a.earned);
   // --- End Process Achievements ---
 
-  // --- Calendar Data (Still requires backend changes) ---
-  const todayDate = new Date().getDate();
-  const currentMonthMock = Array.from({ length: 30 }, (_, i) => {
-    const dayNumber = i + 1;
-    let completed = false;
-    if (
-      dayNumber === todayDate &&
-      todayProgress &&
-      todayProgress.readingCompleted &&
-      todayProgress.idiomCompleted &&
-      (todayProgress.spellingScore ?? 0) > 0
-    ) {
-      completed = true;
-    }
-    return {
-      date: dayNumber,
-      completed: completed,
-    };
-  });
-  // --- End Calendar Data ---
-
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
@@ -144,7 +143,7 @@ export function ProgressTracker() {
         </div>
         {/* Total Practice */}
         <div className="bg-white p-6 rounded-lg shadow-sm flex items-center gap-4">
-          <Activity className="w-8 h-8 text-indigo-500" />
+          <Activity className="size-8 text-indigo-500" />
           <div>
             <p className="text-sm text-gray-500">Усього днів практики</p>
             <p className="text-2xl font-semibold">{totalPractice}</p>
@@ -153,30 +152,97 @@ export function ProgressTracker() {
       </div>
 
       {/* Calendar View */}
-      <div className="bg-white p-6 rounded-lg shadow-sm">
-        <h3 className="text-xl font-semibold mb-8 flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-gray-700" />
-          Календар (Поточний місяць)
-        </h3>
-
-        <div className="grid grid-cols-7 gap-4 justify-items-center">
-          {currentMonthMock.map((day, i) => (
-            <div
-              key={i}
-              className={`size-10 rounded-full flex items-center justify-center border ${
-                day.completed
-                  ? 'bg-green-100 text-green-800 border-green-200 font-semibold'
-                  : 'bg-gray-100 text-gray-400 border-gray-200'
-              }`}
-              title={
-                day.date === todayDate
-                  ? `Today (${day.completed ? 'Completed' : 'Pending'})`
-                  : `Day ${day.date}`
-              }
+      <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold flex items-center gap-2">
+            <Calendar className="size-5" />
+            Practice Calendar
+          </h3>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                if (currentMonth === 0) {
+                  setCurrentMonth(11);
+                  setCurrentYear(currentYear - 1);
+                } else {
+                  setCurrentMonth(currentMonth - 1);
+                }
+              }}
             >
-              {day.date}
+              Previous
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                if (currentMonth === 11) {
+                  setCurrentMonth(0);
+                  setCurrentYear(currentYear + 1);
+                } else {
+                  setCurrentMonth(currentMonth + 1);
+                }
+              }}
+            >
+              Next
+            </Button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-7 gap-2">
+          {/* Week day headers */}
+          {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
+            <div
+              key={day}
+              className="text-start text-sm font-medium text-gray-500"
+            >
+              {day}
             </div>
           ))}
+
+          {/* Empty cells for proper day alignment */}
+          {Array.from({
+            length: new Date(currentYear, currentMonth, 1).getDay(),
+          }).map((_, i) => (
+            <div key={`empty-${i}`} className="h-10" />
+          ))}
+
+          {/* Calendar days */}
+          {daysList.map((day) => {
+            const dateString = getDateString(day + 1);
+            const dayProgress = monthlyProgress?.progressMap[dateString];
+            const isToday =
+              day === today.getDate() &&
+              currentMonth === today.getMonth() &&
+              currentYear === today.getFullYear();
+
+            return (
+              <div
+                key={day}
+                className={`
+                  w-10 h-10 rounded-full flex items-center justify-center
+                  ${
+                    isToday
+                      ? 'ring-2 ring-blue-500'
+                      : dayProgress?.isCompleted
+                      ? 'bg-green-100 text-green-800'
+                      : 'bg-gray-100 text-gray-400'
+                  }
+                `}
+                title={
+                  dayProgress
+                    ? `Completed tasks: ${Object.entries(dayProgress.tasks)
+                        .filter(([, completed]) => completed)
+                        .map(([task]) => task)
+                        .join(', ')}`
+                    : 'No practice this day'
+                }
+              >
+                {day}
+              </div>
+            );
+          })}
         </div>
       </div>
 

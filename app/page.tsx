@@ -1,13 +1,11 @@
 'use client';
 import {
   ArrowRight,
-  Beef,
   BookOpen,
   Calendar,
   CheckCircle,
   Clock,
   Lightbulb,
-  MessageSquare,
 } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import {
@@ -29,7 +27,7 @@ export default function Home() {
     <div className="flex min-h-[calc(100vh_-_65px)] flex-col ">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 lg:py-36 overflow-hidden">
+        <section className="relative py-10 md:py-20 lg:py-28 overflow-hidden">
           <div className=" px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center max-w-7xl mx-auto">
               <div className="space-y-4">
@@ -40,16 +38,16 @@ export default function Home() {
                   Consistency Over Intensity
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We mentor you not just in learning English but in building the
-                  daily habit of practicing it. No cramming. No burning out.
-                  Real progress through daily small steps.
+                  Ми наставляємо вас не лише у вивченні англійської мови, але й
+                  у формуванні звички практикувати її щодня. Без зубріння. Без
+                  вигорання. Реальний прогрес завдяки щоденним маленьким крокам.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Link
                     href="/daily"
                     className="text-white h-9 px-4 py-2 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive bg-emerald-600 hover:bg-emerald-700"
                   >
-                    Start Your Journey
+                    Розпочати
                   </Link>
                 </div>
               </div>
@@ -73,7 +71,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Our Philosophy
+                  Наше бачення
                 </h2>
               </div>
             </div>
@@ -90,34 +88,32 @@ export default function Home() {
                   <li className="flex items-start gap-4">
                     <CheckCircle className="mt-1 h-6 w-6 flex-none text-emerald-600" />
                     <div>
-                      <h3 className="text-xl font-bold">Daily Small Steps</h3>
+                      <h3 className="text-xl font-bold">
+                        Щоденні маленькі кроки
+                      </h3>
                       <p className="text-muted-foreground">
-                        Just 15-20 minutes every day creates lasting progress
-                        and builds neural pathways for language acquisition.
+                        Лише 15-30 хвилин щодня забезпечує тривалий прогрес і
+                        формує нейронні шляхи для засвоєння мови.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="mt-1 h-6 w-6 flex-none text-emerald-600" />
                     <div>
-                      <h3 className="text-xl font-bold">
-                        Accountability Partners
-                      </h3>
+                      <h3 className="text-xl font-bold">Менторство</h3>
                       <p className="text-muted-foreground">
-                        Having someone to check in with daily increases your
-                        chances of sticking with your learning goals by 95%.
+                        Наявність ментора, який буде з вами щодня, збільшує ваші
+                        шанси досягти своїх навчальних цілей на 95%.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="mt-1 h-6 w-6 flex-none text-emerald-600" />
                     <div>
-                      <h3 className="text-xl font-bold">
-                        Sustainable Progress
-                      </h3>
+                      <h3 className="text-xl font-bold">Стійкий прогрес</h3>
                       <p className="text-muted-foreground">
-                        No burnout, no cramming. We help you build a sustainable
-                        practice that fits into your life.
+                        Без вигорання, без зубріння. Ми допомагаємо вам створити
+                        стійку практику, яка впишеться у ваше життя.
                       </p>
                     </div>
                   </li>
@@ -133,32 +129,31 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  How It Works
+                  Як це працює
                 </h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Our structured approach helps you build the habit of daily
-                  English practice.
+                  Наш структурований підхід допоможе вам виробити звичку
+                  щоденної практики англійської мови.
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 pt-12">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-2 gap-8 pt-12">
               <Card className="flex flex-col items-center text-center">
                 <CardHeader className="w-full">
                   <div className="p-2 rounded-full bg-emerald-100 inline-flex mb-4">
                     <Calendar className="h-6 w-6 text-emerald-600" />
                   </div>
                   <CardTitle className="text-2xl font-bold">
-                    Daily Check-ins
+                    Щоденні зустрічі
                   </CardTitle>
                   <CardDescription>
-                    Brief daily sessions with your mentor to practice and review
+                    Короткі щоденні заняття з ментором для практики та рев'ю
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Our mentors check in with you daily to ensure you're on
-                    track with your learning goals and to provide immediate
-                    feedback.
+                    Наші ментори щодня перевіряють вас, щоб переконатися, що ви
+                    досягаєте своїх навчальних цілей
                   </p>
                 </CardContent>
               </Card>
@@ -168,36 +163,17 @@ export default function Home() {
                     <Clock className="h-6 w-6 text-emerald-600" />
                   </div>
                   <CardTitle className="text-2xl font-bold">
-                    Micro-Learning
+                    Мікронавчання
                   </CardTitle>
                   <CardDescription>
-                    Short, focused activities that fit into your busy schedule
+                    Короткі цілеспрямовані дії, які вписуються у ваш напружений
+                    графік
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Our activities are designed to be completed in 15-20
-                    minutes, making it easy to fit language learning into your
-                    daily routine.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="flex flex-col items-center text-center">
-                <CardHeader className="w-full">
-                  <div className="p-2 rounded-full bg-emerald-100 inline-flex mb-4">
-                    <Lightbulb className="h-6 w-6 text-emerald-600" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold">
-                    Personalized Path
-                  </CardTitle>
-                  <CardDescription>
-                    Customized learning plan based on your goals and interests
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We tailor your learning experience to your specific needs,
-                    interests, and learning style for maximum engagement.
+                    Наші завдання розраховані на виконання за 15-30 хвилин, що
+                    дозволяє легко включити вивчення мови у ваш розпорядок дня.
                   </p>
                 </CardContent>
               </Card>
@@ -211,11 +187,11 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Daily Activities
+                  Щоденні завдання
                 </h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Engaging daily exercises that make learning English fun and
-                  effective.
+                  Щоденні вправи, які роблять вивчення англійської веселим та
+                  ефективним.
                 </p>
               </div>
             </div>
@@ -224,13 +200,13 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BookOpen className="h-5 w-5 text-emerald-600" />
-                    Daily Reading
+                    Щоденні читання
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Short, interesting texts matched to your level and
-                    interests. Gradually increase vocabulary and comprehension.
+                    Короткі, цікаві тексти всіх рівнів та інтересів. Поступово
+                    збільшуйте словниковий запас і розуміння.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -245,14 +221,14 @@ export default function Home() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <MessageSquare className="h-5 w-5 text-emerald-600" />
-                    Daily Idiom
+                    <Lightbulb className="h-5 w-5 text-emerald-600" />
+                    Щоденні ідіоми
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Learn one new English idiom each day with examples, usage
-                    notes, and practice opportunities.
+                    Щодня вивчайте одну нову англійську ідіому з прикладами,
+                    примітками щодо використання та можливостями для практики.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -260,21 +236,21 @@ export default function Home() {
                     variant="ghost"
                     className="w-full text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50"
                   >
-                    Today's Idiom <ArrowRight className="ml-2 h-4 w-4" />
+                    Today's Idiom <ArrowRight className="ml-2 size-4" />
                   </Button>
                 </CardFooter>
               </Card>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Beef className="h-5 w-5 text-emerald-600" />
+                    <img src="/bee.svg" className="size-5 filter-green" />
                     Spelling Bee
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Fun, gamified spelling challenges that improve your
-                    vocabulary, spelling, and word recognition.
+                    Веселі, завдання з орфографії, які покращують ваш
+                    словниковий запас та розпізнавання слів.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -488,21 +464,18 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
+              <>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Ready to Build Your English Habit?
+                  Готові будувати звичку вивчати англійську?
                 </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Start your journey to English fluency with daily small steps
-                  and consistent practice.
+                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center">
+                  Почніть свій шлях до вільного володіння англійською з щоденних
+                  маленьких кроків і послідовної практики.
                 </p>
-              </div>
+              </>
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8 py-6">
-                  Start Your 7-Day Free Trial
-                </Button>
-                <Button variant="outline" className="text-lg px-8 py-6">
-                  Schedule a Demo
+                <Button className="text-lg px-8 py-6 bg-emerald-600 hover:bg-emerald-700 cursor-pointer">
+                  Заплануйте демонстрацію
                 </Button>
               </div>
             </div>
@@ -515,7 +488,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 justify-between p-6 md:p-0">
             <div className="flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-emerald-600" />
-              <span className="text-xl font-bold">LinguaPartner</span>
+              <span className="text-xl font-bold">English Щодня</span>
             </div>
             <nav className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               <div className="space-y-3">
