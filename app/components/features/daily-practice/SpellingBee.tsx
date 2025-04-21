@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Volume2, Check, X, Trophy } from 'lucide-react';
 import { useMutation } from 'convex/react';
 import { api } from '@/convex/_generated/api';

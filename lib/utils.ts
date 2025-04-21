@@ -28,19 +28,19 @@ export function conjugateDay(number: number): string {
 
 export async function getWordDefinition(
   word: string
-): Promise<DictionaryResponse | null> {
+): Promise<DictionaryResponse> {
   try {
     const response = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(
         word
       )}`
     );
-    if (!response.ok) return null;
-    const data = await response.json();
-    return data[0];
+    if (!response.ok) return [];
+    const data: DictionaryResponse = await response.json();
+    return data;
   } catch (error) {
     console.error('Error fetching definition:', error);
-    return null;
+    return [];
   }
 }
 
@@ -58,6 +58,22 @@ export function getYesterdayLocalISODate(): string {
 }
 
 export const stopWords = new Set([
+  // Contractions
+  "'s",
+  "'ll",
+  "'re",
+  "'ve",
+  "n't",
+  "'d",
+  "o'clock",
+  "can't",
+  "didn't",
+  "doesn't",
+  "don't",
+  "hadn't",
+  "hasn't",
+  "haven't",
+
   // Articles
   'a',
   'an',

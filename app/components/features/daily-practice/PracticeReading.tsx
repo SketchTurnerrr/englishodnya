@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { Button } from '@/app/components/ui/button';
+import React, { useState, useCallback } from 'react';
+import { Button } from '@/components/ui/button';
 
 import { Loader2, Baseline, Volume2, X } from 'lucide-react';
 import { useQuery, useMutation } from 'convex/react';
@@ -16,6 +16,23 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+
+import nlp from 'compromise';
+
+const PARTS_TO_EXCLUDE = ['NumericValue', 'ProperNoun', 'Person'];
+
+type Token = {
+  text: string;
+  pre: string;
+  post: string;
+  normal: string;
+  tags: Record<string, boolean>;
+  index: [number | undefined, number | undefined];
+  id: string;
+  chunk?: string;
+  dirty?: boolean;
+  syllables?: string[];
+};
 
 export function PracticeReading() {
   const [cacheBuster, rerunQuery] = useState(0);
@@ -34,6 +51,31 @@ export function PracticeReading() {
     cacheBuster,
     difficulty,
   });
+  const paragraphs = randomText?.content?.split('\n');
+
+  const tokenizedParagraphs = paragraphs?.map((para) =>
+    nlp(para)
+      .terms()
+      .document.map((sentence) =>
+        sentence.map(
+          (t): Token => ({
+            text: t.text,
+            pre: t.pre,
+            post: t.post,
+            normal: t.normal,
+            //@ts-expect-error type is not defined
+            tags: t.tags,
+            index: [t.index?.[0], t.index?.[1]],
+            //@ts-expect-error type is not defined
+            id: t.id,
+            chunk: t.chunk,
+            dirty: t.dirty,
+            syllables: t.syllables,
+          })
+        )
+      )
+  );
+
   const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
 
   const fetchDefinition = useCallback(
@@ -83,7 +125,7 @@ export function PracticeReading() {
   };
 
   const renderDefinitionContent = (cleanWord: string) => {
-    const definition = definitions.get(cleanWord);
+    const results = definitions.get(cleanWord);
 
     if (loading.has(cleanWord)) {
       return (
@@ -93,33 +135,34 @@ export function PracticeReading() {
       );
     }
 
-    if (!definition) {
+    if (!results?.length) {
       return (
         <p className="text-sm text-muted-foreground">
-          Визначення не знайдено "{cleanWord}"
+          No definition found for "{cleanWord}"
         </p>
       );
     }
 
+    // Find the first available audio URL
+    const audioUrl = results
+      .flatMap((result) => result.phonetics || [])
+      .find((phonetic) => phonetic.audio)?.audio;
+
     return (
-      <div className="space-y-3">
+      <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="font-semibold">{definition.word}</h4>
-            {definition.phonetic && (
+            <h4 className="font-semibold capitalize">{cleanWord}</h4>
+            {results[0].phonetics?.[0]?.text && (
               <span className="text-sm text-muted-foreground">
-                {definition.phonetic}
+                {results[0].phonetics[0].text}
               </span>
             )}
           </div>
           <div className="flex gap-2">
-            {definition.phonetics.some((p) => p.audio) && (
+            {audioUrl && (
               <button
-                onClick={() =>
-                  playAudio(
-                    definition.phonetics.find((p) => p.audio)?.audio || ''
-                  )
-                }
+                onClick={() => playAudio(audioUrl)}
                 className="p-2 hover:bg-blue-50 rounded-full"
               >
                 <Volume2 className="h-4 w-4" />
@@ -133,17 +176,44 @@ export function PracticeReading() {
             </button>
           </div>
         </div>
-        {definition.meanings.map((meaning, i) => (
-          <div key={i} className="space-y-1">
-            <span className="text-xs font-medium text-blue-600">
-              {meaning.partOfSpeech}
-            </span>
-            <p className="text-sm">{meaning.definitions[0].definition}</p>
-            {meaning.definitions[0].example && (
-              <p className="text-sm text-muted-foreground italic">
-                "{meaning.definitions[0].example}"
-              </p>
-            )}
+
+        {/* Show all definitions from all results */}
+        {results.map((result, resultIndex) => (
+          <div key={resultIndex} className="space-y-3">
+            {result.meanings?.map((meaning, meaningIndex) => (
+              <div key={`${resultIndex}-${meaningIndex}`} className="space-y-2">
+                {meaning.partOfSpeech && (
+                  <span className="text-xs font-medium text-blue-600 capitalize">
+                    {meaning.partOfSpeech}
+                  </span>
+                )}
+                <div className="space-y-2">
+                  {meaning.definitions?.map((def, defIndex) => (
+                    <div
+                      key={defIndex}
+                      className="pl-2 border-l-2 border-gray-200 space-y-1"
+                    >
+                      <p className="text-sm">
+                        {meaning.definitions &&
+                          meaning.definitions.length > 1 &&
+                          `${defIndex + 1}. `}
+                        {def.definition}
+                      </p>
+                      {def.example && (
+                        <p className="text-sm text-muted-foreground italic">
+                          "{def.example}"
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                {meaning.synonyms && meaning.synonyms.length > 0 && (
+                  <p className="text-sm text-gray-500">
+                    Synonyms: {meaning?.synonyms?.join(', ')}
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         ))}
       </div>
@@ -151,22 +221,24 @@ export function PracticeReading() {
   };
 
   const renderWord = useCallback(
-    (word: string, index: number) => {
-      if (/^[\s.,!?;]$/.test(word)) {
-        return <span key={`${word}-${index}`}>{word}</span>;
+    (word: Token, index: number, pIndex: number) => {
+      if (
+        !word.normal ||
+        stopWords.has(word.normal) ||
+        !definitionMode ||
+        // @ts-expect-error type is not defined
+        word.tags.values().some((tag) => PARTS_TO_EXCLUDE.includes(tag))
+      ) {
+        return (
+          <span className="" key={`${word}-${index}`}>
+            {word.pre}
+            {word.text}
+            {word.post}
+          </span>
+        );
       }
 
-      const cleanWord = word
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-z]/g, '');
-
-      // Don't highlight or fetch definitions for stop words
-      if (!cleanWord || stopWords.has(cleanWord) || !definitionMode) {
-        return <span key={`${word}-${index}`}>{word}</span>;
-      }
-
-      const popoverId = `${cleanWord}-${index}`;
+      const popoverId = `${pIndex}-${word.normal}-${index}`;
 
       return (
         <Popover
@@ -174,21 +246,29 @@ export function PracticeReading() {
           open={openPopoverId === popoverId}
           onOpenChange={(open) => {
             if (open) {
-              setOpenPopoverId(popoverId);
-              fetchDefinition(cleanWord);
+              // If there's already an open popover, close it first
+              if (openPopoverId && openPopoverId !== popoverId) {
+                setOpenPopoverId(null);
+              } else {
+                setOpenPopoverId(popoverId);
+                fetchDefinition(word.normal);
+              }
             } else {
               setOpenPopoverId(null);
-              setTimeout(() => setOpenPopoverId(null), 100);
             }
           }}
         >
           <PopoverTrigger asChild>
-            <span className="cursor-pointer border-b border-dotted border-blue-400 touch-manipulation">
-              {word}
+            <span className="whitespace-break-spaces">
+              {word.pre && <span>{word.pre}</span>}
+              <span className="cursor-pointer border-b border-dotted border-blue-400 touch-manipulation ">
+                {word.text}
+              </span>
+              {word.post}
             </span>
           </PopoverTrigger>
-          <PopoverContent className="w-80 p-4">
-            {renderDefinitionContent(cleanWord)}
+          <PopoverContent className="w-80 h-[300px] overflow-y-scroll p-4">
+            {renderDefinitionContent(word.normal)}
           </PopoverContent>
         </Popover>
       );
@@ -202,7 +282,6 @@ export function PracticeReading() {
       openPopoverId,
     ]
   );
-
   if (!randomText) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
@@ -231,23 +310,26 @@ export function PracticeReading() {
         </Toggle>
       </div>
 
-      <h2 className="text-2xl font-bold mb-4">{randomText.title}</h2>
-
       {definitionMode && (
         <div className="mb-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <p className="text-sm text-blue-700">
-            наведіть/натисніть на слово, щоб побачити його визначення або
-            прослухати
+            натисніть на слово, щоб побачити його визначення або прослухати
           </p>
         </div>
       )}
 
+      <h1 className="text-4xl font-bold mb-4">{randomText.title}</h1>
+
       <div className="prose prose-blue max-w-none mb-8 space-y-4">
-        {randomText.content.split('\n').map((paragraph, index) => (
-          <p key={index}>
-            {paragraph
-              .split(/(\s+|[.,!?;])/)
-              .map((word, wordIndex) => renderWord(word, wordIndex))}
+        {tokenizedParagraphs?.map((paragraph, pIndex) => (
+          <p key={pIndex}>
+            {paragraph.map((sentense, sIndex) => (
+              <span key={sIndex}>
+                {sentense.map((word, wIndex) =>
+                  renderWord(word, wIndex, pIndex)
+                )}
+              </span>
+            ))}
           </p>
         ))}
       </div>

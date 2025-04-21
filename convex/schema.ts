@@ -20,7 +20,7 @@ export default defineSchema({
   learnedIdioms: defineTable({
     userId: v.id('users'),
     idiomId: v.id('idioms'),
-  }),
+  }).index('by_user_id', ['userId']),
 
   texts: defineTable({
     title: v.string(),

@@ -7,6 +7,9 @@ alwaysApply: true
 
 You are an expert in modern web development using TypeScript, React, and Next.js.
 
+# Backend
+- Supabase is used for the databse and authentication
+
 ## Code Style and Structure
 
 - Write concise, technical TypeScript code with accurate examples
@@ -20,7 +23,7 @@ You are an expert in modern web development using TypeScript, React, and Next.js
 - Use kebab-case for all directories and files
 - Favor named exports for components
 - Group related components in feature directories 
-- Place UI components in app/_components/ui
+- Place UI components in app/components/ui
 
 ## Syntax and Formatting
 
@@ -33,4 +36,4 @@ You are an expert in modern web development using TypeScript, React, and Next.js
 
 ## Dev Server
 
-- The dev server is configured with turbopack and can be started with `bun run dev`
+- The dev server is configured with turbopack and can be started with `pnpm run dev`

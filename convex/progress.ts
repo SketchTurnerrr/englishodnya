@@ -90,7 +90,6 @@ export const updateDailyProgress = mutation({
       )
       .first();
 
-    console.log('dailyProgress :', dailyProgress);
     if (dailyProgress) {
       const updates: {
         readingCompleted?: boolean;
@@ -143,9 +142,7 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
   }
 
   const today = getLocalISODate();
-  console.log('today :', today);
   const yesterday = getYesterdayLocalISODate();
-  console.log('yesterday :', yesterday);
 
   // Check if user practiced yesterday
   const yesterdayProgress = await ctx.db
@@ -174,11 +171,6 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
     lastPracticeDate: today,
     totalPracticeCount: (user.totalPracticeCount ?? 0) + 1,
   });
-  console.log('Current user streak:', user.currentStreak);
-  console.log('Last practice date:', user.lastPracticeDate);
-
-  console.log('Yesterday completed:', yesterdayCompleted);
-  console.log('New streak:', newStreak);
 
   // Check and award streak achievements
   if (newStreak === 7) {
@@ -195,9 +187,9 @@ async function updateStreak(ctx: MutationCtx, userId: Id<'users'>) {
       earnedAt: today,
       description: 'Maintained practice for a full month',
     });
-
-    return newStreak;
   }
+
+  return newStreak;
 }
 
 export const getUserProgress = query({
@@ -245,7 +237,6 @@ export const getUserProgress = query({
   },
 });
 
-// convex/progress.ts
 export const getMonthlyProgress = query({
   args: {
     year: v.number(),

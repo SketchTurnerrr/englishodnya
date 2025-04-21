@@ -1,4 +1,4 @@
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
@@ -19,7 +19,9 @@ export function DifficultySelector({
           type="button"
           variant={currentDifficulty === 'easy' ? 'default' : 'ghost'}
           className={`cursor-pointer rounded-none px-4 py-2 h-9 ${
-            currentDifficulty === 'easy' ? '' : 'hover:bg-muted'
+            currentDifficulty === 'easy'
+              ? 'bg-blue-100 text-blue-900 hover:bg-blue-200'
+              : 'hover:bg-muted '
           }`}
           onClick={() => onChange('easy')}
         >
@@ -29,7 +31,9 @@ export function DifficultySelector({
           type="button"
           variant={currentDifficulty === 'medium' ? 'default' : 'ghost'}
           className={`cursor-pointer rounded-none px-4 py-2 h-9 ${
-            currentDifficulty === 'medium' ? '' : 'hover:bg-muted'
+            currentDifficulty === 'medium'
+              ? 'bg-blue-100 text-blue-900 hover:bg-blue-200'
+              : 'hover:bg-muted'
           }`}
           onClick={() => onChange('medium')}
         >
@@ -39,7 +43,9 @@ export function DifficultySelector({
           type="button"
           variant={currentDifficulty === 'hard' ? 'default' : 'ghost'}
           className={`cursor-pointer rounded-none px-4 py-2 h-9 ${
-            currentDifficulty === 'hard' ? '' : 'hover:bg-muted'
+            currentDifficulty === 'hard'
+              ? 'bg-blue-100 text-blue-900 hover:bg-blue-200'
+              : 'hover:bg-muted'
           }`}
           onClick={() => onChange('hard')}
         >

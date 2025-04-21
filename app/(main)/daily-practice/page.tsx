@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { useState, type JSX } from 'react';
 import {
   Calendar,
@@ -31,7 +31,6 @@ export default function DailyPracticePage() {
   console.log('isAuthenticated :', isAuthenticated);
 
   const progress = useQuery(api.progress.getUserProgress);
-  console.log('progress :', progress);
   const router = useRouter();
 
   const [selectedTask, setSelectedTask] = useState<string | null>(null);

@@ -23,7 +23,7 @@ You are an expert in React 19 and Typescript.
 - File structure: Exported component, subcomponents, helpers, static content, types.
 - Use concise, one-line syntax for simple conditional statements (e.g., if (condition) doSomething()).
 - Avoid `any` type; use `unknown` when type is uncertain, then narrow appropriately
-- Place shared types in the src/types directory
+- Place shared types in the ./types directory
 - Leverage TypeScript template literal types for string manipulation
 - Prioritize error handling and edge cases:
   - Handle errors and edge cases at the beginning of functions.
@@ -42,7 +42,6 @@ You are an expert in React 19 and Typescript.
 - Use mobile-first approach for responsive design.
 - Place static content and interfaces at file end.
 - Use content variables for static content outside render functions.
-- Minimize 'use client', 'useEffect', and 'setState'. Favor RSC.
 - Use Zod for form validation.
 - Wrap client components in Suspense with fallback.
 - Use dynamic loading for non-critical components.

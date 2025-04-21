@@ -7,7 +7,7 @@ import {
   Clock,
   Lightbulb,
 } from 'lucide-react';
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -335,131 +335,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-16 md:py-24 bg-emerald-50">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Simple Pricing
-                </h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Choose the plan that works for your learning goals.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 pt-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Basic</CardTitle>
-                  <div className="text-4xl font-bold">
-                    $49
-                    <span className="text-base font-normal text-muted-foreground">
-                      /month
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Daily micro-learning activities</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Weekly accountability check-ins</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Access to community forum</span>
-                    </li>
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                    Get Started
-                  </Button>
-                </CardFooter>
-              </Card>
-              <Card className="border-emerald-600 shadow-lg">
-                <CardHeader>
-                  <div className="py-1 px-3 text-xs bg-emerald-100 text-emerald-700 rounded-full w-fit mx-auto mb-2">
-                    Most Popular
-                  </div>
-                  <CardTitle>Premium</CardTitle>
-                  <div className="text-4xl font-bold">
-                    $99
-                    <span className="text-base font-normal text-muted-foreground">
-                      /month
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>All Basic features</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Daily accountability check-ins</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Personalized learning path</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Weekly 1-on-1 mentoring (30 min)</span>
-                    </li>
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                    Get Started
-                  </Button>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Enterprise</CardTitle>
-                  <div className="text-4xl font-bold">
-                    $199
-                    <span className="text-base font-normal text-muted-foreground">
-                      /month
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>All Premium features</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Daily 1-on-1 mentoring (15 min)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Industry-specific vocabulary</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600" />
-                      <span>Priority support</span>
-                    </li>
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                    Get Started
-                  </Button>
-                </CardFooter>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6 mx-auto">
@@ -475,7 +350,7 @@ export default function Home() {
               </>
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <Button className="text-lg px-8 py-6 bg-emerald-600 hover:bg-emerald-700 cursor-pointer">
-                  Заплануйте демонстрацію
+                  Заплануйте безкоштовне пробне заняття
                 </Button>
               </div>
             </div>
