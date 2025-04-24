@@ -240,3 +240,31 @@ export const stopWords = new Set([
   'hundred',
   'thousand',
 ]);
+
+// const speakWord = () => {
+//   if (!currentWord) return;
+
+//   const synth = window.speechSynthesis;
+
+//   const speak = () => {
+//     const voices = synth.getVoices();
+//     console.log('Available voices:', voices);
+//     let selectedVoice = voices.find((v) => v.name === 'Google US English');
+//     if (!selectedVoice) {
+//       // fallback to en‑US or first available
+//       selectedVoice =
+//         voices.find((v) => v.lang.startsWith('en-US')) || voices[0];
+//     }
+//     console.log('Selected voice:', selectedVoice);
+
+//     const utterance = new SpeechSynthesisUtterance(currentWord.word);
+//     if (selectedVoice) utterance.voice = selectedVoice;
+//     utterance.lang = 'en-US';
+//     synth.cancel(); // clear any ongoing speech
+//     synth.speak(utterance);
+//   };
+
+//   // speak right away, and again if voices load later
+//   speak();
+//   synth.addEventListener('voiceschanged', speak);
+// };

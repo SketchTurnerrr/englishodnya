@@ -1,0 +1,3832 @@
+[
+  {
+    "word": "all",
+    "definition": "(with a possessive pronoun) Everything that one is capable of.",
+    "example": "She gave her all, and collapsed at the finish line."
+  },
+  {
+    "word": "and",
+    "definition": "As a coordinating conjunction; expressing two elements to be taken together or in addition to each other.",
+    "example": "Example not found."
+  },
+  {
+    "word": "ball",
+    "definition": "A solid or hollow sphere, or roughly spherical mass.",
+    "example": "a ball of spittle; a fecal ball"
+  },
+  {
+    "word": "bed",
+    "definition": "A piece of furniture, usually flat and soft, on which to rest or sleep.",
+    "example": "My cat often sleeps on my bed.\nI keep a glass of water next to my bed when I sleep."
+  },
+  {
+    "word": "big",
+    "definition": "Of great size, large.",
+    "example": "Elephants are big animals, and they eat a lot."
+  },
+  {
+    "word": "book",
+    "definition": "A collection of sheets of paper bound together to hinge at one edge, containing printed or written material, pictures, etc.",
+    "example": "He was frustrated because he couldn't find anything about dinosaurs in the book."
+  },
+  {
+    "word": "box",
+    "definition": "To place inside a box; to pack in one or more boxes.",
+    "example": "Example not found."
+  },
+  {
+    "word": "boy",
+    "definition": "A young male.",
+    "example": "Kate is dating a boy named Jim."
+  },
+  {
+    "word": "car",
+    "definition": "A wheeled vehicle that moves independently, with at least three wheels, powered mechanically, steered by a driver and mostly for personal transportation.",
+    "example": "She drove her car to the mall."
+  },
+  {
+    "word": "cat",
+    "definition": "To hoist (the anchor) by its ring so that it hangs at the cathead.",
+    "example": "Example not found."
+  },
+  {
+    "word": "come",
+    "definition": "To move from further away to nearer to.",
+    "example": "She\u2019ll be coming \u2019round the mountain when she comes [...]"
+  },
+  {
+    "word": "cow",
+    "definition": "(properly) An adult female of the species Bos taurus, especially one that has calved.",
+    "example": "Example not found."
+  },
+  {
+    "word": "dad",
+    "definition": "A father, a male parent.",
+    "example": "His dad was always there for him."
+  },
+  {
+    "word": "day",
+    "definition": "Any period of 24 hours.",
+    "example": "I've been here for two days and a bit."
+  },
+  {
+    "word": "dog",
+    "definition": "A mammal, Canis familiaris or Canis lupus familiaris, that has been domesticated for thousands of years, of highly variable appearance due to human breeding.",
+    "example": "The dog barked all night long."
+  },
+  {
+    "word": "for",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "fun",
+    "definition": "To tease, kid, poke fun at, make fun of.",
+    "example": "Hey, don't get bent out of shape over it; I was just funning you."
+  },
+  {
+    "word": "get",
+    "definition": "(ditransitive) To obtain; to acquire.",
+    "example": "I'm going to get a computer tomorrow from the discount store."
+  },
+  {
+    "word": "good",
+    "definition": "That is good; an elliptical exclamation of satisfaction or commendation.",
+    "example": "Good! I can leave now."
+  },
+  {
+    "word": "got",
+    "definition": "(ditransitive) To obtain; to acquire.",
+    "example": "I'm going to get a computer tomorrow from the discount store."
+  },
+  {
+    "word": "hen",
+    "definition": "To behave in an overprotective or extremely nurturing manner (towards).",
+    "example": "Example not found."
+  },
+  {
+    "word": "home",
+    "definition": "(of animals) To return to its owner.",
+    "example": "The dog homed."
+  },
+  {
+    "word": "hot",
+    "definition": "(of an object) Having a high temperature.",
+    "example": "He forgot that the frying pan was hot and burned his hand."
+  },
+  {
+    "word": "into",
+    "definition": "To or towards the inside of.",
+    "example": "Mary danced into the house."
+  },
+  {
+    "word": "like",
+    "definition": "(usually in the plural) Something that a person likes (prefers).",
+    "example": "Tell me your likes and dislikes."
+  },
+  {
+    "word": "look",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "man",
+    "definition": "An adult male human.",
+    "example": "The show is especially popular with middle-aged men."
+  },
+  {
+    "word": "may",
+    "definition": "To be strong; to have power (over).",
+    "example": "Example not found."
+  },
+  {
+    "word": "mom",
+    "definition": "To care in a motherly way.",
+    "example": "Example not found."
+  },
+  {
+    "word": "old",
+    "definition": "(with the, invariable plural only) People who are old; old beings; the older generation, taken as a group.",
+    "example": "A civilised society should always look after the old in the community."
+  },
+  {
+    "word": "out",
+    "definition": "A means of exit, escape, reprieve, etc.",
+    "example": "They wrote the law to give those organizations an out."
+  },
+  {
+    "word": "pan",
+    "definition": "Meanings relating to a wind instrument.",
+    "example": "Example not found."
+  },
+  {
+    "word": "pet",
+    "definition": "Favourite; cherished; the focus of one's (usually positive) attention.",
+    "example": "The professor seemed offended by the criticism of her pet theory."
+  },
+  {
+    "word": "pig",
+    "definition": "Any of several intelligent mammalian species of the genus Sus, having cloven hooves, bristles and a nose adapted for digging; especially the domesticated animal Sus scrofa.",
+    "example": "The man kept a pen with two pigs that he fed from carrots to cabbage."
+  },
+  {
+    "word": "play",
+    "definition": "Activity for amusement only, especially among the young.",
+    "example": "Children learn through play."
+  },
+  {
+    "word": "ran",
+    "definition": "To move swiftly.",
+    "example": "Example not found."
+  },
+  {
+    "word": "rat",
+    "definition": "(usually with \u201con\u201d or \u201cout\u201d) To betray a person or party, especially by telling their secret to an authority or an enemy; to turn someone in.",
+    "example": "He is going to rat us out!"
+  },
+  {
+    "word": "red",
+    "definition": "Having red as its color.",
+    "example": "The girl wore a red skirt."
+  },
+  {
+    "word": "ride",
+    "definition": "An instance of riding.",
+    "example": "Can I have a ride on your bike?"
+  },
+  {
+    "word": "run",
+    "definition": "Act or instance of running, of moving rapidly using the feet.",
+    "example": "I just got back from my morning run."
+  },
+  {
+    "word": "see",
+    "definition": "Directing the audience to pay attention to the following",
+    "example": "See here, fellas, there's no need for all this rucus!"
+  },
+  {
+    "word": "sit",
+    "definition": "(of a person) To be in a position in which the upper body is upright and supported by the buttocks.",
+    "example": "After a long day of walking, it was good just to sit and relax."
+  },
+  {
+    "word": "six",
+    "definition": "A numerical value equal to 6; the number following five and preceding seven. This many dots: (\u2022\u2022\u2022\u2022\u2022\u2022).",
+    "example": "Example not found."
+  },
+  {
+    "word": "stop",
+    "definition": "A (usually marked) place where buses, trams or trains halt to let passengers get on and off, usually smaller than a station.",
+    "example": "They agreed to meet at the bus stop."
+  },
+  {
+    "word": "sun",
+    "definition": "To expose to the warmth and radiation of the sun.",
+    "example": "Beautiful bodies lying on the beach, sunning their bronzed limbs."
+  },
+  {
+    "word": "ten",
+    "definition": "A set or group with ten elements.",
+    "example": "We divided the chocolates into tens to hand out to Hallowe'en visitors."
+  },
+  {
+    "word": "top",
+    "definition": "The highest or uppermost part of something.",
+    "example": "His kite got caught at the top of the tree."
+  },
+  {
+    "word": "toy",
+    "definition": "Something to play with, especially as intended for use by a child.",
+    "example": "A grown man does not play with a child\u2019s toy."
+  },
+  {
+    "word": "will",
+    "definition": "(now uncommon or literary) To wish, desire (something).",
+    "example": "Do what you will."
+  },
+  {
+    "word": "you",
+    "definition": "(object pronoun) The people spoken, or written to, as an object.",
+    "example": "Both of you should get ready now."
+  },
+  {
+    "word": "about",
+    "definition": "Moving around; astir.",
+    "example": "After my bout with Guillan-Barre Syndrome, it took me 6 months to be up and about again."
+  },
+  {
+    "word": "add",
+    "definition": "To join or unite (e.g. one thing to another, or as several particulars) so as to increase the number, augment the quantity or enlarge the magnitude, or so as to form into one aggregate.",
+    "example": "Example not found."
+  },
+  {
+    "word": "after",
+    "definition": "Behind; later in time; following.",
+    "example": "I left the room, and the dog bounded after."
+  },
+  {
+    "word": "ago",
+    "definition": "Gone; gone by; gone away; passed; passed away.",
+    "example": "in days ago/in days agone"
+  },
+  {
+    "word": "any",
+    "definition": "To even the slightest extent, at all.",
+    "example": "I will not remain here any longer."
+  },
+  {
+    "word": "apple",
+    "definition": "To become apple-like.",
+    "example": "Example not found."
+  },
+  {
+    "word": "are",
+    "definition": "An accepted (but deprecated and rarely used) SI unit of area equal to 100 square metres, or a former unit of approximately the same extent. Symbol: a.",
+    "example": "Example not found."
+  },
+  {
+    "word": "ask",
+    "definition": "To request (information, or an answer to a question).",
+    "example": "I asked her age."
+  },
+  {
+    "word": "ate",
+    "definition": "To ingest; to be ingested.",
+    "example": "Example not found."
+  },
+  {
+    "word": "away",
+    "definition": "To depart; to go to another place.",
+    "example": "At 9 o'clock sharp he awayed to bed."
+  },
+  {
+    "word": "baby",
+    "definition": "Of a child: very young; of the age when he or she would be termed a baby or infant.",
+    "example": "a baby boy"
+  },
+  {
+    "word": "back",
+    "definition": "The rear of the body, especially the part between the neck and the end of the spine and opposite the chest and belly.",
+    "example": "Could you please scratch my back?"
+  },
+  {
+    "word": "bad",
+    "definition": "Unfavorable; negative; not good.",
+    "example": "Abducting children is bad for mothers."
+  },
+  {
+    "word": "bag",
+    "definition": "To put into a bag.",
+    "example": "Example not found."
+  },
+  {
+    "word": "base",
+    "definition": "A low spectrum of sound tones.",
+    "example": "Peter adjusted the equalizer on his audio equipment to emphasize the bass."
+  },
+  {
+    "word": "bat",
+    "definition": "Any of the flying mammals of the order Chiroptera, usually small and nocturnal, insectivorous or frugivorous.",
+    "example": "Example not found."
+  },
+  {
+    "word": "bee",
+    "definition": "A flying insect, of the clade Anthophila within the hymenopteran superfamily Apoidea, known for its organised societies (though only a minority have them), for collecting pollen and (in some species) producing wax and honey.",
+    "example": "Example not found."
+  },
+  {
+    "word": "been",
+    "definition": "A flying insect, of the clade Anthophila within the hymenopteran superfamily Apoidea, known for its organised societies (though only a minority have them), for collecting pollen and (in some species) producing wax and honey.",
+    "example": "Example not found."
+  },
+  {
+    "word": "before",
+    "definition": "At an earlier time.",
+    "example": "I've never done this before."
+  },
+  {
+    "word": "being",
+    "definition": "Given that; since.",
+    "example": "Example not found."
+  },
+  {
+    "word": "best",
+    "definition": "The supreme effort one can make, or has made.",
+    "example": "I did my best."
+  },
+  {
+    "word": "bike",
+    "definition": "To ride a bike.",
+    "example": "I biked so much yesterday that I'm very sore today."
+  },
+  {
+    "word": "bill",
+    "definition": "To dig, chop, etc., with a bill.",
+    "example": "Example not found."
+  },
+  {
+    "word": "bird",
+    "definition": "A member of the class of animals Aves in the phylum Chordata, characterized by being warm-blooded, having feathers and wings usually capable of flight, and laying eggs.",
+    "example": "Ducks and sparrows are birds."
+  },
+  {
+    "word": "black",
+    "definition": "(of an object) Absorbing all light and reflecting none; dark and hueless.",
+    "example": "Example not found."
+  },
+  {
+    "word": "blue",
+    "definition": "Of the colour blue.",
+    "example": "the deep blue sea"
+  },
+  {
+    "word": "boat",
+    "definition": "To travel by boat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "both",
+    "definition": "Each of the two, or of the two kinds.",
+    "example": "\"Did you want this one or that one?\" \u2014 \"Give me both.\""
+  },
+  {
+    "word": "bring",
+    "definition": "(ditransitive) To transport toward somebody/somewhere.",
+    "example": "Waiter, please bring me a single malt whiskey."
+  },
+  {
+    "word": "brother",
+    "definition": "Expressing exasperation.",
+    "example": "We're being forced to work overtime? Oh, brother!"
+  },
+  {
+    "word": "brown",
+    "definition": "A colour like that of chocolate or coffee.",
+    "example": "The browns and greens in this painting give it a nice woodsy feel."
+  },
+  {
+    "word": "bus",
+    "definition": "To transport via a motor bus.",
+    "example": "Example not found."
+  },
+  {
+    "word": "buy",
+    "definition": "Something which is bought; a purchase.",
+    "example": "At only $30, the second-hand kitchen table was a great buy."
+  },
+  {
+    "word": "cake",
+    "definition": "Coat (something) with a crust of solid material.",
+    "example": "His shoes are caked with mud."
+  },
+  {
+    "word": "call",
+    "definition": "A telephone conversation.",
+    "example": "I received several calls today."
+  },
+  {
+    "word": "candy",
+    "definition": "To cook in, or coat with, sugar syrup.",
+    "example": "Example not found."
+  },
+  {
+    "word": "change",
+    "definition": "The process of becoming different.",
+    "example": "The product is undergoing a change in order to improve it."
+  },
+  {
+    "word": "child",
+    "definition": "A person who has not yet reached adulthood, whether natural (puberty), cultural (initiation), or legal (majority)",
+    "example": "Go easy on him: he is but a child."
+  },
+  {
+    "word": "city",
+    "definition": "A large settlement, bigger than a town; sometimes with a specific legal definition, depending on the place.",
+    "example": "S\u00e3o Paulo is the largest city in South America."
+  },
+  {
+    "word": "clean",
+    "definition": "Removal of dirt.",
+    "example": "This place needs a clean."
+  },
+  {
+    "word": "club",
+    "definition": "To hit with a club.",
+    "example": "He clubbed the poor dog."
+  },
+  {
+    "word": "coat",
+    "definition": "To cover with a coating of some material.",
+    "example": "The frying pan was coated with a layer of non-stick material, making it easier to wash."
+  },
+  {
+    "word": "cold",
+    "definition": "(of a thing) Having a low temperature.",
+    "example": "A cold wind whistled through the trees."
+  },
+  {
+    "word": "coming",
+    "definition": "To move from further away to nearer to.",
+    "example": "She\u2019ll be coming \u2019round the mountain when she comes [...]"
+  },
+  {
+    "word": "corn",
+    "definition": "To granulate; to form a substance into grains",
+    "example": "to corn gunpowder"
+  },
+  {
+    "word": "could",
+    "definition": "(auxiliary verb, defective) To know how to; to be able to.",
+    "example": "She can speak English, French, and German.\u00a0\u00a0 I can play football.\u00a0\u00a0 Can you remember your fifth birthday?"
+  },
+  {
+    "word": "cry",
+    "definition": "A shedding of tears; the act of crying.",
+    "example": "After we broke up, I retreated to my room for a good cry."
+  },
+  {
+    "word": "cup",
+    "definition": "A concave vessel for drinking from, usually made of opaque material (as opposed to a glass) and with a handle.",
+    "example": "Pour the tea into the cup."
+  },
+  {
+    "word": "cut",
+    "definition": "The act of cutting.",
+    "example": "He made a fine cut with his sword."
+  },
+  {
+    "word": "daddy",
+    "definition": "To father; to sire.",
+    "example": "Example not found."
+  },
+  {
+    "word": "dear",
+    "definition": "A very kind, loving person.",
+    "example": "My cousin is such a dear, always drawing me pictures."
+  },
+  {
+    "word": "deep",
+    "definition": "(with \"the\") The deep part of a lake, sea, etc.",
+    "example": "creatures of the deep"
+  },
+  {
+    "word": "deer",
+    "definition": "A ruminant mammal with antlers and hooves of the family Cervidae, or one of several similar animals from related families of the order Artiodactyla",
+    "example": "Example not found."
+  },
+  {
+    "word": "doing",
+    "definition": "A deed or action, especially when somebody is held responsible for it.",
+    "example": "This is his doing. (= \"He did it.\")"
+  },
+  {
+    "word": "doll",
+    "definition": "A toy in the form of a human.",
+    "example": "Example not found."
+  },
+  {
+    "word": "door",
+    "definition": "A portal of entry into a building, room, or vehicle, consisting of a rigid plane movable on a hinge. Doors are frequently made of wood or metal. May have a handle to help open and close, a latch to hold the door closed and a lock that ensures the door cannot be opened without the key.",
+    "example": "I knocked on the vice president's door"
+  },
+  {
+    "word": "down",
+    "definition": "A negative aspect; a downer.",
+    "example": "I love almost everything about my job. The only down is that I can't take Saturdays off."
+  },
+  {
+    "word": "dress",
+    "definition": "An item of clothing (usually worn by a woman or young girl) which both covers the upper part of the body and includes skirts below the waist.",
+    "example": "Amy and Mary looked very pretty in their dresses."
+  },
+  {
+    "word": "drive",
+    "definition": "Motivation to do or achieve something; ability coupled with ambition.",
+    "example": "Crassus had wealth and wit, but Pompey had drive and Caesar as much again."
+  },
+  {
+    "word": "drop",
+    "definition": "A small quantity of liquid, just large enough to hold its own round shape via surface tension, especially one that falls from a source of liquid.",
+    "example": "Put three drops of oil into the mixture."
+  },
+  {
+    "word": "dry",
+    "definition": "The process by which something is dried.",
+    "example": "This towel is still damp: I think it needs another dry."
+  },
+  {
+    "word": "duck",
+    "definition": "To quickly lower the head or body in order to prevent it from being struck by something.",
+    "example": "Example not found."
+  },
+  {
+    "word": "each",
+    "definition": "For one; apiece; per.",
+    "example": "The apples cost 50 cents each."
+  },
+  {
+    "word": "eat",
+    "definition": "To ingest; to be ingested.",
+    "example": "Example not found."
+  },
+  {
+    "word": "eating",
+    "definition": "Bred to be eaten.",
+    "example": "eating chickens; eating quails"
+  },
+  {
+    "word": "egg",
+    "definition": "To throw eggs at.",
+    "example": "Example not found."
+  },
+  {
+    "word": "end",
+    "definition": "The terminal point of something in space or time.",
+    "example": "At the end of the road, turn left."
+  },
+  {
+    "word": "fall",
+    "definition": "(heading) To be moved downwards.",
+    "example": "Example not found."
+  },
+  {
+    "word": "far",
+    "definition": "Distant; remote in space.",
+    "example": "He went to a far land."
+  },
+  {
+    "word": "farm",
+    "definition": "To work on a farm, especially in the growing and harvesting of crops.",
+    "example": "Example not found."
+  },
+  {
+    "word": "fast",
+    "definition": "Firmly or securely fixed in place; stable.",
+    "example": "That rope is dangerously loose. Make it fast!"
+  },
+  {
+    "word": "father",
+    "definition": "A (generally human) male who begets a child.",
+    "example": "My father was a strong influence on me."
+  },
+  {
+    "word": "feed",
+    "definition": "Food given to (especially herbivorous) animals.",
+    "example": "They sell feed, riding helmets, and everything else for horses."
+  },
+  {
+    "word": "feel",
+    "definition": "A quality of an object experienced by touch.",
+    "example": "Bark has a rough feel."
+  },
+  {
+    "word": "feet",
+    "definition": "A biological structure found in many animals that is used for locomotion and that is frequently a separate organ at the terminal part of the leg.",
+    "example": "A spider has eight feet."
+  },
+  {
+    "word": "fell",
+    "definition": "To make something fall; especially to chop down a tree.",
+    "example": "Example not found."
+  },
+  {
+    "word": "find",
+    "definition": "To encounter or discover by accident; to happen upon.",
+    "example": "Example not found."
+  },
+  {
+    "word": "fine",
+    "definition": "To make finer, purer, or cleaner; to purify or clarify.",
+    "example": "to fine gold"
+  },
+  {
+    "word": "fire",
+    "definition": "A (usually self-sustaining) chemical reaction involving the bonding of oxygen with carbon or other fuel, with the production of heat and the presence of flame or smouldering.",
+    "example": "Example not found."
+  },
+  {
+    "word": "first",
+    "definition": "The person or thing in the first position.",
+    "example": "He was the first to complete the course."
+  },
+  {
+    "word": "fish",
+    "definition": "A cold-blooded vertebrate animal that lives in water, moving with the help of fins and breathing with gills.",
+    "example": "Salmon is a fish."
+  },
+  {
+    "word": "five",
+    "definition": "The digit/figure 5.",
+    "example": "He wrote a five followed by four zeroes."
+  },
+  {
+    "word": "fix",
+    "definition": "A repair or corrective action.",
+    "example": "That plumber's fix is much better than the first one's."
+  },
+  {
+    "word": "flag",
+    "definition": "To furnish or deck out with flags.",
+    "example": "Example not found."
+  },
+  {
+    "word": "floor",
+    "definition": "The interior bottom or surface of a house or building; the supporting surface of a room.",
+    "example": "The room has a wooden floor."
+  },
+  {
+    "word": "fly",
+    "definition": "Any insect of the order Diptera; characterized by having two wings (except for some wingless species), also called true flies.",
+    "example": "Example not found."
+  },
+  {
+    "word": "food",
+    "definition": "Any solid substance that can be consumed by living organisms, especially by eating, in order to sustain life.",
+    "example": "The innkeeper brought them food and drink."
+  },
+  {
+    "word": "foot",
+    "definition": "A biological structure found in many animals that is used for locomotion and that is frequently a separate organ at the terminal part of the leg.",
+    "example": "A spider has eight feet."
+  },
+  {
+    "word": "four",
+    "definition": "A numerical value equal to 4; the number after three and before five; two plus two. This many dots (\u2022\u2022\u2022\u2022)",
+    "example": "There are four seasons: winter, spring, summer and autumn."
+  },
+  {
+    "word": "fox",
+    "definition": "A red fox, small carnivore (Vulpes vulpes), related to dogs and wolves, with red or silver fur and a bushy tail.",
+    "example": "The quick brown fox jumps over the lazy dog."
+  },
+  {
+    "word": "from",
+    "definition": "Used to indicate source or provenance.",
+    "example": "I got a letter from my brother."
+  },
+  {
+    "word": "full",
+    "definition": "Containing the maximum possible amount that can fit in the space available.",
+    "example": "The jugs were full to the point of overflowing."
+  },
+  {
+    "word": "funny",
+    "definition": "Amusing; humorous; comical.",
+    "example": "When I went to the circus, I only found the clowns funny."
+  },
+  {
+    "word": "game",
+    "definition": "Willing to participate.",
+    "example": "Example not found."
+  },
+  {
+    "word": "gas",
+    "definition": "Matter in a state intermediate between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly.",
+    "example": "A lot of gas had escaped from the cylinder."
+  },
+  {
+    "word": "gave",
+    "definition": "(ditransitive) To move, shift, provide something abstract or concrete to someone or something or somewhere.",
+    "example": "Example not found."
+  },
+  {
+    "word": "girl",
+    "definition": "To feminize or girlify; to gender as a girl or as for girls.",
+    "example": "Example not found."
+  },
+  {
+    "word": "give",
+    "definition": "The amount of bending that something undergoes when a force is applied to it; a tendency to yield under pressure; resilence.",
+    "example": "There is no give in his dogmatic religious beliefs."
+  },
+  {
+    "word": "glad",
+    "definition": "Pleased, happy, gratified.",
+    "example": "I'm glad the rain has finally stopped."
+  },
+  {
+    "word": "goat",
+    "definition": "To allow goats to feed on.",
+    "example": "Example not found."
+  },
+  {
+    "word": "goes",
+    "definition": "To move:",
+    "example": "Example not found."
+  },
+  {
+    "word": "going",
+    "definition": "A departure.",
+    "example": "Thy going is not lonely, with thee goes thy Husband"
+  },
+  {
+    "word": "gold",
+    "definition": "Made of gold.",
+    "example": "Example not found."
+  },
+  {
+    "word": "gone",
+    "definition": "Away, having left.",
+    "example": "Are they gone already?"
+  },
+  {
+    "word": "grade",
+    "definition": "A rating.",
+    "example": "I gave him a good grade for effort."
+  },
+  {
+    "word": "grass",
+    "definition": "To lay out on the grass; to knock down (an opponent etc.).",
+    "example": "Example not found."
+  },
+  {
+    "word": "green",
+    "definition": "Having green as its color.",
+    "example": "The former flag of Libya is fully green."
+  },
+  {
+    "word": "grow",
+    "definition": "To become larger, to increase in magnitude.",
+    "example": "Children grow quickly."
+  },
+  {
+    "word": "hand",
+    "definition": "The part of the forelimb below the forearm or wrist in a human, and the corresponding part in many other animals.",
+    "example": "Her hands are really strong."
+  },
+  {
+    "word": "happy",
+    "definition": "Having a feeling arising from a consciousness of well-being or of enjoyment; enjoying good of any kind, such as comfort, peace, or tranquillity; blissful, contented, joyous.",
+    "example": "Music makes me feel happy."
+  },
+  {
+    "word": "hard",
+    "definition": "(manner) With much force or effort.",
+    "example": "At the intersection, bear hard left."
+  },
+  {
+    "word": "have",
+    "definition": "To possess, own.",
+    "example": "I have a house and a car."
+  },
+  {
+    "word": "hear",
+    "definition": "(stative) To perceive sounds through the ear.",
+    "example": "I was deaf, and now I can hear."
+  },
+  {
+    "word": "help",
+    "definition": "Action given to provide assistance; aid.",
+    "example": "I need some help with my homework."
+  },
+  {
+    "word": "here",
+    "definition": "(abstract) This place; this location.",
+    "example": "An Alzheimer patient's here may in his mind be anywhere he called home in the time he presently re-lives."
+  },
+  {
+    "word": "hill",
+    "definition": "An elevated location smaller than a mountain.",
+    "example": "The park is sheltered from the wind by a hill to the east."
+  },
+  {
+    "word": "hit",
+    "definition": "A blow; a punch; a striking against; the collision of one body against another; the stroke that touches anything.",
+    "example": "The hit was very slight."
+  },
+  {
+    "word": "hold",
+    "definition": "A grasp or grip.",
+    "example": "Keep a firm hold on the handlebars."
+  },
+  {
+    "word": "hole",
+    "definition": "A hollow place or cavity; an excavation; a pit; an opening in or through a solid body, a fabric, etc.; a perforation; a rent; a fissure.",
+    "example": "There\u2019s a hole in my shoe.\u2003 Her stocking has a hole in it."
+  },
+  {
+    "word": "hop",
+    "definition": "A short jump.",
+    "example": "The frog crossed the brook in three or four hops."
+  },
+  {
+    "word": "hope",
+    "definition": "To want something to happen, with a sense of expectation that it might.",
+    "example": "I am still hoping that all will turn out well."
+  },
+  {
+    "word": "horse",
+    "definition": "Any of several animals related to Equus ferus caballus.",
+    "example": "Example not found."
+  },
+  {
+    "word": "house",
+    "definition": "A structure built or serving as an abode of human beings.",
+    "example": "This is my house and my family's ancestral home."
+  },
+  {
+    "word": "how",
+    "definition": "The means by which something is accomplished.",
+    "example": "I am not interested in the why, but in the how."
+  },
+  {
+    "word": "ice",
+    "definition": "To cool with ice, as a beverage.",
+    "example": "Example not found."
+  },
+  {
+    "word": "inch",
+    "definition": "(followed by a preposition) To advance very slowly, or by a small amount (in a particular direction).",
+    "example": "Fearful of falling, he inched along the window ledge."
+  },
+  {
+    "word": "inside",
+    "definition": "The interior or inner part.",
+    "example": "The inside of the building has been extensively restored."
+  },
+  {
+    "word": "job",
+    "definition": "A task.",
+    "example": "A job half done is hardly done at all."
+  },
+  {
+    "word": "jump",
+    "definition": "To propel oneself rapidly upward, downward and/or in any horizontal direction such that momentum causes the body to become airborne.",
+    "example": "Kangaroos are known for their ability to jump high."
+  },
+  {
+    "word": "just",
+    "definition": "Factually right, correct; factual.",
+    "example": "It is a just assessment of the facts."
+  },
+  {
+    "word": "keep",
+    "definition": "To continue in (a course or mode of action); not to intermit or fall from; to uphold or maintain.",
+    "example": "to keep silence;\u2003 to keep one's word;\u2003 to keep possession"
+  },
+  {
+    "word": "king",
+    "definition": "A male monarch; a man who heads a monarchy. If it's an absolute monarchy, then he is the supreme ruler of his nation.",
+    "example": "Henry VIII was the king of England from 1509 to 1547."
+  },
+  {
+    "word": "know",
+    "definition": "To perceive the truth or factuality of; to be certain of or that.",
+    "example": "He knew something terrible was going to happen."
+  },
+  {
+    "word": "lake",
+    "definition": "A small stream of running water; a channel for water; a drain.",
+    "example": "Example not found."
+  },
+  {
+    "word": "land",
+    "definition": "The part of Earth which is not covered by oceans or other bodies of water.",
+    "example": "Most insects live on land."
+  },
+  {
+    "word": "last",
+    "definition": "Final, ultimate, coming after all others of its kind.",
+    "example": "\u201cEyes Wide Shut\u201d was the last film to be directed by Stanley Kubrick."
+  },
+  {
+    "word": "late",
+    "definition": "Near the end of a period of time.",
+    "example": "It was late in the evening when we finally arrived."
+  },
+  {
+    "word": "lay",
+    "definition": "Arrangement or relationship; layout.",
+    "example": "the lay of the land"
+  },
+  {
+    "word": "left",
+    "definition": "The opposite of right; toward the west when one is facing north.",
+    "example": "The left side."
+  },
+  {
+    "word": "leg",
+    "definition": "A limb or appendage that an animal uses for support or locomotion.",
+    "example": "{{ux|en|Insects have six legs.}"
+  },
+  {
+    "word": "light",
+    "definition": "Visible electromagnetic radiation. The human eye can typically detect radiation (light) in the wavelength range of about 400 to 750 nanometers. Nearby shorter and longer wavelength ranges, although not visible, are commonly called ultraviolet and infrared light.",
+    "example": "As you can see, this spacious dining-room gets a lot of light in the mornings."
+  },
+  {
+    "word": "line",
+    "definition": "A path through two or more points (compare \u2018segment\u2019); a continuous mark, including as made by a pen; any path, curved or straight.",
+    "example": "The arrow descended in a curved line."
+  },
+  {
+    "word": "little",
+    "definition": "A small amount.",
+    "example": "Can I try a little of that sauce?"
+  },
+  {
+    "word": "live",
+    "definition": "To be alive; to have life.",
+    "example": "He's not expected to live for more than a few months."
+  },
+  {
+    "word": "lives",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "long",
+    "definition": "Having much distance from one terminating point on an object or an area to another terminating point (usually applies to horizontal dimensions; see Usage Notes below).",
+    "example": "It's a long way from the Earth to the Moon."
+  },
+  {
+    "word": "looking",
+    "definition": "The act of one who looks; a glance.",
+    "example": "Example not found."
+  },
+  {
+    "word": "lost",
+    "definition": "To cause (something) to cease to be in one's possession or capability due to unfortunate or unknown circumstances, events or reasons.",
+    "example": "He lost his hearing in the explosion."
+  },
+  {
+    "word": "lot",
+    "definition": "A large quantity or number; a great deal.",
+    "example": "lots of people think so"
+  },
+  {
+    "word": "love",
+    "definition": "(usually transitive, sometimes intransitive, stative) To have a strong affection for (someone or something).",
+    "example": "I love my spouse. \u00a0 I love you!"
+  },
+  {
+    "word": "mad",
+    "definition": "Insane; crazy, mentally deranged.",
+    "example": "He's got this mad idea that he's irresistible to women."
+  },
+  {
+    "word": "made",
+    "definition": "A grub or maggot.",
+    "example": "Example not found."
+  },
+  {
+    "word": "make",
+    "definition": "Brand or kind; model.",
+    "example": "What make of car do you drive?"
+  },
+  {
+    "word": "many",
+    "definition": "A multitude; a great aggregate; a mass of people; the generality; the common herd.",
+    "example": "Democracy must balance the rights of the few against the will of the many."
+  },
+  {
+    "word": "meat",
+    "definition": "The flesh (muscle tissue) of an animal used as food.",
+    "example": "A large portion of domestic meat production comes from animals raised on factory farms."
+  },
+  {
+    "word": "men",
+    "definition": "An adult male human.",
+    "example": "The show is especially popular with middle-aged men."
+  },
+  {
+    "word": "met",
+    "definition": "To make contact (with) while in proximity.",
+    "example": "Example not found."
+  },
+  {
+    "word": "mile",
+    "definition": "The international mile: a unit of length precisely equal to 1.609344 kilometers established by treaty among Anglophone nations in 1959, divided into 5,280 feet or 1,760 yards.",
+    "example": "Example not found."
+  },
+  {
+    "word": "milk",
+    "definition": "A white liquid produced by the mammary glands of female mammals to nourish their young. From certain animals, especially cows, it is also called dairy milk and is a common food for humans as a beverage or used to produce various dairy products such as butter, cheese, and yogurt.",
+    "example": "Example not found."
+  },
+  {
+    "word": "mine",
+    "definition": "My; belonging to me; that which belongs to me.",
+    "example": "Example not found."
+  },
+  {
+    "word": "miss",
+    "definition": "To fail to hit.",
+    "example": "I missed the target."
+  },
+  {
+    "word": "moon",
+    "definition": "(by extension of Moon) Any natural satellite of a planet.",
+    "example": "That's no moon, you idiot... it's a space station!"
+  },
+  {
+    "word": "more",
+    "definition": "To a greater degree or extent.",
+    "example": "I could no more climb that than fly!"
+  },
+  {
+    "word": "most",
+    "definition": "The greatest amount.",
+    "example": "The most I can offer for the house is $150,000."
+  },
+  {
+    "word": "mother",
+    "definition": "A (human) female who has given birth to a baby",
+    "example": "He had something of his mother in him."
+  },
+  {
+    "word": "move",
+    "definition": "The act of moving; a movement.",
+    "example": "A slight move of the tiller, and the boat will go off course."
+  },
+  {
+    "word": "much",
+    "definition": "To a great extent.",
+    "example": "He is much fatter than I remember him."
+  },
+  {
+    "word": "must",
+    "definition": "Something that is mandatory or required.",
+    "example": "If you'll be out all day, a map is a must."
+  },
+  {
+    "word": "myself",
+    "definition": "(reflexive pronoun) Me, as direct or indirect object the speaker as the object of a verb or preposition, when the speaker is also the subject.",
+    "example": "I taught myself."
+  },
+  {
+    "word": "nail",
+    "definition": "The thin, horny plate at the ends of fingers and toes on humans and some other animals.",
+    "example": "When I'm nervous I bite my nails."
+  },
+  {
+    "word": "name",
+    "definition": "Any nounal word or phrase which indicates a particular person, place, class, or thing.",
+    "example": "I've never liked the name my parents gave me so I changed it at the age of twenty."
+  },
+  {
+    "word": "need",
+    "definition": "A requirement for something; something needed.",
+    "example": "I've always tried to have few needs beyond food, clothing and shelter."
+  },
+  {
+    "word": "new",
+    "definition": "Things that are new.",
+    "example": "Out with the old, in with the new."
+  },
+  {
+    "word": "next",
+    "definition": "The one that follows after this one.",
+    "example": "Next, please, don't hold up the queue!"
+  },
+  {
+    "word": "nice",
+    "definition": "Nicely.",
+    "example": "Children, play nice."
+  },
+  {
+    "word": "night",
+    "definition": "The period between sunset and sunrise, when a location faces far away from the sun, thus when the sky is dark.",
+    "example": "How do you sleep at night when you attack your kids like that!?"
+  },
+  {
+    "word": "nine",
+    "definition": "A numerical value equal to 9; the number following eight and preceding ten.",
+    "example": "Example not found."
+  },
+  {
+    "word": "north",
+    "definition": "One of the four major compass points, specifically 0\u00b0, directed toward the North Pole, and conventionally upwards on a map, abbreviated as N.",
+    "example": "Minnesota is in the north of the USA."
+  },
+  {
+    "word": "now",
+    "definition": "The present time.",
+    "example": "Now is the right time."
+  },
+  {
+    "word": "nut",
+    "definition": "A hard-shelled seed.",
+    "example": "There are many sort of nuts: peanuts, cashews, pistachios, Brazil nuts and more."
+  },
+  {
+    "word": "off",
+    "definition": "(usually in phrases such as 'from the off', 'at the off', etc.) Beginning; starting point.",
+    "example": "He has been very obviously an untrustworthy narrator right from the off."
+  },
+  {
+    "word": "only",
+    "definition": "Alone in a category.",
+    "example": "He is the only doctor for miles."
+  },
+  {
+    "word": "open",
+    "definition": "Not closed",
+    "example": "Example not found."
+  },
+  {
+    "word": "other",
+    "definition": "An other, another (person, etc), more often rendered as another.",
+    "example": "I'm afraid little Robbie does not always play well with others."
+  },
+  {
+    "word": "our",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "outside",
+    "definition": "The part of something that faces out; the outer surface.",
+    "example": "He's repainting the outside of his house."
+  },
+  {
+    "word": "over",
+    "definition": "To go over, or jump over.",
+    "example": "He overed the fence in good style."
+  },
+  {
+    "word": "page",
+    "definition": "To mark or number the pages of, as a book or manuscript.",
+    "example": "Example not found."
+  },
+  {
+    "word": "park",
+    "definition": "To bring (something such as a vehicle) to a halt or store in a specified place.",
+    "example": "I parked the drive heads of my hard disk before travelling with my laptop."
+  },
+  {
+    "word": "part",
+    "definition": "Fractional; partial.",
+    "example": "Fred was part owner of the car."
+  },
+  {
+    "word": "pay",
+    "definition": "Money given in return for work; salary or wages.",
+    "example": "Many employers have rules designed to keep employees from comparing their pays."
+  },
+  {
+    "word": "pick",
+    "definition": "To grasp and pull with the fingers or fingernails.",
+    "example": "Don't pick at that scab."
+  },
+  {
+    "word": "plant",
+    "definition": "An organism that is not an animal, especially an organism capable of photosynthesis. Typically a small or herbaceous organism of this kind, rather than a tree.",
+    "example": "The garden had a couple of trees, and a cluster of colourful plants around the border."
+  },
+  {
+    "word": "playing",
+    "definition": "To act in a manner such that one has fun; to engage in activities expressly for the purpose of recreation or entertainment.",
+    "example": "They played long and hard."
+  },
+  {
+    "word": "pony",
+    "definition": "To lead (a horse) from another horse.",
+    "example": "Example not found."
+  },
+  {
+    "word": "post",
+    "definition": "A long dowel or plank protruding from the ground; a fencepost; a lightpost.",
+    "example": "ram a post into the ground"
+  },
+  {
+    "word": "pull",
+    "definition": "An act of pulling (applying force)",
+    "example": "He gave the hair a sharp pull and it came out."
+  },
+  {
+    "word": "put",
+    "definition": "To place something somewhere.",
+    "example": "She put her books on the table."
+  },
+  {
+    "word": "rabbit",
+    "definition": "A mammal of the family Leporidae, with long ears, long hind legs and a short, fluffy tail.",
+    "example": "The pioneers survived by eating the small game they could get: rabbits, squirrels and occasionally a raccoon."
+  },
+  {
+    "word": "rain",
+    "definition": "Condensed water falling from a cloud.",
+    "example": "The rains came late that year."
+  },
+  {
+    "word": "read",
+    "definition": "To look at and interpret letters or other information that is written.",
+    "example": "Have you read this book?"
+  },
+  {
+    "word": "rest",
+    "definition": "(of a person or animal) Relief from work or activity by sleeping; sleep.",
+    "example": "I need to get a good rest tonight; I was up late last night."
+  },
+  {
+    "word": "riding",
+    "definition": "A path cut through woodland.",
+    "example": "Example not found."
+  },
+  {
+    "word": "road",
+    "definition": "At the venue of the opposing team or competitor; on the road.",
+    "example": "Example not found."
+  },
+  {
+    "word": "rock",
+    "definition": "A formation of minerals, specifically:",
+    "example": "Example not found."
+  },
+  {
+    "word": "room",
+    "definition": "To reside, especially as a boarder or tenant.",
+    "example": "Doctor Watson roomed with Sherlock Holmes at Baker Street."
+  },
+  {
+    "word": "said",
+    "definition": "Mentioned earlier; aforesaid.",
+    "example": "The said party has denied the charges."
+  },
+  {
+    "word": "same",
+    "definition": "Not different or other; not another or others; not different as regards self; selfsame; identical.",
+    "example": "Are you the same person who phoned me yesterday?"
+  },
+  {
+    "word": "sang",
+    "definition": "To produce musical or harmonious sounds with one\u2019s voice.",
+    "example": "\"I really want to sing in the school choir,\" said Vera."
+  },
+  {
+    "word": "saw",
+    "definition": "To cut (something) with a saw.",
+    "example": "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"
+  },
+  {
+    "word": "say",
+    "definition": "To pronounce.",
+    "example": "Please say your name slowly and clearly."
+  },
+  {
+    "word": "school",
+    "definition": "(collective) A group of fish or a group of marine mammals such as porpoises, dolphins, or whales.",
+    "example": "The divers encountered a huge school of mackerel."
+  },
+  {
+    "word": "sea",
+    "definition": "A large body of salt water.",
+    "example": "Example not found."
+  },
+  {
+    "word": "seat",
+    "definition": "To put an object into a place where it will rest; to fix; to set firm.",
+    "example": "Be sure to seat the gasket properly before attaching the cover."
+  },
+  {
+    "word": "seem",
+    "definition": "To appear; to look outwardly; to be perceived as.",
+    "example": "He seems to be ill.\u00a0\u00a0 Her eyes seem blue.\u00a0\u00a0 It seems like it is going to rain later.\u00a0\u00a0 How did she seem to you?"
+  },
+  {
+    "word": "seen",
+    "definition": "(stative) To perceive or detect with the eyes, or as if by sight.",
+    "example": "Example not found."
+  },
+  {
+    "word": "send",
+    "definition": "To make something (such as an object or message) go from one place to another.",
+    "example": "Every day at two o'clock, he sends his secretary out to buy him a coffee."
+  },
+  {
+    "word": "set",
+    "definition": "To put (something) down, to rest.",
+    "example": "Set the tray there."
+  },
+  {
+    "word": "seven",
+    "definition": "The digit/figure 7 or an occurrence thereof.",
+    "example": "He wrote three sevens on the paper."
+  },
+  {
+    "word": "sheep",
+    "definition": "A woolly ruminant of the genus Ovis.",
+    "example": "Example not found."
+  },
+  {
+    "word": "ship",
+    "definition": "A water-borne vessel generally larger than a boat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "shoe",
+    "definition": "A protective covering for the foot, with a bottom part composed of thick leather or plastic sole and often a thicker heel, and a softer upper part made of leather or synthetic material. Shoes generally do not extend above the ankle, as opposed to boots, which do.",
+    "example": "Get your shoes on now, or you'll be late for school."
+  },
+  {
+    "word": "show",
+    "definition": "To display, to have somebody see (something).",
+    "example": "All he had to show for four years of attendance at college was a framed piece of paper."
+  },
+  {
+    "word": "sick",
+    "definition": "Sick people in general as a group.",
+    "example": "We have to cure the sick."
+  },
+  {
+    "word": "side",
+    "definition": "A bounding straight edge of a two-dimensional shape.",
+    "example": "A square has four sides."
+  },
+  {
+    "word": "sing",
+    "definition": "To produce musical or harmonious sounds with one\u2019s voice.",
+    "example": "\"I really want to sing in the school choir,\" said Vera."
+  },
+  {
+    "word": "sky",
+    "definition": "The atmosphere above a given point, especially as visible from the ground during the day.",
+    "example": "That year, a meteor fell from the sky."
+  },
+  {
+    "word": "sleep",
+    "definition": "To rest in a state of reduced consciousness.",
+    "example": "You should sleep 8 hours a day."
+  },
+  {
+    "word": "small",
+    "definition": "Not large or big; insignificant; few in number.",
+    "example": "A small group."
+  },
+  {
+    "word": "snow",
+    "definition": "To have snow fall from the sky.",
+    "example": "It is snowing."
+  },
+  {
+    "word": "some",
+    "definition": "Of a measurement: approximately, roughly.",
+    "example": "I guess he must have weighed some 90 kilos."
+  },
+  {
+    "word": "soon",
+    "definition": "Short in length of time from the present.",
+    "example": "I need the soonest date you have available."
+  },
+  {
+    "word": "spell",
+    "definition": "Words or a formula supposed to have magical powers.",
+    "example": "He cast a spell to cure warts."
+  },
+  {
+    "word": "start",
+    "definition": "The beginning of an activity.",
+    "example": "The movie was entertaining from start to finish."
+  },
+  {
+    "word": "stay",
+    "definition": "Continuance or a period of time spent in a place; abode for an indefinite time; sojourn.",
+    "example": "I hope you enjoyed your stay in Hawaii."
+  },
+  {
+    "word": "still",
+    "definition": "A period of calm or silence.",
+    "example": "the still of the night"
+  },
+  {
+    "word": "store",
+    "definition": "A place where items may be accumulated or routinely kept.",
+    "example": "This building used to be a store for old tires."
+  },
+  {
+    "word": "story",
+    "definition": "A sequence of real or fictional events; or, an account of such a sequence.",
+    "example": "The book tells the story of two roommates."
+  },
+  {
+    "word": "take",
+    "definition": "To get into one's hands, possession or control, with or without force.",
+    "example": "I'll take that plate off the table."
+  },
+  {
+    "word": "talk",
+    "definition": "To communicate, usually by means of speech.",
+    "example": "Although I don't speak Chinese I managed to talk with the villagers using signs and gestures."
+  },
+  {
+    "word": "tall",
+    "definition": "(of a person) Having a vertical extent greater than the average. For example, somebody with a height of over 6 feet would generally be considered to be tall.",
+    "example": "Being tall is an advantage in basketball."
+  },
+  {
+    "word": "teach",
+    "definition": "To show (someone) the way; to guide, conduct; to point, indicate.",
+    "example": "\u2018The bliss is there\u2019, mumbled the old man and taught to Heaven."
+  },
+  {
+    "word": "tell",
+    "definition": "(archaic outside of idioms) To count, reckon, or enumerate.",
+    "example": "All told, there were over a dozen.\u2003 Can you tell time on a clock?\u2003 He had untold wealth."
+  },
+  {
+    "word": "than",
+    "definition": "Introduces a comparison, and is associated with comparatives, and with words such as more, less, and fewer. Typically, it seeks to measure the force of an adjective or similar description between two predicates.",
+    "example": "A player than whom none is more skillful."
+  },
+  {
+    "word": "thank",
+    "definition": "An expression of appreciation; a thought.",
+    "example": "Example not found."
+  },
+  {
+    "word": "that",
+    "definition": "(degree) To a given extent or degree.",
+    "example": "\"The ribbon was that thin.\" \"I disagree, I say it was not that thin, it was thicker... or maybe thinner...\""
+  },
+  {
+    "word": "them",
+    "definition": "(plural) Those ones.",
+    "example": "Example not found."
+  },
+  {
+    "word": "then",
+    "definition": "Used in comparisons, to introduce the basis of comparison.",
+    "example": "she's taller than I am;\u00a0 she found his advice more witty than helpful;\u00a0 we have less work today than we had yesterday;\u00a0 We had no choice than to return home"
+  },
+  {
+    "word": "there",
+    "definition": "Used as an expletive subject of be in its sense of \u201cexist\u201d, with the semantic, usually indefinite subject being postponed or (occasionally) implied.",
+    "example": "Is there an answer? [=Does an answer exist?]"
+  },
+  {
+    "word": "they",
+    "definition": "(the third-person plural) A group of people, animals, plants or objects previously mentioned.",
+    "example": "Dogs may bark if they want to be fed."
+  },
+  {
+    "word": "thing",
+    "definition": "To express as a thing; to reify.",
+    "example": "Example not found."
+  },
+  {
+    "word": "think",
+    "definition": "An act of thinking; consideration (of something).",
+    "example": "I'll have a think about that and let you know."
+  },
+  {
+    "word": "three",
+    "definition": "A goal or other means of scoring worth three points.",
+    "example": "Example not found."
+  },
+  {
+    "word": "time",
+    "definition": "The inevitable progression into the future with the passing of present and past events.",
+    "example": "Time stops for nobody.\u00a0\u00a0 the ebb and flow of time"
+  },
+  {
+    "word": "today",
+    "definition": "A current day or date.",
+    "example": "Today is the day we'll fix this once and for all."
+  },
+  {
+    "word": "told",
+    "definition": "(archaic outside of idioms) To count, reckon, or enumerate.",
+    "example": "All told, there were over a dozen.\u2003 Can you tell time on a clock?\u2003 He had untold wealth."
+  },
+  {
+    "word": "too",
+    "definition": "(focus) Likewise.",
+    "example": "Example not found."
+  },
+  {
+    "word": "took",
+    "definition": "To get into one's hands, possession or control, with or without force.",
+    "example": "I'll take that plate off the table."
+  },
+  {
+    "word": "train",
+    "definition": "To practice an ability.",
+    "example": "She trained seven hours a day to prepare for the Olympics."
+  },
+  {
+    "word": "tree",
+    "definition": "A perennial woody plant, not exactly defined, but differentiated from a shrub by its larger size (typically over a few meters in height) or growth habit, usually having a single (or few) main axis or trunk unbranched for some distance above the ground and a head of branches and foliage.",
+    "example": "Birds have a nest in a tree in the garden."
+  },
+  {
+    "word": "truck",
+    "definition": "To drive a truck: Generally a truck driver's slang.",
+    "example": "Example not found."
+  },
+  {
+    "word": "try",
+    "definition": "An attempt.",
+    "example": "I gave unicycling a try but I couldn\u2019t do it."
+  },
+  {
+    "word": "use",
+    "definition": "The act of using.",
+    "example": "The use of torture has been condemned by the United Nations."
+  },
+  {
+    "word": "very",
+    "definition": "True, real, actual.",
+    "example": "He tried his very best."
+  },
+  {
+    "word": "walk",
+    "definition": "To move on the feet by alternately setting each foot (or pair or group of feet, in the case of animals with four or more feet) forward, with at least one foot on the ground at all times. Compare run.",
+    "example": "To walk briskly for an hour every day is to keep fit."
+  },
+  {
+    "word": "want",
+    "definition": "To wish for or desire (something); to feel a need or desire for; to crave or demand.",
+    "example": "What do you want to eat?\u2003 I want you to leave.\u2003 I\u00a0never wanted to go back to live with my mother."
+  },
+  {
+    "word": "warm",
+    "definition": "Having a temperature slightly higher than usual, but still pleasant; mildly hot.",
+    "example": "The tea is still warm."
+  },
+  {
+    "word": "wash",
+    "definition": "The process or an instance of washing or being washed by water or other liquid.",
+    "example": "I'm going to have a quick wash before coming to bed."
+  },
+  {
+    "word": "way",
+    "definition": "(only in reply to no way) yes; it is true; it is possible",
+    "example": "Example not found."
+  },
+  {
+    "word": "week",
+    "definition": "Any period of seven consecutive days.",
+    "example": "Example not found."
+  },
+  {
+    "word": "well",
+    "definition": "In good health.",
+    "example": "I had been sick, but now I'm well."
+  },
+  {
+    "word": "went",
+    "definition": "A course; a way, a path; a journey.",
+    "example": "Example not found."
+  },
+  {
+    "word": "were",
+    "definition": "A man, a husband",
+    "example": "Example not found."
+  },
+  {
+    "word": "wet",
+    "definition": "Made up of liquid or moisture, usually (but not always) water.",
+    "example": "Water is wet."
+  },
+  {
+    "word": "what",
+    "definition": "(usually followed by \"with,\" but also sometimes \"would\" or \"might,\" especially in finance) In some manner or degree; in part; partly. See also what with",
+    "example": "The market will calculate these higher risks in their funding costs what might result in higher lending rates."
+  },
+  {
+    "word": "when",
+    "definition": "The time at which something happens.",
+    "example": "A good article will cover the who, the what, the when, the where, the why and the how."
+  },
+  {
+    "word": "while",
+    "definition": "An uncertain duration of time, a period of time.",
+    "example": "He lectured for quite a long while."
+  },
+  {
+    "word": "white",
+    "definition": "Bright and colourless; reflecting equal quantities of all frequencies of visible light.",
+    "example": "Write in black ink on white paper."
+  },
+  {
+    "word": "who",
+    "definition": "(interrogative) What person or people; which person or people; asks for the identity of someone. (used in a direct or indirect question)",
+    "example": "I don't know who it is. (indirect question)"
+  },
+  {
+    "word": "why",
+    "definition": "Reason",
+    "example": "A good article will cover the who, the what, the when, the where, the why and the how."
+  },
+  {
+    "word": "wind",
+    "definition": "Real or perceived movement of atmospheric air usually caused by convection or differences in air pressure.",
+    "example": "As they accelerated onto the motorway, the wind tore the plywood off the car's roof-rack."
+  },
+  {
+    "word": "wish",
+    "definition": "To desire; to want.",
+    "example": "I'll come tomorrow, if you wish it."
+  },
+  {
+    "word": "with",
+    "definition": "Along, together with others, in a group, etc.",
+    "example": "Do you want to come with?"
+  },
+  {
+    "word": "woke",
+    "definition": "Awake: conscious and not asleep.",
+    "example": "Example not found."
+  },
+  {
+    "word": "wood",
+    "definition": "The substance making up the central part of the trunk and branches of a tree. Used as a material for construction, to manufacture various items, etc. or as fuel.",
+    "example": "There was lots of wood on the beach."
+  },
+  {
+    "word": "work",
+    "definition": "(heading) Employment.",
+    "example": "Example not found."
+  },
+  {
+    "word": "yellow",
+    "definition": "Having yellow as its colour.",
+    "example": "Example not found."
+  },
+  {
+    "word": "yet",
+    "definition": "(usually with negative) Thus far; up to the present; up to some specified time; still",
+    "example": "He has never yet been late for an appointment; \u00a0 I\u2019m not yet wise enough to answer that; \u00a0 Have you finished yet?"
+  },
+  {
+    "word": "your",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "zoo",
+    "definition": "A park where live animals are exhibited.",
+    "example": "Example not found."
+  },
+  {
+    "word": "able",
+    "definition": "Easy to use.",
+    "example": "Example not found."
+  },
+  {
+    "word": "above",
+    "definition": "Physically over; on top of; worn on top of, said of clothing.",
+    "example": "He always put his coat on above his sweater."
+  },
+  {
+    "word": "afraid",
+    "definition": "(usually used predicatively, not attributively, be afraid) Impressed with fear or apprehension; in fear.",
+    "example": "He is afraid of death."
+  },
+  {
+    "word": "afternoon",
+    "definition": "Clipping of good afternoon.",
+    "example": "Example not found."
+  },
+  {
+    "word": "again",
+    "definition": "(obsolete or dialectal) Against.",
+    "example": "Example not found."
+  },
+  {
+    "word": "age",
+    "definition": "To cause to grow old; to impart the characteristics of age to.",
+    "example": "Grief ages us."
+  },
+  {
+    "word": "air",
+    "definition": "The substance constituting earth's atmosphere, particularly:",
+    "example": "I'm going outside to get some air."
+  },
+  {
+    "word": "airplane",
+    "definition": "To fly in an aeroplane.",
+    "example": "Example not found."
+  },
+  {
+    "word": "almost",
+    "definition": "Something or someone that doesn't quite make it.",
+    "example": "In all the submissions, they found four papers that were clearly worth publishing and another dozen almosts."
+  },
+  {
+    "word": "alone",
+    "definition": "By oneself, solitary.",
+    "example": "I can't ask for help because I am alone."
+  },
+  {
+    "word": "along",
+    "definition": "In company; together.",
+    "example": "John played the piano and everyone sang along."
+  },
+  {
+    "word": "already",
+    "definition": "Prior to some specified time, either past, present, or future; by this time; previously.",
+    "example": "Example not found."
+  },
+  {
+    "word": "also",
+    "definition": "(focus) In addition; besides; as well; further; too.",
+    "example": "They had porridge for breakfast, and also toast."
+  },
+  {
+    "word": "always",
+    "definition": "At all times; throughout all time; since the beginning.",
+    "example": "Airplanes did not always exist as a form of transportation."
+  },
+  {
+    "word": "animal",
+    "definition": "In scientific usage, a multicellular organism that is usually mobile, whose cells are not encased in a rigid cell wall (distinguishing it from plants and fungi) and which derives energy solely from the consumption of other organisms (distinguishing it from plants).",
+    "example": "A cat is an animal, not a plant. Humans are also animals, under the scientific definition, as we are not plants."
+  },
+  {
+    "word": "another",
+    "definition": "An additional one of the same kind.",
+    "example": "There is one sterling and here is another"
+  },
+  {
+    "word": "anything",
+    "definition": "Any object, act, state, event, or fact whatever; a thing of any kind; something or other.",
+    "example": "I would not do it for anything."
+  },
+  {
+    "word": "around",
+    "definition": "(with the verb \"to be\") Present in the vicinity.",
+    "example": "Is Clare around today?"
+  },
+  {
+    "word": "art",
+    "definition": "The conscious production or arrangement of sounds, colours, forms, movements, or other elements in a manner that affects the senses and emotions, usually specifically the production of the beautiful in a graphic or plastic medium.",
+    "example": "There is a debate as to whether graffiti is art or vandalism."
+  },
+  {
+    "word": "aunt",
+    "definition": "The sister or sister-in-law of one\u2019s parent.",
+    "example": "Example not found."
+  },
+  {
+    "word": "balloon",
+    "definition": "To increase or expand rapidly.",
+    "example": "His stomach ballooned from eating such a large meal."
+  },
+  {
+    "word": "bark",
+    "definition": "To make a short, loud, explosive noise with the vocal organs (said of animals, especially dogs).",
+    "example": "The neighbour's dog is always barking."
+  },
+  {
+    "word": "barn",
+    "definition": "To lay up in a barn.",
+    "example": "Example not found."
+  },
+  {
+    "word": "basket",
+    "definition": "A lightweight container, generally round, open at the top, and tapering toward the bottom.",
+    "example": "A basket of fake fruit adorned the table."
+  },
+  {
+    "word": "beach",
+    "definition": "A gravel-filled zone on a racetrack, used as a hazard, exclusionary region, and, safety device to slow down and trap vehicles.",
+    "example": "Example not found."
+  },
+  {
+    "word": "bear",
+    "definition": "To endeavour to depress the price of, or prices in.",
+    "example": "to bear a railroad stock"
+  },
+  {
+    "word": "because",
+    "definition": "By or for the cause that; on this account that; for the reason that.",
+    "example": "I hid myself because I was afraid."
+  },
+  {
+    "word": "become",
+    "definition": "To arrive, come (to a place).",
+    "example": "Example not found."
+  },
+  {
+    "word": "began",
+    "definition": "To start, to initiate or take the first step into something.",
+    "example": "I began playing the piano at the age of five.\u00a0\u00a0 Now that everyone is here, we should begin the presentation."
+  },
+  {
+    "word": "begin",
+    "definition": "To start, to initiate or take the first step into something.",
+    "example": "I began playing the piano at the age of five.\u00a0\u00a0 Now that everyone is here, we should begin the presentation."
+  },
+  {
+    "word": "behind",
+    "definition": "At the back of; positioned with something else in front of.",
+    "example": "The car is behind the wall."
+  },
+  {
+    "word": "believe",
+    "definition": "To accept as true, particularly without absolute certainty (i.e., as opposed to knowing)",
+    "example": "I believe there are faeries."
+  },
+  {
+    "word": "below",
+    "definition": "Lower in spatial position than.",
+    "example": "The treasure is buried two meters below the surface."
+  },
+  {
+    "word": "belt",
+    "definition": "A band worn around the waist to hold clothing to one's body (usually pants), hold weapons (such as a gun or sword), or serve as a decorative piece of clothing.",
+    "example": "As part of the act, the fat clown's belt broke, causing his pants to fall down."
+  },
+  {
+    "word": "better",
+    "definition": "An entity, usually animate, deemed superior to another; one who has a claim to precedence; a superior.",
+    "example": "He quickly found Ali his better in the ring."
+  },
+  {
+    "word": "birthday",
+    "definition": "To celebrate one's birthday.",
+    "example": "Example not found."
+  },
+  {
+    "word": "body",
+    "definition": "To give body or shape to something.",
+    "example": "Example not found."
+  },
+  {
+    "word": "bones",
+    "definition": "A musical instrument in the brass family, having a cylindrical bore, and usually a sliding tube (but sometimes piston valves, and rarely both). Most often refers to the tenor trombone, which is the most common type of trombone and has a fundamental tone of B\u266d\u02cc (contra B\u266d).",
+    "example": "Jim plays the trombone very well."
+  },
+  {
+    "word": "born",
+    "definition": "To carry or convey, literally or figuratively.",
+    "example": "Judging from the look on his face, he wasn't bearing good news."
+  },
+  {
+    "word": "bought",
+    "definition": "To obtain (something) in exchange for money or goods",
+    "example": "I'm going to buy my father something nice for his birthday."
+  },
+  {
+    "word": "bread",
+    "definition": "To coat with breadcrumbs",
+    "example": "Example not found."
+  },
+  {
+    "word": "bright",
+    "definition": "Visually dazzling; luminous, lucent, clear, radiant; not dark.",
+    "example": "Could you please dim the light? It's far too bright."
+  },
+  {
+    "word": "broke",
+    "definition": "To separate into two or more pieces, to fracture or crack, by a process that cannot easily be reversed for reassembly.",
+    "example": "If the vase falls to the floor, it might break."
+  },
+  {
+    "word": "brought",
+    "definition": "(ditransitive) To transport toward somebody/somewhere.",
+    "example": "Waiter, please bring me a single malt whiskey."
+  },
+  {
+    "word": "busy",
+    "definition": "To make somebody busy or active; to occupy.",
+    "example": "On my vacation I'll busy myself with gardening."
+  },
+  {
+    "word": "cabin",
+    "definition": "A small dwelling characteristic of the frontier, especially when built from logs with simple tools and not constructed by professional builders, but by those who meant to live in it.",
+    "example": "Abraham Lincoln was born in a log cabin."
+  },
+  {
+    "word": "cage",
+    "definition": "An enclosure made of bars, normally to hold animals.",
+    "example": "The most dangerous prisoners are locked away in a cage."
+  },
+  {
+    "word": "camp",
+    "definition": "To live in a tent or similar temporary accommodation.",
+    "example": "We're planning to camp in the field until Sunday."
+  },
+  {
+    "word": "care",
+    "definition": "Grief, sorrow.",
+    "example": "Example not found."
+  },
+  {
+    "word": "carry",
+    "definition": "A manner of transporting or lifting something; the grip or position in which something is carried.",
+    "example": "Adjust your carry from time to time so that you don't tire too quickly."
+  },
+  {
+    "word": "catch",
+    "definition": "The act of seizing or capturing.",
+    "example": "The catch of the perpetrator was the product of a year of police work."
+  },
+  {
+    "word": "cattle",
+    "definition": "Domesticated bovine animals (cows, bulls, steers etc).",
+    "example": "Do you want to raise cattle?"
+  },
+  {
+    "word": "cave",
+    "definition": "A large, naturally-occurring cavity formed underground or in the face of a cliff or a hillside.",
+    "example": "We found a cave on the mountainside where we could take shelter."
+  },
+  {
+    "word": "children",
+    "definition": "A person who has not yet reached adulthood, whether natural (puberty), cultural (initiation), or legal (majority)",
+    "example": "Go easy on him: he is but a child."
+  },
+  {
+    "word": "class",
+    "definition": "A group, collection, category or set sharing characteristics or attributes.",
+    "example": "Often used to imply membership of a large class."
+  },
+  {
+    "word": "close",
+    "definition": "An end or conclusion.",
+    "example": "We owe them our thanks for bringing the project to a successful close."
+  },
+  {
+    "word": "cloth",
+    "definition": "A woven fabric such as used in dressing, decorating, cleaning or other practical use.",
+    "example": "Example not found."
+  },
+  {
+    "word": "coal",
+    "definition": "A black rock formed from prehistoric plant remains, composed largely of carbon and burned as a fuel.",
+    "example": "Put some coal on the fire."
+  },
+  {
+    "word": "color",
+    "definition": "The spectral composition of visible light",
+    "example": "Humans and birds can perceive color."
+  },
+  {
+    "word": "corner",
+    "definition": "The point where two converging lines meet; an angle, either external or internal.",
+    "example": "The corners of the wire mesh were reinforced with little blobs of solder."
+  },
+  {
+    "word": "cotton",
+    "definition": "Made of cotton.",
+    "example": "Example not found."
+  },
+  {
+    "word": "cover",
+    "definition": "To place something over or upon, as to conceal or protect.",
+    "example": "He covered the baby with a blanket."
+  },
+  {
+    "word": "dark",
+    "definition": "Having an absolute or (more often) relative lack of light.",
+    "example": "The room was too dark for reading."
+  },
+  {
+    "word": "desert",
+    "definition": "(usually in the plural) That which is deserved or merited; a just punishment or reward",
+    "example": "Example not found."
+  },
+  {
+    "word": "dinner",
+    "definition": "To eat a dinner.",
+    "example": "Example not found."
+  },
+  {
+    "word": "dishes",
+    "definition": "To put in a dish or dishes; serve, usually food.",
+    "example": "The restaurant dished up a delicious Italian brunch."
+  },
+  {
+    "word": "done",
+    "definition": "(of food) Ready, fully cooked.",
+    "example": "As soon as the potatoes are done we can sit down and eat."
+  },
+  {
+    "word": "dragon",
+    "definition": "A legendary serpentine or reptilian creature.",
+    "example": "Example not found."
+  },
+  {
+    "word": "draw",
+    "definition": "The result of a contest that neither side has won; a tie.",
+    "example": "The game ended in a draw."
+  },
+  {
+    "word": "dream",
+    "definition": "Ideal; perfect.",
+    "example": "Example not found."
+  },
+  {
+    "word": "drink",
+    "definition": "To consume (a liquid) through the mouth.",
+    "example": "He drank the water I gave him."
+  },
+  {
+    "word": "early",
+    "definition": "At a time in advance of the usual or expected event.",
+    "example": "at eleven, we went for an early lunch;\u00a0 she began reading at an early age;\u00a0 his mother suffered an early death"
+  },
+  {
+    "word": "earth",
+    "definition": "Soil.",
+    "example": "This is good earth for growing potatoes."
+  },
+  {
+    "word": "east",
+    "definition": "Towards the east; eastwards",
+    "example": "Example not found."
+  },
+  {
+    "word": "eight",
+    "definition": "The ordinal form of the number eight.",
+    "example": "Example not found."
+  },
+  {
+    "word": "even",
+    "definition": "(diminutive) An even number.",
+    "example": "So let's see. There are two evens here and three odds."
+  },
+  {
+    "word": "ever",
+    "definition": "Always, frequently, forever.",
+    "example": "It was ever thus."
+  },
+  {
+    "word": "every",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "everyone",
+    "definition": "Every person.",
+    "example": "Example not found."
+  },
+  {
+    "word": "everything",
+    "definition": "All the things under discussion.",
+    "example": "I checked the list again and everything is done."
+  },
+  {
+    "word": "eyes",
+    "definition": "An organ through which animals see (perceive surroundings via light).",
+    "example": "Bright lights really hurt my eyes."
+  },
+  {
+    "word": "face",
+    "definition": "The front part of the head of a human or other animal, featuring the eyes, nose and mouth, and the surrounding area.",
+    "example": "That girl has a pretty face."
+  },
+  {
+    "word": "family",
+    "definition": "A group of people who are closely related to one another (by blood, marriage or adoption); kin; for example, a set of parents and their children; an immediate family.",
+    "example": "Our family lives in town."
+  },
+  {
+    "word": "feeling",
+    "definition": "Sensation, particularly through the skin.",
+    "example": "The wool on my arm produced a strange feeling."
+  },
+  {
+    "word": "felt",
+    "definition": "To make into felt, or a feltlike substance; to cause to adhere and mat together.",
+    "example": "Example not found."
+  },
+  {
+    "word": "few",
+    "definition": "Few people, few things.",
+    "example": "Many are called, but few are chosen."
+  },
+  {
+    "word": "fight",
+    "definition": "To contend in physical conflict, either singly or in war, battle etc.",
+    "example": "A wounded animal will fight like a maniac, relentless, savage and murderous."
+  },
+  {
+    "word": "fishing",
+    "definition": "The act of catching fish.",
+    "example": "We had a good day's fishing at the weekend."
+  },
+  {
+    "word": "flower",
+    "definition": "To put forth blooms.",
+    "example": "This plant flowers in June."
+  },
+  {
+    "word": "flying",
+    "definition": "To hit a fly ball; to hit a fly ball that is caught for an out. Compare ground (verb) and line (verb).",
+    "example": "Jones flied to right in his last at-bat."
+  },
+  {
+    "word": "follow",
+    "definition": "(sometimes attributive) In billiards and similar games, a stroke causing a ball to follow another ball after hitting it.",
+    "example": "a follow shot"
+  },
+  {
+    "word": "forest",
+    "definition": "To cover an area with trees.",
+    "example": "Example not found."
+  },
+  {
+    "word": "forgot",
+    "definition": "To lose remembrance of.",
+    "example": "I have forgotten most of the things I learned in school."
+  },
+  {
+    "word": "form",
+    "definition": "To assume (a certain shape or visible structure).",
+    "example": "When you kids form a straight line I'll hand out the lollies."
+  },
+  {
+    "word": "found",
+    "definition": "Food and lodging; board.",
+    "example": "Example not found."
+  },
+  {
+    "word": "fourth",
+    "definition": "The ordinal form of the number four.",
+    "example": "Example not found."
+  },
+  {
+    "word": "free",
+    "definition": "(social) Unconstrained.",
+    "example": "He was given free rein to do whatever he wanted."
+  },
+  {
+    "word": "Friday",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "friend",
+    "definition": "A person other than a family member, spouse or lover whose company one enjoys and towards whom one feels affection.",
+    "example": "John and I have been friends ever since we were roommates at college.\u00a0\u00a0 Trust is important between friends.\u00a0\u00a0 I used to find it hard to make friends when I was shy."
+  },
+  {
+    "word": "front",
+    "definition": "Located at or near the front.",
+    "example": "The front runner was thirty meters ahead of her nearest competitor."
+  },
+  {
+    "word": "getting",
+    "definition": "(ditransitive) To obtain; to acquire.",
+    "example": "I'm going to get a computer tomorrow from the discount store."
+  },
+  {
+    "word": "given",
+    "definition": "A condition that is assumed to be true without further evaluation.",
+    "example": "When evaluating this math problem, don't forget to read the givens."
+  },
+  {
+    "word": "grandmother",
+    "definition": "A mother of someone's parent.",
+    "example": "Example not found."
+  },
+  {
+    "word": "great",
+    "definition": "A person of major significance, accomplishment or acclaim.",
+    "example": "Newton and Einstein are two of the greats of the history of science."
+  },
+  {
+    "word": "grew",
+    "definition": "To become larger, to increase in magnitude.",
+    "example": "Children grow quickly."
+  },
+  {
+    "word": "ground",
+    "definition": "The surface of the Earth, as opposed to the sky or water or underground.",
+    "example": "Look, I found a ten dollar bill on the ground!"
+  },
+  {
+    "word": "guess",
+    "definition": "To reach a partly (or totally) unqualified conclusion.",
+    "example": "Example not found."
+  },
+  {
+    "word": "hair",
+    "definition": "To remove the hair from.",
+    "example": "Example not found."
+  },
+  {
+    "word": "half",
+    "definition": "One of two usually roughly equal parts into which anything may be divided, or considered as divided.",
+    "example": "I ate the slightly smaller half of the apple."
+  },
+  {
+    "word": "having",
+    "definition": "To possess, own.",
+    "example": "I have a house and a car."
+  },
+  {
+    "word": "head",
+    "definition": "The part of the body of an animal or human which contains the brain, mouth and main sense organs.",
+    "example": "Be careful when you pet that dog on the head; it may bite."
+  },
+  {
+    "word": "heard",
+    "definition": "(stative) To perceive sounds through the ear.",
+    "example": "I was deaf, and now I can hear."
+  },
+  {
+    "word": "heat",
+    "definition": "Thermal energy.",
+    "example": "This furnace puts out 5000 BTUs of heat.\u00a0\u00a0 That engine is really throwing off some heat.\u00a0\u00a0 Removal of heat from the liquid caused it to turn into a solid."
+  },
+  {
+    "word": "hello",
+    "definition": "A greeting (salutation) said when meeting someone or acknowledging someone\u2019s arrival or presence.",
+    "example": "Hello, everyone."
+  },
+  {
+    "word": "high",
+    "definition": "To rise.",
+    "example": "The sun higheth."
+  },
+  {
+    "word": "himself",
+    "definition": "(reflexive pronoun) Him; the male object of a verb or preposition that also appears as the subject",
+    "example": "He injured himself."
+  },
+  {
+    "word": "hour",
+    "definition": "A time period of sixty minutes; one twenty-fourth of a day.",
+    "example": "I spent an hour at lunch."
+  },
+  {
+    "word": "hundred",
+    "definition": "A numerical value equal to 100 (102), occurring after ninety-nine.",
+    "example": "a hundred, one hundred"
+  },
+  {
+    "word": "hurry",
+    "definition": "Rushed action.",
+    "example": "Why are you in such a big hurry?"
+  },
+  {
+    "word": "hurt",
+    "definition": "An emotional or psychological humiliation or bad experience.",
+    "example": "how to overcome old hurts of the past"
+  },
+  {
+    "word": "inches",
+    "definition": "(followed by a preposition) To advance very slowly, or by a small amount (in a particular direction).",
+    "example": "Fearful of falling, he inched along the window ledge."
+  },
+  {
+    "word": "kept",
+    "definition": "To continue in (a course or mode of action); not to intermit or fall from; to uphold or maintain.",
+    "example": "to keep silence;\u2003 to keep one's word;\u2003 to keep possession"
+  },
+  {
+    "word": "kids",
+    "definition": "A young goat.",
+    "example": "He treated the oxen like they didn't exist, but he treated the goat kid like a puppy."
+  },
+  {
+    "word": "kind",
+    "definition": "A type, race or category; a group of entities that have common characteristics such that they may be grouped together.",
+    "example": "This is a strange kind of tobacco."
+  },
+  {
+    "word": "kitten",
+    "definition": "To give birth to kittens.",
+    "example": "Example not found."
+  },
+  {
+    "word": "knew",
+    "definition": "To perceive the truth or factuality of; to be certain of or that.",
+    "example": "He knew something terrible was going to happen."
+  },
+  {
+    "word": "knife",
+    "definition": "To cut with a knife.",
+    "example": "Example not found."
+  },
+  {
+    "word": "lady",
+    "definition": "An aristocratic title for a woman; the wife of a lord and/or a woman who holds the position in her own right; a title for a peeress, the wife of a peer or knight, and the daughters and daughters-in-law of certain peers.",
+    "example": "Sir John Smith and Lady Smith."
+  },
+  {
+    "word": "large",
+    "definition": "Of considerable or relatively great size or extent.",
+    "example": "Russia is a large country.\u00a0\u00a0 The fruit-fly has large eyes for its body size.\u00a0\u00a0 He has a large collection of stamps."
+  },
+  {
+    "word": "largest",
+    "definition": "Of considerable or relatively great size or extent.",
+    "example": "Russia is a large country.\u00a0\u00a0 The fruit-fly has large eyes for its body size.\u00a0\u00a0 He has a large collection of stamps."
+  },
+  {
+    "word": "later",
+    "definition": "Near the end of a period of time.",
+    "example": "It was late in the evening when we finally arrived."
+  },
+  {
+    "word": "learn",
+    "definition": "To acquire, or attempt to acquire knowledge or an ability to do something.",
+    "example": "Example not found."
+  },
+  {
+    "word": "leave",
+    "definition": "To have a consequence or remnant.",
+    "example": "Example not found."
+  },
+  {
+    "word": "letter",
+    "definition": "A symbol in an alphabet.",
+    "example": "There are twenty-six letters in the English alphabet."
+  },
+  {
+    "word": "life",
+    "definition": "The state of organisms preceding their death, characterized by biological processes such as metabolism and reproduction and distinguishing them from inanimate objects; the state of being alive and living.",
+    "example": "Having experienced both, the vampire decided that he preferred (un)death to life.\u2003 He gave up on life."
+  },
+  {
+    "word": "list",
+    "definition": "To create or recite a list.",
+    "example": "Example not found."
+  },
+  {
+    "word": "living",
+    "definition": "To be alive; to have life.",
+    "example": "He's not expected to live for more than a few months."
+  },
+  {
+    "word": "lovely",
+    "definition": "An attractive, lovely person, especially a (professional) beauty.",
+    "example": "a calendar depicting young lovelies in bikinis"
+  },
+  {
+    "word": "loving",
+    "definition": "(usually transitive, sometimes intransitive, stative) To have a strong affection for (someone or something).",
+    "example": "I love my spouse. \u00a0 I love you!"
+  },
+  {
+    "word": "lunch",
+    "definition": "To eat lunch.",
+    "example": "I like to lunch in Italian restaurants."
+  },
+  {
+    "word": "mail",
+    "definition": "(ditransitive) To send (a letter, parcel, etc.) through the mail.",
+    "example": "Example not found."
+  },
+  {
+    "word": "making",
+    "definition": "The act of forming, causing, or constituting; workmanship; construction.",
+    "example": "Example not found."
+  },
+  {
+    "word": "maybe",
+    "definition": "Modifies a verb, indicating a lack of certainty: it may be that...",
+    "example": "Example not found."
+  },
+  {
+    "word": "mean",
+    "definition": "To intend.",
+    "example": "Example not found."
+  },
+  {
+    "word": "merry",
+    "definition": "Jolly and full of high spirits.",
+    "example": "We had a very merry Christmas."
+  },
+  {
+    "word": "might",
+    "definition": "Mighty; powerful.",
+    "example": "Example not found."
+  },
+  {
+    "word": "mind",
+    "definition": "The ability for rational thought.",
+    "example": "Despite advancing age, his mind was still as sharp as ever."
+  },
+  {
+    "word": "money",
+    "definition": "A legally or socially binding conceptual contract of entitlement to wealth, void of intrinsic value, payable for all debts and taxes, and regulated in supply.",
+    "example": "Example not found."
+  },
+  {
+    "word": "month",
+    "definition": "A period into which a year is divided, historically based on the phases of the moon.",
+    "example": "July is my favourite month."
+  },
+  {
+    "word": "morning",
+    "definition": "The part of the day from dawn to noon.",
+    "example": "I'll see you tomorrow morning."
+  },
+  {
+    "word": "mouse",
+    "definition": "To move cautiously or furtively, in the manner of a mouse (the rodent) (frequently used in the phrasal verb to mouse around).",
+    "example": "Example not found."
+  },
+  {
+    "word": "mouth",
+    "definition": "The opening of a creature through which food is ingested.",
+    "example": "\"Open your mouth and say 'aah',\" directed the doctor."
+  },
+  {
+    "word": "music",
+    "definition": "A series of sounds organized in time, employing melody, harmony, tempo etc. usually to convey a mood.",
+    "example": "I keep listening to this music because it's a masterpiece."
+  },
+  {
+    "word": "near",
+    "definition": "To come closer to; to approach.",
+    "example": "The ship nears the land."
+  },
+  {
+    "word": "nearly",
+    "definition": "With great scrutiny; carefully.",
+    "example": "Example not found."
+  },
+  {
+    "word": "never",
+    "definition": "At no time; on no occasion; in no circumstance.",
+    "example": "I finally finished, and I never want to do that again."
+  },
+  {
+    "word": "news",
+    "definition": "New information of interest.",
+    "example": "Is there any news about the storm?"
+  },
+  {
+    "word": "noise",
+    "definition": "Various sounds, usually unwanted or unpleasant.",
+    "example": "He knew that it was trash day, when the garbage collectors made all the noise."
+  },
+  {
+    "word": "nothing",
+    "definition": "Not any thing; no thing.",
+    "example": "Example not found."
+  },
+  {
+    "word": "number",
+    "definition": "An abstract entity used to describe quantity.",
+    "example": "Zero, one, \u22121, 2.5, and pi are all numbers."
+  },
+  {
+    "word": "o\u2019clock",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "often",
+    "definition": "Frequently, many times.",
+    "example": "I often walk to work when the weather is nice."
+  },
+  {
+    "word": "oil",
+    "definition": "Liquid fat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "once",
+    "definition": "(frequency) One and only one time.",
+    "example": "I have only once eaten pizza."
+  },
+  {
+    "word": "orange",
+    "definition": "Having the colour of the fruit of an orange tree; yellowred; reddish-yellow.",
+    "example": "Example not found."
+  },
+  {
+    "word": "order",
+    "definition": "To set in some sort of order.",
+    "example": "Example not found."
+  },
+  {
+    "word": "own",
+    "definition": "Belonging to; possessed; proper to. Often marks a possessive determiner as reflexive, referring back to the subject of the clause or sentence.",
+    "example": "Example not found."
+  },
+  {
+    "word": "pair",
+    "definition": "Two similar or identical things taken together; often followed by of.",
+    "example": "I couldn't decide which of the pair of designer shirts I preferred, so I bought the pair."
+  },
+  {
+    "word": "paint",
+    "definition": "To apply paint to.",
+    "example": "Example not found."
+  },
+  {
+    "word": "paper",
+    "definition": "To apply paper to.",
+    "example": "to paper the hallway walls"
+  },
+  {
+    "word": "party",
+    "definition": "A person or group of people constituting a particular side in a contract or legal action.",
+    "example": "The contract requires that the party of the first part pay the fee."
+  },
+  {
+    "word": "pass",
+    "definition": "To change place.",
+    "example": "Example not found."
+  },
+  {
+    "word": "past",
+    "definition": "The period of time that has already happened, in contrast to the present and the future.",
+    "example": "a book about a time machine that can transport people back into the past"
+  },
+  {
+    "word": "penny",
+    "definition": "To jam a door shut by inserting pennies between the doorframe and the door.",
+    "example": "Zach and Ben had only been at college for a week when their door was pennied by the girls down the hall."
+  },
+  {
+    "word": "people",
+    "definition": "Used as plural of person; a body of human beings considered generally or collectively; a group of two or more persons.",
+    "example": "There were so many people at the restaurant last night."
+  },
+  {
+    "word": "person",
+    "definition": "An individual; usually a human being.",
+    "example": "Each person is unique, both mentally and physically."
+  },
+  {
+    "word": "picture",
+    "definition": "To represent in or with a picture.",
+    "example": "Example not found."
+  },
+  {
+    "word": "place",
+    "definition": "(physical) An area; somewhere within an area.",
+    "example": "Example not found."
+  },
+  {
+    "word": "plan",
+    "definition": "A drawing showing technical details of a building, machine, etc., with unwanted details omitted, and often using symbols rather than detailed drawing to represent doors, valves, etc.",
+    "example": "The plans for many important buildings were once publicly available."
+  },
+  {
+    "word": "plane",
+    "definition": "Of a surface: flat or level.",
+    "example": "Example not found."
+  },
+  {
+    "word": "please",
+    "definition": "To make happy or satisfy; to give pleasure to.",
+    "example": "Her presentation pleased the executives."
+  },
+  {
+    "word": "pocket",
+    "definition": "Of a size suitable for putting into a pocket.",
+    "example": "a pocket dictionary"
+  },
+  {
+    "word": "point",
+    "definition": "A discrete division of something.",
+    "example": "Example not found."
+  },
+  {
+    "word": "poor",
+    "definition": "(with \"the\") Those who have little or no possessions or money, taken as a group.",
+    "example": "The poor are always with us."
+  },
+  {
+    "word": "race",
+    "definition": "A contest between people, animals, vehicles, etc. where the goal is to be the first to reach some objective. Example: Several horses run in a horse race, and the first one to reach the finishing post wins",
+    "example": "The race around the park was won by Johnny, who ran faster than the others."
+  },
+  {
+    "word": "reach",
+    "definition": "To extend, stretch, or thrust out (for example a limb or object held in the hand).",
+    "example": "He reached for a weapon that was on the table."
+  },
+  {
+    "word": "reading",
+    "definition": "To look at and interpret letters or other information that is written.",
+    "example": "Have you read this book?"
+  },
+  {
+    "word": "ready",
+    "definition": "Prepared for immediate action or use.",
+    "example": "The porridge is ready to serve."
+  },
+  {
+    "word": "real",
+    "definition": "Really, very.",
+    "example": "When I told him the truth, he got real mad."
+  },
+  {
+    "word": "rich",
+    "definition": "Wealthy: having a lot of money and possessions.",
+    "example": "Example not found."
+  },
+  {
+    "word": "right",
+    "definition": "Straight, not bent.",
+    "example": "a right line"
+  },
+  {
+    "word": "river",
+    "definition": "A large and often winding stream which drains a land mass, carrying water down from higher areas to a lower point, oftentimes ending in another body of water, such as an ocean or in an inland sea.",
+    "example": "Occasionally rivers overflow their banks and cause floods."
+  },
+  {
+    "word": "rocket",
+    "definition": "To accelerate swiftly and powerfully",
+    "example": "Example not found."
+  },
+  {
+    "word": "rode",
+    "definition": "To transport oneself by sitting on and directing a horse, later also a bicycle etc.",
+    "example": "Example not found."
+  },
+  {
+    "word": "round",
+    "definition": "So as to form a circle or trace a circular path, or approximation thereof.",
+    "example": "High above, vultures circled around."
+  },
+  {
+    "word": "rule",
+    "definition": "A regulation, law, guideline.",
+    "example": "All participants must adhere to the rules."
+  },
+  {
+    "word": "running",
+    "definition": "The action of the verb to run.",
+    "example": "His running of the business leaves something to be desired."
+  },
+  {
+    "word": "salt",
+    "definition": "To add salt to.",
+    "example": "to salt fish, beef, or pork; to salt the city streets in the winter"
+  },
+  {
+    "word": "says",
+    "definition": "To pronounce.",
+    "example": "Please say your name slowly and clearly."
+  },
+  {
+    "word": "sending",
+    "definition": "To make something (such as an object or message) go from one place to another.",
+    "example": "Every day at two o'clock, he sends his secretary out to buy him a coffee."
+  },
+  {
+    "word": "sent",
+    "definition": "A subdivision of currency, equal to one hundredth of an Estonian kroon.",
+    "example": "Example not found."
+  },
+  {
+    "word": "seventh",
+    "definition": "The ordinal form of the number seven.",
+    "example": "Example not found."
+  },
+  {
+    "word": "sew",
+    "definition": "To use a needle to pass thread repeatedly through (pieces of fabric) in order to join them together.",
+    "example": "Balls were first made of grass or leaves held together by strings, and later of pieces of animal skin sewn together and stuffed with feathers or hay."
+  },
+  {
+    "word": "shall",
+    "definition": "(modal, auxiliary verb, defective) Used before a verb to indicate the simple future tense in the first person singular or plural.",
+    "example": "I hope that we shall win the game."
+  },
+  {
+    "word": "short",
+    "definition": "Abruptly, curtly, briefly.",
+    "example": "He cut me short repeatedly in the meeting."
+  },
+  {
+    "word": "shot",
+    "definition": "The result of launching a projectile or bullet.",
+    "example": "The shot was wide off the mark."
+  },
+  {
+    "word": "should",
+    "definition": "(modal, auxiliary verb, defective) Used before a verb to indicate the simple future tense in the first person singular or plural.",
+    "example": "I hope that we shall win the game."
+  },
+  {
+    "word": "sight",
+    "definition": "(in the singular) The ability to see.",
+    "example": "He is losing his sight and now can barely read."
+  },
+  {
+    "word": "sister",
+    "definition": "A daughter of the same parents as another person; a female sibling.",
+    "example": "My sister is always driving me crazy."
+  },
+  {
+    "word": "sitting",
+    "definition": "A period during which one is seated for a specific purpose.",
+    "example": "Due to the sheer volume of guests, we had to have two sittings for the meal."
+  },
+  {
+    "word": "sixth",
+    "definition": "The ordinal form of the number six.",
+    "example": "Example not found."
+  },
+  {
+    "word": "sled",
+    "definition": "A small, light vehicle with runners, used recreationally, mostly by children, for sliding down snow-covered hills. (A \"sled\" in this sense is not pulled by an animal as a \"sleigh\" is.)",
+    "example": "The child zoomed down the hill on his sled."
+  },
+  {
+    "word": "smoke",
+    "definition": "Of the colour known as smoke.",
+    "example": "Example not found."
+  },
+  {
+    "word": "soap",
+    "definition": "A substance able to mix with both oil and water, used for cleaning, often in the form of a solid bar or in liquid form, derived from fats or made synthetically.",
+    "example": "I tried washing my hands with soap, but the stain wouldn't go away."
+  },
+  {
+    "word": "someone",
+    "definition": "A partially specified but unnamed person.",
+    "example": "Do you need a gift for that special someone?"
+  },
+  {
+    "word": "something",
+    "definition": "(degree) Somewhat; to a degree.",
+    "example": "The baby looks something like his father."
+  },
+  {
+    "word": "sometime",
+    "definition": "Former, erstwhile; at some previous time.",
+    "example": "my sometime friend and mentor"
+  },
+  {
+    "word": "song",
+    "definition": "A musical composition with lyrics for voice or voices, performed by singing.",
+    "example": "Thomas listened to his favorite song on the radio yesterday."
+  },
+  {
+    "word": "sorry",
+    "definition": "(of a person) Regretful for an action; grieved or saddened, especially by the loss of something or someone.",
+    "example": "I am sorry I stepped on your toes. It was an accident."
+  },
+  {
+    "word": "sound",
+    "definition": "Healthy.",
+    "example": "He was safe and sound."
+  },
+  {
+    "word": "south",
+    "definition": "Toward the south; southward.",
+    "example": "Example not found."
+  },
+  {
+    "word": "space",
+    "definition": "To roam, walk, wander.",
+    "example": "Example not found."
+  },
+  {
+    "word": "spent",
+    "definition": "To pay out (money).",
+    "example": "He spends far more on gambling than he does on living proper."
+  },
+  {
+    "word": "sport",
+    "definition": "To amuse oneself, to play.",
+    "example": "children sporting on the green"
+  },
+  {
+    "word": "spring",
+    "definition": "To weaken, as a joint, ligament, or muscle, by sudden and excessive exertion, as by wrenching; to overstrain, or stretch injuriously, but without luxation",
+    "example": "to sprain one's ankle"
+  },
+  {
+    "word": "stairs",
+    "definition": "A contiguous set of steps connecting two floors.",
+    "example": "Example not found."
+  },
+  {
+    "word": "stand",
+    "definition": "(heading) To position or be positioned physically.",
+    "example": "Example not found."
+  },
+  {
+    "word": "state",
+    "definition": "To declare to be a fact.",
+    "example": "He stated that he was willing to help."
+  },
+  {
+    "word": "step",
+    "definition": "To move the foot in walking; to advance or recede by raising and moving one of the feet to another resting place, or by moving both feet in succession.",
+    "example": "Example not found."
+  },
+  {
+    "word": "stick",
+    "definition": "To cut a piece of wood to be the stick member of a cope-and-stick joint.",
+    "example": "Example not found."
+  },
+  {
+    "word": "stood",
+    "definition": "(heading) To position or be positioned physically.",
+    "example": "Example not found."
+  },
+  {
+    "word": "stopped",
+    "definition": "To cease moving.",
+    "example": "I stopped at the traffic lights."
+  },
+  {
+    "word": "stove",
+    "definition": "To heat or dry, as in a stove.",
+    "example": "to stove feathers"
+  },
+  {
+    "word": "street",
+    "definition": "A paved part of road, usually in a village or a town.",
+    "example": "Walk down the street until you see a hotel on the right."
+  },
+  {
+    "word": "strong",
+    "definition": "Capable of producing great physical force.",
+    "example": "a big strong man; Jake was tall and strong"
+  },
+  {
+    "word": "study",
+    "definition": "(usually academic) To review materials already learned in order to make sure one does not forget them, usually in preparation for an examination.",
+    "example": "I need to study my biology notes."
+  },
+  {
+    "word": "such",
+    "definition": "A person, a thing, people or things like the one or ones already mentioned.",
+    "example": "Example not found."
+  },
+  {
+    "word": "sugar",
+    "definition": "To add sugar to; to sweeten with sugar.",
+    "example": "John heavily sugars his coffee."
+  },
+  {
+    "word": "summer",
+    "definition": "One of four seasons, traditionally the second, marked by the longest and typically hottest days of the year due to the inclination of the Earth and thermal lag. Typically regarded as being from June 21 to September 22 or 23 in parts of the USA, the months of June, July and August in the United Kingdom and the months of December, January and February in the Southern Hemisphere.",
+    "example": "the heat of summer"
+  },
+  {
+    "word": "Sunday",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "supper",
+    "definition": "To consume a snack before retiring.",
+    "example": "Example not found."
+  },
+  {
+    "word": "table",
+    "definition": "To tabulate; to put into a table or grid.",
+    "example": "to table fines"
+  },
+  {
+    "word": "taken",
+    "definition": "To get into one's hands, possession or control, with or without force.",
+    "example": "I'll take that plate off the table."
+  },
+  {
+    "word": "taking",
+    "definition": "To get into one's hands, possession or control, with or without force.",
+    "example": "I'll take that plate off the table."
+  },
+  {
+    "word": "talking",
+    "definition": "The action of the verb talk.",
+    "example": "Example not found."
+  },
+  {
+    "word": "teacher",
+    "definition": "A person who teaches, especially one employed in a school.",
+    "example": "Example not found."
+  },
+  {
+    "word": "team",
+    "definition": "To form a group, as for sports or work.",
+    "example": "They teamed to complete the project."
+  },
+  {
+    "word": "teeth",
+    "definition": "The ability to be enforced, or to be enforced to any useful effect.",
+    "example": "The international community's sanctions against the regime had some teeth to them this time around."
+  },
+  {
+    "word": "thinking",
+    "definition": "Thought; gerund of think.",
+    "example": "What is your thinking on this subject?"
+  },
+  {
+    "word": "third",
+    "definition": "The person or thing in the third position.",
+    "example": "Jones came in third."
+  },
+  {
+    "word": "thought",
+    "definition": "To ponder, to go over in one's head.",
+    "example": "Idly, the detective thought what his next move should be."
+  },
+  {
+    "word": "throw",
+    "definition": "The flight of a thrown object.",
+    "example": "What a great throw by the quarterback!"
+  },
+  {
+    "word": "tonight",
+    "definition": "The nighttime of the current day or date; this night.",
+    "example": "I have high hopes for tonight."
+  },
+  {
+    "word": "trade",
+    "definition": "To engage in trade.",
+    "example": "This company trades (in) precious metal."
+  },
+  {
+    "word": "trick",
+    "definition": "Something designed to fool or swindle.",
+    "example": "It was just a trick to say that the house was underpriced."
+  },
+  {
+    "word": "trip",
+    "definition": "A journey; an excursion or jaunt",
+    "example": "We made a trip to the beach."
+  },
+  {
+    "word": "turn",
+    "definition": "(heading) to make a non-linear physical movement.",
+    "example": "Example not found."
+  },
+  {
+    "word": "twelve",
+    "definition": "A group of twelve items.",
+    "example": "Fractions would be a little easier if we counted by twelves."
+  },
+  {
+    "word": "twenty",
+    "definition": "A banknote with a denomination of 20.",
+    "example": "The waiter\u2019s face lit up when I gave him a twenty."
+  },
+  {
+    "word": "uncle",
+    "definition": "A cry used to indicate surrender.",
+    "example": "Example not found."
+  },
+  {
+    "word": "under",
+    "definition": "In or at a lower level than.",
+    "example": "Example not found."
+  },
+  {
+    "word": "upon",
+    "definition": "Being the target of an action.",
+    "example": "He was set upon by the agitated dogs"
+  },
+  {
+    "word": "wagon",
+    "definition": "To load into a wagon in preparation for transportation; to transport by means of a wagon.",
+    "example": "Example not found."
+  },
+  {
+    "word": "wait",
+    "definition": "A delay.",
+    "example": "I had a very long wait at the airport security check."
+  },
+  {
+    "word": "walking",
+    "definition": "To move on the feet by alternately setting each foot (or pair or group of feet, in the case of animals with four or more feet) forward, with at least one foot on the ground at all times. Compare run.",
+    "example": "To walk briskly for an hour every day is to keep fit."
+  },
+  {
+    "word": "watch",
+    "definition": "A portable or wearable timepiece.",
+    "example": "More people today carry a watch on their wrists than in their pockets."
+  },
+  {
+    "word": "water",
+    "definition": "A substance (of molecular formula H\u2082O) found at room temperature and pressure as a clear liquid; it is present naturally as rain, and found in rivers, lakes and seas; its solid form is ice and its gaseous form is steam.",
+    "example": "By the action of electricity, the water was resolved into its two parts, oxygen and hydrogen."
+  },
+  {
+    "word": "weather",
+    "definition": "Facing towards the flow of a fluid, usually air.",
+    "example": "Example not found."
+  },
+  {
+    "word": "west",
+    "definition": "Towards the west; westwards.",
+    "example": "Example not found."
+  },
+  {
+    "word": "wheat",
+    "definition": "Wheaten, of a light brown colour, like that of wheat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "where",
+    "definition": "The place in which something happens.",
+    "example": "A good article will cover the who, the what, the when, the where, the why and the how."
+  },
+  {
+    "word": "which",
+    "definition": "(interrogative) What one or ones (of those mentioned or implied).",
+    "example": "By now, you must surely know which is which."
+  },
+  {
+    "word": "wife",
+    "definition": "An adult female human.",
+    "example": "Example not found."
+  },
+  {
+    "word": "wild",
+    "definition": "The undomesticated state of a wild animal",
+    "example": "After mending the lion's leg, we returned him to the wild."
+  },
+  {
+    "word": "win",
+    "definition": "To conquer, defeat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "window",
+    "definition": "The inedible parts of a grain-producing plant.",
+    "example": "To separate out the chaff, early cultures tossed baskets of grain into the air and let the wind blow away the lighter chaff."
+  },
+  {
+    "word": "winter",
+    "definition": "To spend the winter (in a particular place).",
+    "example": "When they retired, they hoped to winter in Florida."
+  },
+  {
+    "word": "without",
+    "definition": "Outside of, beyond.",
+    "example": "The snow was swirling without the cottage, but it was warm within."
+  },
+  {
+    "word": "woman",
+    "definition": "To staff with female labor.",
+    "example": "Example not found."
+  },
+  {
+    "word": "won",
+    "definition": "To conquer, defeat.",
+    "example": "Example not found."
+  },
+  {
+    "word": "wool",
+    "definition": "The hair of the sheep, llama and some other ruminants.",
+    "example": "Example not found."
+  },
+  {
+    "word": "word",
+    "definition": "To say or write (something) using particular words; to phrase (something).",
+    "example": "I\u2019m not sure how to word this letter to the council."
+  },
+  {
+    "word": "working",
+    "definition": "(usually in the plural) Operation; action.",
+    "example": "Example not found."
+  },
+  {
+    "word": "world",
+    "definition": "(with \"the\") Human collective existence; existence in general.",
+    "example": "There will always be lovers, till the world\u2019s end."
+  },
+  {
+    "word": "would",
+    "definition": "Something that would happen, or would be the case, under different circumstances; a potentiality.",
+    "example": "Example not found."
+  },
+  {
+    "word": "write",
+    "definition": "To form letters, words or symbols on a surface in order to communicate.",
+    "example": "The pupil wrote his name on the paper."
+  },
+  {
+    "word": "wrong",
+    "definition": "Something that is immoral or not good.",
+    "example": "Injustice is a heinous wrong."
+  },
+  {
+    "word": "yard",
+    "definition": "To confine to a yard.",
+    "example": "Example not found."
+  },
+  {
+    "word": "year",
+    "definition": "A solar year, the time it takes the Earth to complete one revolution of the Sun (between 365.24 and 365.26 days depending on the point of reference).",
+    "example": "we moved to this town a year ago;\u00a0 I quit smoking exactly one year ago"
+  },
+  {
+    "word": "yesterday",
+    "definition": "The day immediately before today; one day ago.",
+    "example": "Today is the child of yesterday and the parent of tomorrow."
+  },
+  {
+    "word": "across",
+    "definition": "(crosswords, often in combination) A word that runs horizontally in the completed puzzle grid or its associated clue.",
+    "example": "I solved all of the acrosses, but then got stuck on 3 down."
+  },
+  {
+    "word": "against",
+    "definition": "In a contrary direction to.",
+    "example": "It is hard work to swim against the current."
+  },
+  {
+    "word": "answer",
+    "definition": "A response or reply; something said or done in reaction to a statement or question.",
+    "example": "Her answer to his proposal was a slap in the face."
+  },
+  {
+    "word": "awhile",
+    "definition": "For some time; for a short time.",
+    "example": "Sit with me awhile."
+  },
+  {
+    "word": "between",
+    "definition": "In the position or interval that separates (two things), or intermediate in quantity or degree. (See Usage notes below.)",
+    "example": "I want to buy one that costs somewhere between forty and fifty dollars."
+  },
+  {
+    "word": "board",
+    "definition": "To step or climb onto or otherwise enter a ship, aircraft, train or other conveyance.",
+    "example": "It is time to board the aircraft."
+  },
+  {
+    "word": "bottom",
+    "definition": "The lowest part of anything.",
+    "example": "Footers appear at the bottoms of pages."
+  },
+  {
+    "word": "breakfast",
+    "definition": "The first meal of the day, usually eaten in the morning.",
+    "example": "You should put more protein in her breakfast so she will grow."
+  },
+  {
+    "word": "broken",
+    "definition": "To separate into two or more pieces, to fracture or crack, by a process that cannot easily be reversed for reassembly.",
+    "example": "If the vase falls to the floor, it might break."
+  },
+  {
+    "word": "build",
+    "definition": "The physique of a human body; constitution or structure of a human body.",
+    "example": "Rugby players are of sturdy build."
+  },
+  {
+    "word": "building",
+    "definition": "The act or process by which something is built; construction.",
+    "example": "The building of the bridge will be completed in a couple of weeks."
+  },
+  {
+    "word": "built",
+    "definition": "Shape; build; form of structure.",
+    "example": "the built of a ship"
+  },
+  {
+    "word": "captain",
+    "definition": "To act as captain",
+    "example": "Example not found."
+  },
+  {
+    "word": "carried",
+    "definition": "To lift (something) and take it to another place; to transport (something) by lifting.",
+    "example": "Example not found."
+  },
+  {
+    "word": "caught",
+    "definition": "Of the method of being out in which the striker hits the ball and a fielder catches it.",
+    "example": "Example not found."
+  },
+  {
+    "word": "charge",
+    "definition": "The amount of money levied for a service.",
+    "example": "There will be a charge of five dollars."
+  },
+  {
+    "word": "chicken",
+    "definition": "Cowardly.",
+    "example": "Why do you refuse to fight? Huh, I guess you're just too chicken."
+  },
+  {
+    "word": "circus",
+    "definition": "A traveling company of performers that may include acrobats, clowns, trained animals, and other novelty acts, that gives shows usually in a circular tent.",
+    "example": "The circus will be in town next week."
+  },
+  {
+    "word": "cities",
+    "definition": "A large settlement, bigger than a town; sometimes with a specific legal definition, depending on the place.",
+    "example": "S\u00e3o Paulo is the largest city in South America."
+  },
+  {
+    "word": "clothes",
+    "definition": "Items of clothing; apparel.",
+    "example": "Example not found."
+  },
+  {
+    "word": "company",
+    "definition": "To accompany, keep company with.",
+    "example": "Example not found."
+  },
+  {
+    "word": "country",
+    "definition": "A style of popular music that originated in the folk music of the rural population of the southern and western United States and characterized by string-band instruments and simple melodies.",
+    "example": "Example not found."
+  },
+  {
+    "word": "discover",
+    "definition": "To find or learn something for the first time.",
+    "example": "Turning the corner, I discovered a lovely little shop. I discovered that they sold widgets."
+  },
+  {
+    "word": "doctor",
+    "definition": "A physician; a member of the medical profession; one who is trained and licensed to heal the sick or injured. The final examination and qualification may award a doctor degree in which case the post-nominal letters are D.O., DPM, M.D., DMD, DDS, in the US or MBBS in the UK.",
+    "example": "If you still feel unwell tomorrow, see your doctor."
+  },
+  {
+    "word": "dollar",
+    "definition": "Official designation for currency in some parts of the world, including Canada, the United States, Australia, New Zealand, Hong Kong, and elsewhere. Its symbol is $.",
+    "example": "Example not found."
+  },
+  {
+    "word": "during",
+    "definition": "For all of a given time interval.",
+    "example": "I lived with my parents during the 1970s."
+  },
+  {
+    "word": "eighth",
+    "definition": "The ordinal form of the number eight.",
+    "example": "Example not found."
+  },
+  {
+    "word": "else",
+    "definition": "(used only with indefinite or interrogative pronouns) Other; in addition to previously mentioned items.",
+    "example": "The instructor is busy. Can anyone else help me?"
+  },
+  {
+    "word": "enjoy",
+    "definition": "To receive pleasure or satisfaction from something",
+    "example": "Enjoy your holidays!\u00a0\u00a0 I enjoy dancing."
+  },
+  {
+    "word": "enough",
+    "definition": "Sufficiently.",
+    "example": "Are you man enough to fight me?"
+  },
+  {
+    "word": "everybody",
+    "definition": "All people.",
+    "example": "Example not found."
+  },
+  {
+    "word": "example",
+    "definition": "To be illustrated or exemplified (by).",
+    "example": "Example not found."
+  },
+  {
+    "word": "except",
+    "definition": "With the exception of; but.",
+    "example": "There was nothing in the cupboard except a tin of beans."
+  },
+  {
+    "word": "excuse",
+    "definition": "Explanation designed to avoid or alleviate guilt or negative judgment; a plea offered in extenuation of a fault.",
+    "example": "Tell me why you were late \u2013 and I don't want to hear any excuses!"
+  },
+  {
+    "word": "field",
+    "definition": "A land area free of woodland, cities, and towns; open country.",
+    "example": "There are several species of wild flowers growing in this field."
+  },
+  {
+    "word": "fifth",
+    "definition": "The ordinal form of the number five.",
+    "example": "Example not found."
+  },
+  {
+    "word": "finish",
+    "definition": "To complete (something).",
+    "example": "Be sure to finish your homework before you go to bed!"
+  },
+  {
+    "word": "following",
+    "definition": "To go after; to pursue; to move behind in the same path or direction.",
+    "example": "Follow that car!"
+  },
+  {
+    "word": "group",
+    "definition": "A number of things or persons being in some relation to one another.",
+    "example": "A group of people gathered in front of the Parliament to demonstrate against the Prime Minister's proposals."
+  },
+  {
+    "word": "happened",
+    "definition": "To occur or take place.",
+    "example": "Let me tell you how it happened."
+  },
+  {
+    "word": "harden",
+    "definition": "To become hard (tough, resistant to pressure).",
+    "example": "Example not found."
+  },
+  {
+    "word": "heavy",
+    "definition": "A villain or bad guy; the one responsible for evil or aggressive acts.",
+    "example": "With his wrinkled, uneven face, the actor always seemed to play the heavy in films."
+  },
+  {
+    "word": "held",
+    "definition": "To grasp or grip.",
+    "example": "Hold the pencil like this."
+  },
+  {
+    "word": "hospital",
+    "definition": "Hospitable.",
+    "example": "Example not found."
+  },
+  {
+    "word": "idea",
+    "definition": "An abstract archetype of a given thing, compared to which real-life examples are seen as imperfect approximations; pure essence, as opposed to actual examples.",
+    "example": "Example not found."
+  },
+  {
+    "word": "instead",
+    "definition": "In the place of something (usually mentioned earlier); as a substitute or alternative.",
+    "example": "I was going to go shopping, but I went dancing instead."
+  },
+  {
+    "word": "known",
+    "definition": "To perceive the truth or factuality of; to be certain of or that.",
+    "example": "He knew something terrible was going to happen."
+  },
+  {
+    "word": "laugh",
+    "definition": "An expression of mirth particular to the human species; the sound heard in laughing; laughter.",
+    "example": "His deep laughs boomed through the room."
+  },
+  {
+    "word": "middle",
+    "definition": "A centre, midpoint.",
+    "example": "The middle of a circle is the point which has the same distance to every point of circle."
+  },
+  {
+    "word": "minute",
+    "definition": "A unit of time equal to sixty seconds (one-sixtieth of an hour).",
+    "example": "You have twenty minutes to complete the test."
+  },
+  {
+    "word": "mountain",
+    "definition": "An elevation of land of considerable dimensions rising more or less abruptly, forming a conspicuous figure in the landscape, usually having a small extent of surface at its summit.",
+    "example": "We spent the weekend hiking in the mountains."
+  },
+  {
+    "word": "ninth",
+    "definition": "The ordinal form of the number nine.",
+    "example": "Example not found."
+  },
+  {
+    "word": "ocean",
+    "definition": "One of the large bodies of water separating the continents.",
+    "example": "Example not found."
+  },
+  {
+    "word": "office",
+    "definition": "To provide (someone) with an office.",
+    "example": "Example not found."
+  },
+  {
+    "word": "parent",
+    "definition": "To act as parent, to raise or rear.",
+    "example": "Example not found."
+  },
+  {
+    "word": "peanut",
+    "definition": "To pull on somebody's tie as a prank, causing the knot to tighten.",
+    "example": "Example not found."
+  },
+  {
+    "word": "pencil",
+    "definition": "To write (something) using a pencil.",
+    "example": "I penciled (BrE: pencilled) a brief reminder in my notebook."
+  },
+  {
+    "word": "picnic",
+    "definition": "An informal social gathering, usually in a natural outdoor setting, to which the participants bring their own food and drink.",
+    "example": "We went out for a picnic in the forest."
+  },
+  {
+    "word": "police",
+    "definition": "A civil force granted the legal authority for law enforcement and maintaining public order.",
+    "example": "Call the police!"
+  },
+  {
+    "word": "pretty",
+    "definition": "Somewhat, fairly, quite; sometimes also (by meiosis) very.",
+    "example": "Example not found."
+  },
+  {
+    "word": "prize",
+    "definition": "That which is taken from another; something captured; a thing seized by force, stratagem, or superior power.",
+    "example": "Example not found."
+  },
+  {
+    "word": "quite",
+    "definition": "Indicates agreement; \"exactly so\".",
+    "example": "Example not found."
+  },
+  {
+    "word": "radio",
+    "definition": "To use two-way radio to transmit (a message) (to another radio or other radio operator).",
+    "example": "I think the boat is sinking; we'd better radio for help. / I radioed him already. / Radio the coordinates this time. / OK. I radioed them the coordinates."
+  },
+  {
+    "word": "raise",
+    "definition": "An increase in wages or salary; a rise (UK).",
+    "example": "The boss gave me a raise."
+  },
+  {
+    "word": "really",
+    "definition": "Indicating surprise at, or requesting confirmation of, some new information; to express skepticism.",
+    "example": "A: He won the Nobel Prize yesterday."
+  },
+  {
+    "word": "reason",
+    "definition": "To deduce or come to a conclusion by being rational",
+    "example": "Example not found."
+  },
+  {
+    "word": "remember",
+    "definition": "To recall from one's memory; to have an image in one's memory.",
+    "example": "Example not found."
+  },
+  {
+    "word": "return",
+    "definition": "The act of returning.",
+    "example": "I expect the house to be spotless upon my return."
+  },
+  {
+    "word": "Saturday",
+    "definition": "Definition not found.",
+    "example": "Example not found."
+  },
+  {
+    "word": "scare",
+    "definition": "A minor fright.",
+    "example": "Johnny had a bad scare last night."
+  },
+  {
+    "word": "second",
+    "definition": "To agree as a second person to (a proposal), usually to reach a necessary quorum of two. (See under #Etymology 3 for translations.)",
+    "example": "I second the motion."
+  },
+  {
+    "word": "since",
+    "definition": "From a specified time in the past.",
+    "example": "A short/long time since"
+  },
+  {
+    "word": "slowly",
+    "definition": "(manner) At a slow pace.",
+    "example": "Example not found."
+  },
+  {
+    "word": "stories",
+    "definition": "A sequence of real or fictional events; or, an account of such a sequence.",
+    "example": "The book tells the story of two roommates."
+  },
+  {
+    "word": "student",
+    "definition": "A person who studies or learns about a particular subject.",
+    "example": "He is a student of life."
+  },
+  {
+    "word": "sudden",
+    "definition": "Happening quickly and with little or no warning.",
+    "example": "The sudden drop in temperature left everyone cold and confused."
+  },
+  {
+    "word": "suit",
+    "definition": "A set of clothes to be worn together, now especially a man's matching jacket and trousers (also business suit or lounge suit), or a similar outfit for a woman.",
+    "example": "Nick hired a navy-blue suit for the wedding."
+  },
+  {
+    "word": "sure",
+    "definition": "Physically secure and certain, non-failing, reliable.",
+    "example": "This investment is a sure thing.\u00a0\u00a0 The bailiff had a sure grip on the prisoner's arm."
+  },
+  {
+    "word": "swimming",
+    "definition": "The act or art of sustaining and propelling the body in water.",
+    "example": "Example not found."
+  },
+  {
+    "word": "though",
+    "definition": "Despite that; however.",
+    "example": "I will do it, though."
+  },
+  {
+    "word": "threw",
+    "definition": "To hurl; to cause an object to move rapidly through the air.",
+    "example": "throw a shoe; throw a javelin; the horse threw its rider"
+  },
+  {
+    "word": "tired",
+    "definition": "In need of some rest or sleep.",
+    "example": "Example not found."
+  },
+  {
+    "word": "together",
+    "definition": "Coherent; well organized.",
+    "example": "He's really together."
+  },
+  {
+    "word": "tomorrow",
+    "definition": "On the day after the present day.",
+    "example": "Example not found."
+  },
+  {
+    "word": "toward",
+    "definition": "In the direction of.",
+    "example": "She moved toward the door."
+  },
+  {
+    "word": "tried",
+    "definition": "To attempt; to endeavour. Followed by infinitive.",
+    "example": "I tried to rollerblade, but I couldn\u2019t."
+  },
+  {
+    "word": "trouble",
+    "definition": "A distressing or dangerous situation.",
+    "example": "He was in trouble when the rain started."
+  },
+  {
+    "word": "truly",
+    "definition": "(manner) In accordance with the facts; truthfully, accurately.",
+    "example": "Example not found."
+  },
+  {
+    "word": "turtle",
+    "definition": "To flip over onto the back or top; to turn upside down.",
+    "example": "Example not found."
+  },
+  {
+    "word": "until",
+    "definition": "Up to the time of (something happening).",
+    "example": "If you can wait until after my meeting with her, we'll talk then."
+  },
+  {
+    "word": "village",
+    "definition": "A rural habitation of size between a hamlet and a town.",
+    "example": "There are 2 churches and 3 shops in our village."
+  },
+  {
+    "word": "visit",
+    "definition": "To habitually go to (someone in distress, sickness etc.) to comfort them. (Now generally merged into later senses, below.)",
+    "example": "Example not found."
+  },
+  {
+    "word": "wear",
+    "definition": "(in combination) clothing",
+    "example": "footwear; outdoor wear; maternity wear"
+  },
+  {
+    "word": "whole",
+    "definition": "Something complete, without any parts missing.",
+    "example": "This variety of fascinating details didn't fall together into an enjoyable, coherent whole."
+  },
+  {
+    "word": "whose",
+    "definition": "(interrogative) That or those of whom or belonging to whom.",
+    "example": "Several people have lost their suitcases. Whose have you found?"
+  },
+  {
+    "word": "women",
+    "definition": "An adult female human.",
+    "example": "Example not found."
+  },
+  {
+    "word": "writing",
+    "definition": "Graphism of symbols such as letters that express some meaning.",
+    "example": "Example not found."
+  },
+  {
+    "word": "written",
+    "definition": "To form letters, words or symbols on a surface in order to communicate.",
+    "example": "The pupil wrote his name on the paper."
+  },
+  {
+    "word": "wrote",
+    "definition": "To form letters, words or symbols on a surface in order to communicate.",
+    "example": "The pupil wrote his name on the paper."
+  },
+  {
+    "word": "yell",
+    "definition": "Shout; holler; make a loud sound with the voice.",
+    "example": "Example not found."
+  },
+  {
+    "word": "young",
+    "definition": "People who are young; young people, collectively; youth.",
+    "example": "The young of today are well-educated."
+  },
+  {
+    "word": "although",
+    "definition": "Though, even though, in spite of or despite the fact that: introducing a clause that expresses a concession.",
+    "example": "Although it was very muddy, the football game went on."
+  },
+  {
+    "word": "among",
+    "definition": "Denotes a mingling or intermixing with distinct or separable objects. (See Usage Note at amidst.)",
+    "example": "How can you speak with authority about their customs when you have never lived among them?"
+  },
+  {
+    "word": "arrive",
+    "definition": "To reach; to get to a certain place.",
+    "example": "He arrived home for two days."
+  },
+  {
+    "word": "attention",
+    "definition": "Mental focus.",
+    "example": "Please direct your attention to the following words."
+  },
+  {
+    "word": "beautiful",
+    "definition": "Someone who is beautiful. Can be used as a term of address.",
+    "example": "Hey, beautiful!"
+  },
+  {
+    "word": "countries",
+    "definition": "A style of popular music that originated in the folk music of the rural population of the southern and western United States and characterized by string-band instruments and simple melodies.",
+    "example": "Example not found."
+  },
+  {
+    "word": "course",
+    "definition": "A sequence of events.",
+    "example": "The normal course of events seems to be just one damned thing after another."
+  },
+  {
+    "word": "cousin",
+    "definition": "The child of a person's uncle or aunt; a first cousin.",
+    "example": "I think my cousin is a good man."
+  },
+  {
+    "word": "decide",
+    "definition": "To resolve (a contest, problem, dispute, etc.); to choose, determine, or settle",
+    "example": "Her last-minute goal decided the game."
+  },
+  {
+    "word": "different",
+    "definition": "Differently.",
+    "example": "Example not found."
+  },
+  {
+    "word": "evening",
+    "definition": "The time of the day between dusk and night, when it gets dark.",
+    "example": "Example not found."
+  },
+  {
+    "word": "favorite",
+    "definition": "A person or thing who enjoys special regard or favour.",
+    "example": "The teacher's favourite always went first."
+  },
+  {
+    "word": "finally",
+    "definition": "At the end or conclusion; ultimately.",
+    "example": "The contest was long, but the Romans finally conquered."
+  },
+  {
+    "word": "future",
+    "definition": "Having to do with or occurring in the future.",
+    "example": "Future generations will either laugh or cry at our stupidity."
+  },
+  {
+    "word": "happiest",
+    "definition": "Having a feeling arising from a consciousness of well-being or of enjoyment; enjoying good of any kind, such as comfort, peace, or tranquillity; blissful, contented, joyous.",
+    "example": "Music makes me feel happy."
+  },
+  {
+    "word": "happiness",
+    "definition": "The emotion of being happy; joy.",
+    "example": "Example not found."
+  },
+  {
+    "word": "important",
+    "definition": "Having relevant and crucial value.",
+    "example": "It is very important to give your daughter independence in her life so she learns from experience."
+  },
+  {
+    "word": "interest",
+    "definition": "The price paid for obtaining, or price received for providing, money or goods in a credit transaction, calculated as a fraction of the amount or value of what was borrowed.",
+    "example": "Our bank offers borrowers an annual interest of 5%."
+  },
+  {
+    "word": "piece",
+    "definition": "A part of a larger whole, usually in such a form that it is able to be separated from other parts.",
+    "example": "I\u2019d like another piece of pie."
+  },
+  {
+    "word": "planet",
+    "definition": "Each of the seven major bodies which move relative to the fixed stars in the night sky\u2014the Moon, Mercury, Venus, the Sun, Mars, Jupiter and Saturn.",
+    "example": "Example not found."
+  },
+  {
+    "word": "present",
+    "definition": "Relating to now, for the time being; current.",
+    "example": "The barbaric practice continues to the present day."
+  },
+  {
+    "word": "president",
+    "definition": "The head of state of a republic.",
+    "example": "The vast majority of presidents have been male."
+  },
+  {
+    "word": "principal",
+    "definition": "The money originally invested or loaned, on which basis interest and returns are calculated.",
+    "example": "A portion of your mortgage payment goes to reduce the principal, and the rest covers interest."
+  },
+  {
+    "word": "probably",
+    "definition": "In all likelihood.",
+    "example": "Example not found."
+  },
+  {
+    "word": "problem",
+    "definition": "A difficulty that has to be resolved or dealt with.",
+    "example": "She's leaving because she faced numerous problems to do with racism."
+  },
+  {
+    "word": "receive",
+    "definition": "To take, as something that is offered, given, committed, sent, paid, etc.; to accept; to be given something.",
+    "example": "She received many presents for her birthday."
+  },
+  {
+    "word": "sentence",
+    "definition": "The decision or judgement of a jury or court; a verdict.",
+    "example": "The court returned a sentence of guilt in the first charge, but innocence in the second."
+  },
+  {
+    "word": "several",
+    "definition": "By itself; severally.",
+    "example": "Example not found."
+  },
+  {
+    "word": "special",
+    "definition": "A reduction in consumer cost (usually for a limited time) for items or services rendered.",
+    "example": "We're running a special on turkey for Thanksgiving."
+  },
+  {
+    "word": "suddenly",
+    "definition": "Happening quickly and with little or no warning; in a sudden manner.",
+    "example": "Suddenly, the heavens opened and we all got drenched."
+  },
+  {
+    "word": "suppose",
+    "definition": "To take for granted; to conclude, with less than absolute supporting data; to believe.",
+    "example": "Suppose that A implies B and B implies C. Then A implies C."
+  },
+  {
+    "word": "surely",
+    "definition": "Without fail.",
+    "example": "slowly but surely"
+  },
+  {
+    "word": "surprise",
+    "definition": "Something unexpected.",
+    "example": "It was a surprise to find out I owed twice as much as I thought I did."
+  },
+  {
+    "word": "through",
+    "definition": "Passing from one side of something to the other.",
+    "example": "Interstate highways form a nationwide system of through roads."
+  },
+  {
+    "word": "usually",
+    "definition": "Most of the time; less than always, but more than occasionally.",
+    "example": "Except for one or two days a year, he usually walks to work."
+  }
+]

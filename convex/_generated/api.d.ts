@@ -18,6 +18,7 @@ import type * as idioms_seed from "../idioms_seed.js";
 import type * as progress from "../progress.js";
 import type * as texts from "../texts.js";
 import type * as users from "../users.js";
+import type * as words from "../words.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -33,6 +34,7 @@ declare const fullApi: ApiFromModules<{
   progress: typeof progress;
   texts: typeof texts;
   users: typeof users;
+  words: typeof words;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

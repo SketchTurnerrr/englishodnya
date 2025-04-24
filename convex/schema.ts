@@ -22,6 +22,11 @@ export default defineSchema({
     idiomId: v.id('idioms'),
   }).index('by_user_id', ['userId']),
 
+  learnedWords: defineTable({
+    userId: v.id('users'),
+    word: v.string(),
+  }).index('by_user_id', ['userId']),
+
   texts: defineTable({
     title: v.string(),
     content: v.string(),

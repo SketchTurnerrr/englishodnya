@@ -25,7 +25,7 @@ export const recordSpellingAttempt = mutation({
     }
 
     // Record the spelling attempt
-    await ctx.db.insert('spellingAttempts', {
+    const attempt = await ctx.db.insert('spellingAttempts', {
       userId: user._id,
       word: args.word,
       correct: args.correct,
@@ -58,7 +58,7 @@ export const recordSpellingAttempt = mutation({
       });
     }
 
-    return { success: true };
+    return args.correct;
   },
 });
 
