@@ -44,7 +44,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <Link
-                    href="/daily"
+                    href="/daily-practice"
                     className="text-white h-9 px-4 py-2 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive bg-emerald-600 hover:bg-emerald-700"
                   >
                     Розпочати

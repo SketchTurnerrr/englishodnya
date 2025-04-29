@@ -33,6 +33,7 @@ export function SpellingBee() {
   >('easy');
   const [currentWord, setCurrentWord] = useState<SpellingWord | null>(null);
   const [userInput, setUserInput] = useState('');
+  console.log('userInput :', userInput);
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
@@ -106,6 +107,7 @@ export function SpellingBee() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (currentWord) {
+      console.log('currentWord :', currentWord);
       const correct =
         userInput.toLowerCase() === currentWord.word.toLowerCase();
       setIsCorrect(correct);
@@ -178,7 +180,7 @@ export function SpellingBee() {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-sm">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Spelling Bee Challenge</h2>
+        <h2 className="text-2xl font-bold">Spelling Bee</h2>
         <div className="flex items-center gap-2">
           <Trophy className="w-5 h-5 text-yellow-500" />
           <span className="font-medium">
@@ -249,14 +251,14 @@ export function SpellingBee() {
               </div>
 
               <>
-                <p className="flex gap-2 items-center text-gray-600">
-                  <Book className=" size-5" />{' '}
+                <p className="flex gap-2 items-center text-gray-600 ">
+                  <Book className=" size-8" />{' '}
                   {wordsMap[currentWord.word.toLowerCase()]?.definition ??
                     'Definition not available'}
                 </p>
                 {wordsMap[currentWord.word.toLowerCase()]?.example && (
                   <p className="flex gap-2 items-center text-gray-500 italic mt-1">
-                    <Quote className=" size-5" />{' '}
+                    <Quote className=" size-10" />{' '}
                     {wordsMap[currentWord.word.toLowerCase()]!.example}
                   </p>
                 )}
@@ -294,16 +296,19 @@ export function SpellingBee() {
 
               <Input
                 value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
+                onChange={(e) =>
+                  setUserInput(e.target.value.trim().toLocaleLowerCase())
+                }
                 className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Type the word here..."
+                placeholder="Ваша відповідь..."
                 disabled={showResult}
+                spellCheck={false}
                 autoFocus
               />
 
               {!showResult && (
                 <Button type="submit" className="w-full">
-                  Check Spelling
+                  Ввести
                 </Button>
               )}
             </form>

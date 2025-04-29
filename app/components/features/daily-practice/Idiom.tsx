@@ -72,7 +72,7 @@ export function Idiom() {
   const currentIdiom = showingExtra ? extraIdiom : dailyIdiom;
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen">
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Mode Switch */}
         <div className="flex justify-between items-center">
@@ -109,7 +109,7 @@ export function Idiom() {
               </CardTitle>
               <Badge
                 variant="outline"
-                className={`ml-2 ${
+                className={`ml-2 hidden md:block ${
                   showingExtra ? 'bg-purple-50' : 'bg-blue-50'
                 }`}
               >
