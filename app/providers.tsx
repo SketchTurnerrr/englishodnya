@@ -5,7 +5,7 @@ import { ConvexProviderWithClerk } from 'convex/react-clerk';
 import type * as React from 'react';
 import { ConvexReactClient } from 'convex/react';
 import { env } from '@/env';
-import { useAuth } from '@clerk/clerk-react';
+import { useAuth } from '@clerk/react';
 
 const convexENV = env.NEXT_PUBLIC_CONVEX_URL;
 
